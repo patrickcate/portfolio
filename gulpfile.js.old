@@ -1,0 +1,200 @@
+var gulp = require('gulp');
+var spawn = require("gulp-spawn");
+var compass = require('gulp-compass');
+var uglify = require('gulp-uglify');
+var notify = require("gulp-notify");
+var livereload = require('gulp-livereload');
+var exec = require('gulp-exec');
+var concat = require('gulp-concat');
+var rename = require('gulp-rename');
+var prefix = require('gulp-autoprefixer');
+var resize = require('gulp-image-resize');
+var connect = require('connect');
+var exec = require('gulp-exec');
+// var gm = require('gulp-gm');
+// var imagemin = require('gulp-imagemin');
+// var server = $.tinyLr();
+
+function handleError(err)
+{
+  console.log(err.toString());
+  this.emit('end');
+}
+
+gulp.task('server', function(){
+  connect(connect.static('_site')).listen(9000);
+  console.log('Server running at http://localhost:9000/');
+  gulp.watch('src/**', function(event){
+    console.log(event.path+ ' ' + event.type +', rebuilding...')
+    gulp.src('').pipe(exec("jekyll build && compass compile")).pipe(livereload());
+  });
+});
+
+// gulp.task('source-images', function ()
+// {
+//   gulp.src('./source/backgrounds/*')
+//   .pipe(rename({
+//     suffix: '-medium'
+//   }))
+//   .pipe(resize({
+//     width : 1050,
+//     height : 50000,
+//     crop : false,
+//     upscale : true,
+//     quality: 1
+//   }))
+//    //  .pipe(gm(function (gmfile) {
+//    //     console.log(gmfile.source);
+//    //     return gmfile.blur('0x30');
+//    // }))
+// .pipe(gulp.dest('./css/img/backgrounds'))
+// .pipe(gulp.dest('./_site/css/img/backgrounds'));
+
+
+// gulp.src('./source/backgrounds/*')
+// .pipe(rename({
+//   suffix: '-large'
+// }))
+//    //  .pipe(gm(function (gmfile) {
+//    //     console.log(gmfile.source);
+//    //     return gmfile.blur('0x100');
+//    // }))
+// .pipe(resize({
+//   width : 2100,
+//   height : 50000,
+//   crop : false,
+//   upscale : true,
+//   quality: 1
+// }))
+// .pipe(gulp.dest('./css/img/backgrounds'))
+// .pipe(gulp.dest('./_site/css/backgrounds'));
+
+
+// });
+
+// gulp.task('image', function ()
+// {
+//   gulp.src('./assets/backgrounds/*')
+//     // .pipe(gm(function (gmfile) {
+//     //     return gmfile.resize(100, 100);
+//     // }))
+// .pipe(gulp.dest('./_site/backgrounds'));
+// });
+
+gulp.task('notify', function ()
+{
+  gulp.src('./_site/css/styles.css')
+  .pipe(notify({
+    onLast: true,
+    title: 'Compass',
+    message: 'Sass has finished compiling.'
+  }));
+});
+
+gulp.task('html', function ()
+{
+  gulp.src('./**/*.html');
+});
+
+
+// gulp.task('prefix', function()
+// {
+//   gulp.src('./css/**/*.css')
+//   .pipe(prefix(
+//         'last 6 Chrome versions',
+//         'last 6 Firefox versions',
+//         'last 4 iOS versions',
+//         'last 4 Safari versions',
+//         'Explorer >= 9',
+//         'last 5 Opera versions',
+//         'Android >= 4'
+//         ))
+//   .pipe(gulp.dest('./css'))
+//   .pipe(notify({
+//     onLast: true,
+//     title: 'AutoPrefix',
+//     message: 'CSS has be prefixed.'
+//   }));
+// });
+
+gulp.task('css', function()
+{
+  gulp.src('./sass/**/*.scss')
+  .pipe(compass({
+    config_file: './config.rb',
+    css: 'css',
+    sass: 'sass',
+    bundle_exec: true
+  }))
+  .on('error', handleError)
+  .pipe(prefix(
+        'last 6 Chrome versions',
+        'last 6 Firefox versions',
+        'last 4 iOS versions',
+        'last 4 Safari versions',
+        'Explorer >= 9',
+        'last 5 Opera versions',
+        'Android >= 4'
+        ))
+  // .pipe(gulp.dest('./css/'))
+  .pipe(gulp.dest('./_site/css/'))
+  .pipe(livereload({ auto: false }))
+  .pipe(notify({
+    onLast: true,
+    title: 'Compass',
+    message: 'CSS has finished compiling.'
+  }));
+});
+
+gulp.task('js', function()
+{
+  gulp.src(['./js/*.js', '!./js/*.min.js'])
+  .pipe(rename({
+    suffix: '.min'
+  }))
+  .pipe(uglify({
+    mangle: false
+  }))
+  .pipe(gulp.dest('./js/'));
+  gulp.src([
+           './js/modernizr.min.js',
+           './js/jquery-1.11.1.min.js',
+           ])
+  .pipe(concat('libs.min.js'))
+  .pipe(gulp.dest('./js/'));
+  gulp.src([
+           './js/headroom.min.js',
+           './js/jquery.headroom.min.js',
+           './js/jquery.onscreen.min.js',
+           './js/jquery.malihu.PageScroll2id.min.js',
+           './js/magnific-popup.min.js',
+           ])
+  .pipe(concat('scripts.min.js'))
+  .pipe(gulp.dest('./js/'))
+  .pipe(notify({
+    onLast: true,
+    title: 'JavaScript',
+    message: 'JS has finished compiling.'
+  }));
+});
+
+// gulp.task('jekyll', function(cb)
+// {
+//     exec('jekyll serve', function(err, stdout, stderr) {
+//         console.log(stdout);
+//         cb(err);
+//     });
+// });
+
+gulp.task('watch', function()
+{
+  gulp.watch('./sass/**/*.scss', ['css']);
+  // gulp.watch('._site/**/*').on('change', livereload.changed);
+ // gulp.watch(['./pages/**/*.html', 'index.html'], ['html']);
+ // gulp.watch(['./js/*.js', '!./js/*.min.js', '!./js/scripts.js'], ['js']);
+});
+
+gulp.task('default', ['watch'], function()
+{
+
+});

@@ -1,0 +1,112 @@
+.gallery
+{
+	.gallery__thumbnail
+	{
+		@include breakpoint($break-tiny)
+		{
+			float: left;
+			margin-right: $grid-padding;
+			max-width: $photo-size--small;
+		}
+
+		@include breakpoint($break-small)
+		{
+			max-width: $photo-size--medium;
+		}
+
+		@include breakpoint($break-medium)
+		{
+			max-width: $photo-size--large;
+		}
+	}
+
+	.l-section--work:nth-child(even) &
+	{
+		.gallery__thumbnail
+		{
+			float: right;
+			margin-left: $grid-padding;
+		}
+	}
+}
+
+.gallery__content
+{
+	@extend %clearfix;
+	margin-bottom: $grid-padding;
+}
+
+.gallery__title
+{
+	color: $blue;
+}
+
+.gallery__thumbnail
+{
+
+}
+
+.gallery__category--print
+{
+	color: $green;
+}
+
+.gallery__category--web
+{
+	color: $red;
+}
+
+.gallery__category--identity
+{
+	color: $purple;
+}
+
+.gallery__category--drupal
+{
+	color: $blue;
+}
+
+.gallery__category--email
+{
+	color: $orange;
+}
+
+.gallery__category--app
+{
+	color: $dark-grey;
+}
+
+.thumbnail-grid
+{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	clear: both;
+}
+
+.thumbnail-grid__item
+{
+	@include span(12);
+	margin-bottom: gutters(24);
+
+	&:nth-child(2n - 1)
+	{
+		@include first;
+	}
+
+	@include breakpoint($break-tiny)
+	{
+		@include span(6 of 24);
+
+		&:nth-child(2n - 1)
+		{
+			margin-left: gutters(24);
+		}
+
+		&:first-child
+		{
+			@include first;
+		}
+
+	}
+}

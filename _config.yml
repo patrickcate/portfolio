@@ -1,0 +1,31 @@
+name: Portfolio
+description: Patrick Cate's Portfolio
+markdown: kramdown
+highlighter: pygments
+relative_permalinks: true
+doctor:          true
+
+timezone:       America/New_York
+source:         .
+destination:    ./_site
+plugins:        ./_plugins
+layouts:        ./_layouts
+include:        ['.htaccess']
+
+# collections:
+# - _portfolio
+
+exclude: [
+    '*.json',
+    '*.log',
+    '*.sublime-project',
+    '*.sublime-workspace',
+    'config.rb',
+    'Gemfile',
+    'Gemfile.lock',
+    'grunt',
+    'Gruntfile.js',
+    'gulpfile.js',
+    'node_modules',
+    'sass',
+]

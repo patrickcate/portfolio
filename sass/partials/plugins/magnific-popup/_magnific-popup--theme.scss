@@ -1,0 +1,199 @@
+// .mfp-with-zoom .mfp-container,
+// .mfp-with-zoom.mfp-bg {
+//   opacity: 0;
+//   -webkit-backface-visibility: hidden;
+//   /* ideally, transition speed should match zoom duration */
+//   -webkit-transition: all 0.3s ease-out;
+//   -moz-transition: all 0.3s ease-out;
+//   -o-transition: all 0.3s ease-out;
+//   transition: all 0.3s ease-out;
+// }
+
+// .mfp-with-zoom.mfp-ready .mfp-container {
+//     opacity: 1;
+// }
+// .mfp-with-zoom.mfp-ready.mfp-bg {
+//     opacity: 0.8;
+// }
+
+// .mfp-with-zoom.mfp-removing .mfp-container,
+// .mfp-with-zoom.mfp-removing.mfp-bg {
+//   opacity: 0;
+// }
+
+.mfp-ready
+{
+	transition: all 0.25s ease-in-out;
+}
+
+.mfp-wrap
+{
+	transform: scale(.85);
+
+	&.mfp-ready
+	{
+		transform: scale(1);
+	}
+}
+
+.mfp-bg
+{
+	opacity: 0;
+
+	&.mfp-ready
+	{
+		opacity: 0.75;
+	}
+}
+
+.mfp-arrow, .mfp-close
+{
+	transition: color 0.25s ease-in-out;
+}
+
+.mfp-image-holder .mfp-close
+{
+	cursor: pointer;
+	background-color: $black;
+	display: inline-block;
+	left: auto;
+	top: -10px;
+	right: -15px;
+	opacity: 1;
+	width: $grid-padding * 2;
+	height: $grid-padding * 2;
+	border: 3px solid $white;
+	box-shadow: $lightbox-shadow;
+	padding: 1px 0 0 0;
+	border-radius: 100px;
+	line-height: 1;
+	position: absolute;
+	text-align: center;
+}
+
+.mfp-counter
+{
+	left: 0;
+	font-size: $base-font-size;
+	line-height: $base-line-height;
+	text-align: center;
+	font-weight: bold;
+}
+
+.mfp-figure
+{
+	position: relative;
+	background-color: $white;
+	padding: $half-grid-padding;
+	box-shadow: $lightbox-shadow;
+
+	// border: 1px solid $image-border-color;
+
+	figure
+	{
+		// padding: $half-grid-padding;
+		border: 1px solid $image-border-color;
+	}
+
+	figcaption
+	{
+		// position: relative;
+	}
+}
+
+img.mfp-img
+{
+	padding: 0;
+}
+
+.mfp-bottom-bar
+{
+	width: 100%;
+	margin-top: $half-grid-padding;
+}
+
+button.mfp-arrow
+{
+	transition: opacity .25s ease-in-out;
+	cursor: pointer;
+	background-color: $black;
+	width: $grid-padding * 3;
+	height: $grid-padding * 3;
+	padding: 1px 0 0 0;
+	border-radius: 100px;
+	line-height: 1;
+	// opacity: 0;
+	// position: relative;
+	margin-top: -#{$grid-padding + $half-grid-padding};
+
+	&:before
+	{
+		margin-top: ( ($grid-padding * 3) / 2 ) - ($grid-padding + $half-grid-padding);
+		position: relative;
+		opacity: .65;
+	}
+
+	&:hover
+	{
+		opacity: 1;
+	}
+
+	&:active
+	{
+		margin-top: -#{$grid-padding + $half-grid-padding};
+	}
+
+	&:after
+	{
+		content: none;
+	}
+
+	.mfp-ready &
+	{
+		// transform: translateX(0);
+		opacity: .65;
+
+		&:hover
+		{
+			opacity: .95;
+		}
+	}
+}
+
+button.mfp-arrow-left
+{
+	left: $grid-padding;
+	// transform: translateX(0);
+
+	@include breakpoint($break-small)
+	{
+		left: $grid-padding * 2;
+	}
+
+	&:before
+	{
+		@include triangle($grid-padding * 2, $white, left);
+		border-top-width: $half-grid-padding + $quarter-grid-padding;
+		border-bottom-width: $half-grid-padding + $quarter-grid-padding;
+		margin-left: -4px;
+	}
+}
+
+button.mfp-arrow-right
+{
+	// transform: translateX(0);
+	right: $grid-padding;
+
+	@include breakpoint($break-small)
+	{
+		right: $grid-padding * 2;
+	}
+
+	&:before
+	{
+		@include triangle($grid-padding * 2, $white, right);
+		border-top-width: $half-grid-padding + $quarter-grid-padding;
+		border-bottom-width: $half-grid-padding + $quarter-grid-padding;
+		margin-left: 22px;
+	}
+}

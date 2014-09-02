@@ -1,0 +1,46 @@
+// Grid Component
+
+.clearfix
+{
+	@extend %clearfix;
+}
+
+.clear
+{
+	clear: both;
+}
+
+.trailer
+{
+	margin-bottom: $grid-padding;
+}
+
+.half-trailer
+{
+	margin-bottom: $half-grid-padding;
+}
+
+.quarter-trailer
+{
+	margin-bottom: $quarter-grid-padding;
+}
+
+.leader
+{
+	margin-top: $grid-padding;
+}
+
+.leader-trailer
+{
+	margin-top: $half-grid-padding;
+}
+
+.leader-trailer
+{
+	margin-top: $quarter-grid-padding;
+}
+
+.align-right
+{
+	float: right;
+}

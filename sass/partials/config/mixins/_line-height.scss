@@ -1,0 +1,14 @@
+// Shortcut mixin to calculate line height
+
+@mixin line-height($line-numbers: 1, $border-height: 0)
+{
+	@if $border-height == 0
+	{
+		line-height: $base-line-height * $line-numbers;
+	}
+
+	@else if $border-height != 0
+	{
+		line-height: ($base-line-height * $line-numbers) - $border-height;
+	}
+}

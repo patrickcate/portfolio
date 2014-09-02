@@ -1,0 +1,35 @@
+ul, ol, dl
+{
+	// margin: 0 0 rhythm() 0;
+	margin: 0 0 $grid-padding 0;
+	padding: 0 0 0 ($half-grid-padding + $quarter-grid-padding);
+}
+
+ul, ol
+{
+	list-style-position: outside;
+}
+
+nav
+{
+	ul, ol, li, li + li
+	{
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		vertical-align: middle;
+	}
+}
+
+dl
+{
+
+}
+
+li
+{
+	+ li
+	{
+		margin-top: $half-grid-padding;
+	}
+}

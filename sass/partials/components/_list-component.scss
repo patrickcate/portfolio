@@ -1,0 +1,47 @@
+.list--column
+{
+	text-align: center;
+
+	+ .list--column
+	{
+		@include breakpoint($break-tiny)
+		{
+			margin-left: $grid-padding;
+		}
+	}
+}
+
+.list--column__header
+{
+	margin-bottom: $quarter-grid-padding;
+	text-align: center;
+	text-transform: uppercase;
+	color: $black;
+}
+
+.list--column__item
+{
+	display: inline-block;
+	vertical-align: top;
+	text-align: left;
+
+	+ .list--column__item
+	{
+		margin-left: $grid-padding;
+	}
+
+	&:first-child
+	{
+		// margin-right: $grid-padding;
+	}
+}
+
+.list--skills
+{
+
+}
+
+.list--tools
+{
+
+}

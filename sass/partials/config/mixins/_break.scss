@@ -1,0 +1,150 @@
+// Media Query Mixin
+
+@mixin break($media, $media-direction: up)
+{
+	@if ($media == tiny)
+	{
+		@if($media-direction == up)
+		{
+			@media only screen and (min-width: $breakpoint-tiny)
+			{
+				@content;
+			}
+		}
+
+		@if($media-direction == down)
+		{
+			@media only screen and (max-width: $breakpoint-tiny - convert-length(1px, em))
+			{
+				@content;
+			}
+		}
+	}
+
+	@else if ($media == small)
+	{
+		@if($media-direction == up)
+		{
+			@media only screen and (min-width: $breakpoint-small)
+			{
+				@content;
+			}
+		}
+
+		@if($media-direction == down)
+		{
+			@media only screen and (max-width: $breakpoint-small - convert-length(1px, em))
+			{
+				@content;
+			}
+		}
+	}
+
+	@else if ($media == medium)
+	{
+		@if($media-direction == up)
+		{
+			@media only screen and (min-width: $breakpoint-medium)
+			{
+				@content;
+			}
+		}
+
+		@if($media-direction == down)
+		{
+			@media only screen and (max-width: $breakpoint-medium - convert-length(1px, em))
+			{
+				@content;
+			}
+		}
+	}
+
+	@else if ($media == large)
+	{
+	@if($media-direction == up)
+		{
+			@media only screen and (min-width: $breakpoint-large)
+			{
+				@content;
+			}
+		}
+
+		@if($media-direction == down)
+		{
+			@media only screen and (max-width: $breakpoint-large - convert-length(1px, em))
+			{
+				@content;
+			}
+		}
+	}
+
+	@else if ($media == huge)
+	{
+		@if($media-direction == up)
+		{
+			@media only screen and (min-width: $breakpoint-huge)
+			{
+				@content;
+			}
+		}
+
+		@if($media-direction == down)
+		{
+			@media only screen and (max-width: $breakpoint-huge - convert-length(1px, em))
+			{
+				@content;
+			}
+		}
+	}
+
+	@else if ($media == portrait)
+	{
+		@media only screen and (orientation portrait)
+		{
+			@content;
+		}
+	}
+
+	@else if ($media == landscape)
+	{
+		@media only screen and (orientation landscape)
+		{
+			@content;
+		}
+	}
+
+	@else if ($media == print)
+	{
+		@media only print
+		{
+			@content;
+		}
+	}
+
+	@else if ($media == retina)
+	{
+		@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 1.5/1), only screen and (min-resolution: 144dpi), only screen and (min-resolution: 1.5dppx)
+		{
+			@content;
+		}
+	}
+
+	@else
+	{
+		@if($media-direction == up)
+		{
+			@media only screen and (min-width: $media)
+			{
+				@content;
+			}
+		}
+
+		@if($media-direction == down)
+		{
+			@media only screen and (max-width: $media)
+			{
+				@content;
+			}
+		}
+	}
+}

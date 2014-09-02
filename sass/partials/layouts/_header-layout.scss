@@ -1,0 +1,97 @@
+.l-header
+{
+	@extend %noise-background;
+	transition: transform .25s ease-in-out;
+	background-color: rgba($blue, .95);
+	color: $white;
+	text-shadow: $drop-text-shadow;
+	width: 100%;
+	z-index: 999;
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: auto;
+	padding: 0;
+
+	// position: sticky;
+	// -webkit-backface-visibility: hidden;
+
+	// .csspositionsticky &
+	// {
+	// 	position: sticky;
+
+	// 	+ .l-content
+	// 	{
+	// 		padding-top: 0!important;
+	// 	}
+	// }
+
+	&.headroom--unpinned
+	{
+		transform: translateY( -#{image-height('logo/logo.png') + $half-grid-padding} );
+	}
+
+	&.headroom--pinned
+	{
+		transform: translateY(0);
+	}
+
+	@include breakpoint( (min-height $break-small, $break-small) )
+	{
+		&.headroom--unpinned, &.headroom--pinned
+		{
+			transform: translateY(0);
+		}
+	}
+
+	// @include breakpoint( (min-height $break-small) )
+	// {
+	// 	&.l-header.headroom--unpinned, &.l-header.headroom--pinned
+	// 	{
+	// 		transform: translateY(0);
+	// 	}
+	// }
+}
+
+.l-header__inner
+{
+	@extend %clearfix;
+	@extend %container;
+	padding: $half-grid-padding $grid-padding 0 $grid-padding;
+
+	@include breakpoint($break-medium)
+	{
+		padding: $half-grid-padding $grid-padding;
+	}
+}
+
+.l-headline
+{
+	@extend %clearfix;
+	// @include span(first 12);
+
+	@include breakpoint($break-medium)
+	{
+		// float: left;
+		// width: 400px;
+		@include span(first 9);
+	}
+}
+
+.site-logo
+{
+	display: block;
+	float: left;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-image: image-url('logo/logo.png');
+	height: image-height('logo/logo.png');
+	width: image-width('logo/logo.png');
+	margin-right: $half-grid-padding;
+}
+
+.site-headline
+{
+	margin-top: $half-grid-padding;
+}

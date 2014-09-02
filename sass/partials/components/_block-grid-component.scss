@@ -1,0 +1,103 @@
+
+.block-grid
+{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.block-grid__item
+{
+	margin: 0;
+	padding: 0;
+
+	@include breakpoint($break-small)
+	{
+		@include span(12);
+
+		&:first-child
+		{
+			@include first;
+		}
+	}
+}
+
+.block-grid--tools
+{
+	.block-grid__item
+	{
+		&:first-child
+		{
+			@include first;
+		}
+
+		@include breakpoint($break-tiny)
+		{
+			@include span(12);
+		}
+
+		@include breakpoint($break-small)
+		{
+			@include span(8);
+		}
+	}
+}
+
+
+%block-grid__icon
+{
+	width: span(5);
+	background-repeat: no-repeat;
+	background-size: contain;
+	display: table-cell;
+	padding-bottom: $grid-padding;
+}
+
+.block-grid__icon--print-design
+{
+	@extend %block-grid__icon;
+	background-image: image-url('icon/icon--print-design.png');
+}
+
+.block-grid__icon--web-design
+{
+	@extend %block-grid__icon;
+	background-image: image-url('icon/icon--web-design.png');
+}
+
+.block-grid__icon--identity-design
+{
+	@extend %block-grid__icon;
+	background-image: image-url('icon/icon--identity-design.png');
+}
+
+.block-grid__icon--drupal-theming
+{
+	@extend %block-grid__icon;
+	background-image: image-url('icon/icon--drupal-theming.png');
+}
+
+.block-grid__icon--app-design
+{
+	@extend %block-grid__icon;
+	background-image: image-url('icon/icon--app-design.png');
+}
+
+.block-grid__icon--email-design
+{
+	@extend %block-grid__icon;
+	background-image: image-url('icon/icon--email-design.png');
+}
+
+.block-grid__content
+{
+	// @include span(18);
+	width: span(19);
+	padding-left: $grid-padding;
+	display: table-cell;
+}
+
+.block-grid__title
+{
+	text-transform: uppercase;
+}

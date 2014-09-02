@@ -1,0 +1,184 @@
+%noise-background
+{
+	background-image: image-url('bg/noise-background.png');
+}
+
+.l-content
+{
+	padding-top: 126px;
+
+	@include breakpoint($break-medium)
+	{
+		padding-top: (image-height('logo/logo.png') + $grid-padding);
+	}
+}
+
+.l-content__inner
+{
+	@extend %clearfix;
+}
+
+.l-section
+{
+	@extend %noise-background;
+	position: relative;
+
+	&:nth-of-type(odd)
+	{
+		background-color: $content-background-color;
+	}
+
+	+ .l-section
+	{
+		border-top: 1px solid $content-border-color;
+	}
+}
+
+.l-section__content
+{
+	@extend %container;
+	padding-top: $grid-padding;
+	padding-bottom: $grid-padding;
+}
+
+.l-section__divider
+{
+	// background-color: red;
+	// text-align: center;
+	background: transparent inline-image('bg/section-divider.png') repeat-x center scroll;
+	// position: absolute;
+	height: image-height('bg/section-divider.png');
+
+	&:before
+	{
+		// content: '';
+		// display: block;
+		// height: image-height('icon/icon--about.png');
+		// width: image-width('icon/icon--about.png');
+		// margin: 0 auto;
+		// height: 4px;
+		// width: 100%;
+		// background-color: $blue;
+	}
+
+	+ .l-section
+	{
+		border-top: none;
+	}
+
+	// + .l-section__content
+	// {
+	// 	padding-bottom: 0;
+	// }
+}
+
+.l-section__icon
+{
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: -#{image-height('icon/icon--about.png') / 2};
+	height: image-height('icon/icon--about.png');
+	width: image-width('icon/icon--about.png');
+	margin: 0 auto;
+}
+
+.l-section__icon--about
+{
+// 	&:before
+// 	{
+	background: transparent image-url('icon/icon--about.png') no-repeat 0 0 scroll;
+	// }
+}
+
+.l-section__icon--skills
+{
+	// &:before
+	// {
+		background: transparent image-url('icon/icon--skills.png') no-repeat 0 0 scroll;
+	// }
+}
+
+.l-section__icon--tools
+{
+	// &:before
+	// {
+		background: transparent image-url('icon/icon--tools.png') no-repeat 0 0 scroll;
+	// }
+}
+
+.l-section__icon--work
+{
+	// &:before
+	// {
+		background: transparent image-url('icon/icon--work.png') no-repeat 0 0 scroll;
+	// }
+}
+
+.l-section__icon--contact
+{
+	// &:before
+	// {
+		background: transparent image-url('icon/icon--contact.png') no-repeat 0 0 scroll;
+	// }
+}
+
+%section-divider__icon
+{
+	// background: transparent url('http://placehold.it/20x20') no-repeat;
+	// height: image-height('icon/icon--about.png');
+	// width: image-width('icon/icon--about.png');
+	// margin: 0 auto;
+}
+
+// .section-divider__icon--intro
+// {
+// 	background: transparent url('icon/icon--about.png') no-repeat 0 0 scroll;
+// }
+
+
+.l-section__header
+{
+	text-align: center;
+}
+
+.l-section__title
+{
+	color: $blue;
+	margin: $quarter-grid-padding 0;
+}
+
+.l-section__subtitle
+{
+	display: inline;
+	font-size: $h4-font-size;
+}
+
+
+
+
+	// @include span(12);
+
+	// &:nth-child(even)
+	// {
+	// 	@include span(last 12);
+	// }
+
+	// @include breakpoint($break-small)
+	// {
+	// 	@include span(6);
+
+	// 	&:last-child
+	// 	{
+	// 		@include span(last 6);
+	// 	}
+	// }
+
+
+// .l-section-anchor
+// {
+// 	z-index: -1;
+// 	position: relative;
+// 	top: -#{( image-height('logo/logo.png') + image-height('icon/icon--about.png') )};
+// 	clear: both;
+// }

@@ -1,0 +1,11 @@
+%container
+{
+	@include container;
+	padding-left: $grid-padding;
+	padding-right: $grid-padding;
+}
+
+%clearfix
+{
+	@include clearfix;
+}

@@ -1,0 +1,19 @@
+.l-footer
+{
+	@extend %noise-background;
+	background-color: $blue;
+	// background-image: image-url('bg/noise-background.png');
+	color: $white;
+	// @extend %clearfix;
+}
+
+.l-footer__inner
+{
+	@extend %container;
+	padding: ($grid-padding * 2) $grid-padding;
+}
+
+.l-footer__copyright
+{
+	text-align: center;
+}

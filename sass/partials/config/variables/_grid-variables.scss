@@ -1,0 +1,51 @@
+$border-box-sizing: true;
+$breakpoint-to-ems: true;
+
+$container-style: magic;
+$total-columns: 24;
+
+// $column-width: rhythm(.5);
+$column-width: $base-line-height;
+$gutter-width: $column-width;
+
+$grid-padding: convert-length($gutter-width, px);
+$half-gutter-width: convert-length(($grid-padding / 2), px);
+$half-grid-padding: convert-length(($grid-padding / 2), px);
+$quarter-gutter-width: convert-length(($grid-padding / 4), px);
+$quarter-grid-padding: convert-length(($grid-padding / 4), px);
+
+$susy: (
+        // the basics
+        columns: $total-columns,
+        gutters: $gutter-width / $column-width,
+       	column-width: $column-width,
+        global-box-sizing: border-box,
+        gutter-position: before,
+
+        // advanced
+        // container: $container-width,
+        math: fluid,
+        flow: ltr,
+        last-flow: from,
+        );
+
+$breakpoint-list: 'tiny', 'small', 'medium', 'large', 'huge';
+
+//$breakpoint-mini: convert-length(459px, em);
+$break-tiny: 480px;
+$break-small: 700px;
+$break-medium: 820px;
+$break-large: 920px;
+$break-huge: 960px;
+$break-retina: min-resolution 1.5dppx;
+
+
+$default-border-radius: 6px;
+// $tab-border-radius: $default-border-radius;
+$photo-border: 5px;
+$photo-size--small: 150px;
+$photo-size--medium: 300px;
+$photo-size--large: 350px;
+
+$drop-shadow: 0 2px 8px 0 rgba($black, 0.5);
+$lightbox-shadow: 0 2px 8px 0 $black;
