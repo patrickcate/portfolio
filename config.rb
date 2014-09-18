@@ -13,6 +13,7 @@ generated_images_dir = images_dir + "/generated"
 require 'compass'
 require 'susy'
 require 'breakpoint'
+require 'autoprefixer-rails'
 # require 'sass-globbing'
 require 'oily_png'
 
@@ -68,5 +69,20 @@ on_stylesheet_saved do |filename|
     File.open(filename, 'w+') do |f|
       f << css.gsub(%r{-s[a-z0-9]{10}\.png}, '.png')
     end
+  end
+end
+
+on_stylesheet_saved do |file|
+  css = File.read(file)
+  File.open(file, 'w') do |io|
+    io << AutoprefixerRails.process(css, browsers: [
+      'last 6 Chrome versions',
+      'last 6 Firefox versions',
+      'last 4 iOS versions',
+      'last 4 Safari versions',
+      'Explorer >= 9',
+      'last 5 Opera versions',
+      'Android >= 4'
+      ])
   end
 end

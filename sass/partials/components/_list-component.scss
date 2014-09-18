@@ -1,10 +1,12 @@
 .list--column
 {
-	text-align: center;
+	text-align: left;
 
-	+ .list--column
+	@include breakpoint($break-tiny)
 	{
-		@include breakpoint($break-tiny)
+		text-align: center;
+
+		+ .list--column
 		{
 			margin-left: $grid-padding;
 		}
@@ -25,14 +27,12 @@
 	vertical-align: top;
 	text-align: left;
 
-	+ .list--column__item
+	@include breakpoint($break-medium)
 	{
-		margin-left: $grid-padding;
-	}
-
-	&:first-child
-	{
-		// margin-right: $grid-padding;
+		+ .list--column__item
+		{
+			margin-left: $grid-padding;
+		}
 	}
 }
 

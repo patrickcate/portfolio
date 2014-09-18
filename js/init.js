@@ -7,11 +7,11 @@
 			// vertical offset in px before element is first unpinned
 			offset: 0,
 			// or scroll tolerance per direction
-			// tolerance:
-			// {
-			// 	down: 5,
-			// 	up: 0
-			// },
+			tolerance:
+			{
+				down: 0,
+				up: 0
+			},
 			// css classes to apply
 			// classes:
 			// {
@@ -28,33 +28,33 @@
 			// },
 		});
 
-		$('.js-initially-hidden').onScreen(
-		{
-			container: window,
-			direction: 'vertical',
-			doIn: function()
-			{
-				$(this).addClass('is-onscreen');
-			},
-			doOut: function()
-			{
+		// $('.js-initially-hidden').onScreen(
+		// {
+		// 	container: window,
+		// 	direction: 'vertical',
+		// 	doIn: function()
+		// 	{
+		// 		$(this).addClass('is-onscreen');
+		// 	},
+		// 	doOut: function()
+		// 	{
 
-			},
-			tolerance: 0,
-			throttle: 0,
-			toggleClass: false,
-			lazyAttr: null,
-			lazyPlaceholder: 'someImage.jpg',
-			debug: false
-		});
+		// 	},
+		// 	tolerance: 0,
+		// 	throttle: 0,
+		// 	toggleClass: false,
+		// 	lazyAttr: null,
+		// 	lazyPlaceholder: 'someImage.jpg',
+		// 	debug: false
+		// });
 
 		$('.gallery').each(function()
 		{
 			$(this).magnificPopup({
 				type: 'image',
 				delegate: 'a',
-				// mainClass: 'lightbox-popup',
-				disableOn: 400,
+				mainClass: 'lightbox-popup',
+				// disableOn: 400,
 				closeOnBgClick: true,
 				closeOnContentClick: true,
 				showCloseBtn: true,
@@ -82,28 +82,30 @@
 					{
 						// console.log(this.currItem);
 						// re-appends controls inside the main container
-						// this.contentContainer.append(this.arrowLeft.add(this.arrowRight));
+						this.contentContainer.append(this.arrowLeft.add(this.arrowRight));
 					}
 				}
 
 			});
 		});
 
-		$('#js-nav .nav__link').mPageScroll2id(
-		{
-			layout: 'vertical',
-			offset: '150',
-			scrollSpeed: 750,
-			autoScrollSpeed: true,
-			pageEndSmoothScroll: true,
-			forceSingleHighlight: false,
-			// disablePluginBelow: 770,
-			keepHighlightUntilNext: true,
-			scrollEasing: 'easeInOutExpo',
-			scrollingEasing: 'easeInOutExpo',
-			clickedClass: 'nav__link--is-active',
-			highlightClass: 'nav__link--is-active',
-		});
+		// $('#js-nav .nav__link').mPageScroll2id(
+		// {
+		// 	layout: 'vertical',
+		// 	offset: '150',
+		// 	scrollSpeed: 750,
+		// 	autoScrollSpeed: true,
+		// 	pageEndSmoothScroll: true,
+		// 	forceSingleHighlight: false,
+		// 	// disablePluginBelow: 770,
+		// 	keepHighlightUntilNext: true,
+		// 	scrollEasing: 'easeInOutExpo',
+		// 	scrollingEasing: 'easeInOutExpo',
+		// 	clickedClass: 'nav__link--is-active',
+		// 	highlightClass: 'nav__link--is-active',
+		// });
+
+
 
 		// $(window).resize(function()
 		// {
@@ -112,6 +114,36 @@
 		// 	$.mPageScroll2id('scrollTo', to);
 		// });
 
-	});
+// $(document).load(function()
+// {
+// 	console.log('This worked');
+
+// 	var myScroll = new IScroll('#l-page',
+// 	{
+// 		mouseWheel: true,
+// 		scrollbars: true,
+// 		bounce: true,
+// 		bounceEasing: 'elastic',
+// 		bounceTime: 1200,
+// 	});
+
+// 	document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+// });
+
+});
 
 }( jQuery ));
+
+
+// // console.log('This worked');
+// var myScroll = new IScroll('#js-content',
+// {
+// 	mouseWheel: true,
+// 	scrollbars: false,
+// 	bounce: true,
+// 	bounceEasing: 'elastic',
+// 	bounceTime: 1200,
+// });
+
+// document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+// );

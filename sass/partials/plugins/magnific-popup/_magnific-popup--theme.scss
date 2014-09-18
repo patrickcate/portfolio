@@ -34,6 +34,14 @@
 	{
 		transform: scale(1);
 	}
+
+	&.lightbox-popup
+	{
+		&:hover
+		{
+			cursor: zoom-out;
+		}
+	}
 }
 
 .mfp-bg
@@ -57,9 +65,9 @@
 	background-color: $black;
 	display: inline-block;
 	left: auto;
-	top: -10px;
-	right: -15px;
+	right: 0;
 	opacity: 1;
+	top: -15px;
 	width: $grid-padding * 2;
 	height: $grid-padding * 2;
 	border: 3px solid $white;
@@ -69,6 +77,12 @@
 	line-height: 1;
 	position: absolute;
 	text-align: center;
+
+	@include breakpoint($break-medium)
+	{
+		top: -10px;
+		right: -15px;
+	}
 }
 
 .mfp-counter
@@ -86,6 +100,12 @@
 	background-color: $white;
 	padding: $half-grid-padding;
 	box-shadow: $lightbox-shadow;
+	// border-radius: 0 $grid-padding 0 0;
+
+	// @include breakpoint($break-medium)
+	// {
+	// 	border-radius: 0;
+	// }
 
 	// border: 1px solid $image-border-color;
 

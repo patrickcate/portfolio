@@ -12,8 +12,12 @@ plugins:        ./_plugins
 layouts:        ./_layouts
 include:        ['.htaccess']
 
-# collections:
-# - _portfolio
+# Serving
+port: 3000
+host: localhost
+
+collections:
+- _projects
 
 exclude: [
     '*.json',

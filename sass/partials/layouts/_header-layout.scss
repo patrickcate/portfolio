@@ -6,7 +6,7 @@
 	color: $white;
 	text-shadow: $drop-text-shadow;
 	width: 100%;
-	z-index: 999;
+	z-index: 1;
 	position: fixed;
 	left: 0;
 	right: 0;
@@ -27,23 +27,23 @@
 	// 	}
 	// }
 
-	&.headroom--unpinned
-	{
-		transform: translateY( -#{image-height('logo/logo.png') + $half-grid-padding} );
-	}
+	// &.headroom--unpinned
+	// {
+	// 	transform: translateY( -#{image-height('logo/logo.png') + $half-grid-padding} );
+	// }
 
-	&.headroom--pinned
-	{
-		transform: translateY(0);
-	}
+	// &.headroom--pinned
+	// {
+	// 	transform: translateY(0);
+	// }
 
-	@include breakpoint( (min-height $break-small, $break-small) )
-	{
-		&.headroom--unpinned, &.headroom--pinned
-		{
-			transform: translateY(0);
-		}
-	}
+	// @include breakpoint( (min-height $break-small, $break-small) )
+	// {
+	// 	&.headroom--unpinned, &.headroom--pinned
+	// 	{
+	// 		transform: translateY(0);
+	// 	}
+	// }
 
 	// @include breakpoint( (min-height $break-small) )
 	// {
@@ -56,42 +56,61 @@
 
 .l-header__inner
 {
-	@extend %clearfix;
+	// @extend %clearfix;
 	@extend %container;
 	padding: $half-grid-padding $grid-padding 0 $grid-padding;
 
-	@include breakpoint($break-medium)
+	@include breakpoint($break-small)
 	{
-		padding: $half-grid-padding $grid-padding;
+		padding: $half-grid-padding $grid-padding $quarter-grid-padding $grid-padding;
 	}
 }
 
 .l-headline
 {
-	@extend %clearfix;
+	// @extend %clearfix;
 	// @include span(first 12);
 
-	@include breakpoint($break-medium)
+	@include breakpoint($break-small)
 	{
-		// float: left;
-		// width: 400px;
-		@include span(first 9);
+		float: left;
+		width: 260px;
+		// @include span(first 10);
 	}
 }
+
+$logo-size--small: 50px;
+$logo-size--medium: 75px;
 
 .site-logo
 {
 	display: block;
 	float: left;
-	background-repeat: no-repeat;
-	background-size: contain;
-	background-image: image-url('logo/logo.png');
-	height: image-height('logo/logo.png');
-	width: image-width('logo/logo.png');
+	// background-repeat: no-repeat;
+	// background-size: contain;
+	// background-image: image-url('logo/logo.png');
+	// height: image-height('logo/logo.png');
+	// width: image-width('logo/logo.png');
 	margin-right: $half-grid-padding;
+
+	.logo
+	{
+		width: $logo-size--small - 1px;
+		height: $logo-size--small;
+		// filter: drop-shadow($drop-text-shadow);
+
+		@include breakpoint($break-small)
+		{
+			width: $logo-size--medium - 1px;
+			height: $logo-size--medium;
+		}
+	}
 }
 
 .site-headline
 {
-	margin-top: $half-grid-padding;
+	@include breakpoint($break-small)
+	{
+		margin-top: $half-grid-padding;
+	}
 }

@@ -63,6 +63,8 @@
 		/* 2 */
 		cursor: pointer;
 		/* 3 */
+		 -webkit-font-smoothing: antialiased; /* Set the anti-alias settings. Alternative: subpixel-antialiased */
+    -moz-osx-font-smoothing: grayscale;
 	}
 
 /**

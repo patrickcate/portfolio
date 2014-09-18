@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-<!--[if IE 9]>         <html class="no-js lt-ie10"> <![endif]-->
-<!--[if gt IE 9]><!--> <html class="no-js"> <!--<![endif]-->
+<!--[if IE 9]><html class="no-js lt-ie10"><![endif]-->
+<!--[if gt IE 9]><!--><html class="no-js"><!--<![endif]-->
 {% include head.html %}
 <body>
-	<div id="l-page" class="l-page">
-	<!-- <nav class="l-nav">
-		<div class="l-nav__inner"></div>
-	</nav> -->
+	{% include svg-sprite.svg %}
 	{% include header.html %}
+	<main id="js-content" class="l-content">
+		<div id="js-content__inner" class="l-content__inner">
 
-	{% include main.html %}
+			{% include main.html %}
+			{{ content }}
+			{% include footer.html %}
+		</div>
 
-	{% include footer.html %}
-
-</div>
+	</main>
 </body>
 </html>

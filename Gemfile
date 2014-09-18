@@ -7,3 +7,4 @@ gem "sass", "~> 3.3"
 gem "susy", "~> 2.1"
 gem "breakpoint", "~> 2.4"
 gem 'oily_png'
+gem 'autoprefixer-rails', '~> 2.2'  # AutoPrefixer rails gem.

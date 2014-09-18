@@ -33,8 +33,9 @@ $breakpoint-list: 'tiny', 'small', 'medium', 'large', 'huge';
 
 //$breakpoint-mini: convert-length(459px, em);
 $break-tiny: 480px;
-$break-small: 700px;
-$break-medium: 820px;
+// $break-tempsmall: 600px;
+$break-small: 600px;
+$break-medium: 800px;
 $break-large: 920px;
 $break-huge: 960px;
 $break-retina: min-resolution 1.5dppx;

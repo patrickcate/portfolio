@@ -1,0 +1,24 @@
+
+.icon--pdf
+{
+	&:before
+	{
+		@extend %icon--pdf;
+	}
+}
+
+.icon--send
+{
+	&:before
+	{
+		@extend %icon--send;
+	}
+}
+
+.icon--download
+{
+	&:before
+	{
+		@extend %icon--download;
+	}
+}

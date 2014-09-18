@@ -1,6 +1,8 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    autoprefixer-rails (2.2.0.20140804)
+      execjs
     breakpoint (2.4.2)
       sass (~> 3.3.0)
       sassy-maps (< 1.0.0)
@@ -17,6 +19,7 @@ GEM
       sass (>= 3.3.0, < 3.5)
     compass-import-once (1.0.4)
       sass (>= 3.2, < 3.5)
+    execjs (2.2.1)
     ffi (1.9.3)
     json (1.8.1)
     listen (1.1.6)
@@ -41,6 +44,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  autoprefixer-rails (~> 2.2)
   breakpoint (~> 2.4)
   compass (~> 1.0.0.alpha)
   oily_png

@@ -1,0 +1,43 @@
+%icon--before
+{
+	&:before
+	{
+		display: inline-block;
+		vertical-align: inherit;
+		text-decoration: none;
+		text-transform: none;
+		font-weight: normal;
+		font-style: normal;
+		font-family: $icon-font;
+		line-height: 1;
+		speak: none;
+		margin-right: $quarter-grid-padding + ($quarter-grid-padding / 2);
+	}
+}
+
+%icon--pdf
+{
+	&:before
+	{
+		@extend %icon--before;
+		content: "\e603";
+	}
+}
+
+%icon--send
+{
+	&:before
+	{
+		@extend %icon--before;
+		content: "\e604";
+	}
+}
+
+%icon--download
+{
+	&:before
+	{
+		@extend %icon--before;
+		content: "\e605";
+	}
+}

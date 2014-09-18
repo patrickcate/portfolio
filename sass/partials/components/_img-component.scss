@@ -43,8 +43,14 @@
 
 		&:after
 		{
-			background: transparent image-url('icon/icon--zoom.png') no-repeat center center scroll;
+			background: transparent image-url('icons/icon--zoom.png') no-repeat center center scroll;
 			transform: scale(.85, .85);
+
+			@include breakpoint($break-retina)
+			{
+				background-image: image-url('icons/icon--zoom2x.png');
+				background-size: image-height('icons/icon--zoom2x.png') / 2;
+			}
 		}
 
 		&:hover
@@ -54,13 +60,13 @@
 			&:before
 			{
 				opacity: .75;
-				z-index: 1000;
+				z-index: 100;
 			}
 
 			&:after
 			{
 				opacity: 1;
-				z-index: 1100;
+				z-index: 200;
 				transform: scale(1,1);
 			}
 		}

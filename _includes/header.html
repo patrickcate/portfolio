@@ -1,17 +1,19 @@
 <header id="js-header" class="l-header">
 	<div class="l-header__inner">
 		<div class="l-headline">
-			<a href="index.html" class="site-logo"></a>
+			<a href="index.html" class="site-logo"><svg class="logo"><use xlink:href="#logo"></use></svg></a>
 			<h2 class="site-headline">Patrick Cate</h2>
 			<h5 class="site-tagline">Graphic/Web Designer</h5>
 		</div>
 		<nav class="l-navigation">
 			<ul id="js-nav" class="nav">
-				<li class="nav__item nav__item--about"><a href="#l-anchor--about" class="nav__link nav__link--about">About</a></li>
-				<li class="nav__item nav__item--skills"><a href="#l-anchor--skills" class="nav__link nav__link--skills">Skills</a></li>
-				<li class="nav__item nav__item--tools"><a href="#l-anchor--tools" class="nav__link nav__link--tools">Tools</a></li>
-				<li class="nav__item nav__item--work"><a href="#l-anchor--work" class="nav__link nav__link--work">Work</a></li>
-				<li class="nav__item nav__item--contact"><a href="#l-anchor--contact" class="nav__link nav__link--contact">Contact</a></li>
+				{% for link in site.data.navigation %}
+				{% if page.id == link.id %}
+				<li class="nav__item nav__item--{{link.id}}"><a href="{{link.url}}" class="nav__link nav__link--{{link.id}} nav__link--is-active-first"><span class="nav__text">{{link.id | capitalize}}</span></a></li>
+				{% else %}
+				<li class="nav__item nav__item--{{link.id}}"><a href="{{link.url}}" class="nav__link nav__link--{{link.id}}"><span class="nav__text">{{link.id | capitalize}}</span></a></li>
+				{% endif %}
+				{% endfor %}
 			</ul>
 		</nav>
 	</div>

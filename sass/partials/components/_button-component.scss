@@ -10,10 +10,11 @@
 	border: none;
 	padding: $half-grid-padding $grid-padding;
 	text-decoration: none;
-	border: 1px solid shade($blue, 25%);
+	// border: 1px solid shade($blue, 25%);
 	margin-bottom: $grid-padding;
 	float: left;
 	display: block;
+	border-radius: $quarter-grid-padding;
 
 	&:hover
 	{
@@ -28,16 +29,16 @@
 	}
 }
 
-.icon--pdf
-{
-	&:before
-	{
-		content: '';
-		display: inline-block;
-		vertical-align: text-bottom;
-		margin-right: 5px;
-		background: transparent image-url('icon/icon--pdf.png') no-repeat 0 0 scroll;
-		height: image-height('icon/icon--pdf.png');
-		width: image-width('icon/icon--pdf.png');
-	}
-}
+// .icon--pdf
+// {
+// 	&:before
+// 	{
+// 		content: '';
+// 		display: inline-block;
+// 		vertical-align: text-bottom;
+// 		margin-right: 5px;
+// 		background: transparent image-url('icons/icon--pdf.png') no-repeat 0 0 scroll;
+// 		height: image-height('icons/icon--pdf.png');
+// 		width: image-width('icons/icon--pdf.png');
+// 	}
+// }

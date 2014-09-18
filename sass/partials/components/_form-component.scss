@@ -13,17 +13,24 @@
 {
 	display: block;
 	margin-bottom: $half-grid-padding;
+	vertical-align: middle;
 }
 
 .form__label
 {
-	text-align: right;
-	margin-right: $quarter-grid-padding;
-	width: 35%;
-	max-width: 150px;
-	cursor: pointer;
 	display: inline-block;
-	vertical-align: middle;
+	cursor: pointer;
+	// vertical-align: middle;
+	// margin-bottom: 2px;
+
+	@include breakpoint($break-tiny)
+	{
+		width: 35%;
+		max-width: 150px;
+		display: inline-block;
+		text-align: right;
+		margin-right: $quarter-grid-padding;
+	}
 }
 
 .form__label--textarea
@@ -33,16 +40,36 @@
 
 .form__element
 {
-	text-align: left;
-	width: 60%;
-	max-width: 300px;
 	display: inline-block;
-	padding: 2px;
+	width: 100%;
+
+	@include breakpoint($break-tiny)
+	{
+		display: inline-block;
+		width: 60%;
+		max-width: 300px;
+	}
+}
+
+.form__textfield, .form__textarea
+{
+	transition: border .25s ease-in-out;
+	font-family: $mono-font;
+	background-color: $white;
+	padding: $quarter-grid-padding;
+	border: 1px solid $image-border-color;
+	text-align: left;
+
+	&:focus
+	{
+		border-color: $blue;
+		border-left-width: $quarter-grid-padding;
+	}
 }
 
 .form__textarea
 {
-	display: inline-block;
+	// display: inline-block;
 	min-height: 200px;
 	resize: vertical;
 	vertical-align: top;
@@ -54,22 +81,39 @@
 
 .form__button
 {
-	@extend %h4;
-	transition: background-color 0.25s ease-in-out;
-	text-align: center;
-	text-shadow: $drop-text-shadow;
+	@extend .button;
+	// @extend %h4;
+	// transition: background-color 0.25s ease-in-out;
+	// text-align: center;
+	// text-shadow: $drop-text-shadow;
 	// width: 60%;
 	// max-width: 300px;
 	// margin-left: 35%;
-	background-color: $blue;
-	color: $white;
-	border: none;
-	padding: $half-grid-padding 0;
-	border: 1px solid shade($blue, 25%);
+	// background-color: $blue;
+	// color: $white;
+	// border: none;
+	float: none;
+	margin: 0;
+	// display: inline-block;
+	// padding: $half-grid-padding 0;
+	// border: 1px solid shade($blue, 25%);
+
+	&:before
+	{
+		transition: transform 0.25s ease-in-out;
+	}
 
 	&:hover
 	{
 		background-color: shade($blue, 25%);
+
+		.no-touch &
+		{
+			&:before
+			{
+				transform: translateY(-3px);
+			}
+		}
 	}
 
 	@include breakpoint($break-huge)

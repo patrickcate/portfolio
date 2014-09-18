@@ -19,16 +19,18 @@
     -moz-osx-font-smoothing: grayscale;
 
     font-size: $browser-default-font-size;
-    height: 100%;
+    // height: 100%;
 	// @include adjust-font-size-to($base-font-size);
 
-	// &.touch
-	// {
-	// 	overflow-x: hidden;
-	// 	overflow-y: scroll; /* has to be scroll, not auto */
-	// 	-webkit-overflow-scrolling: touch;
-	// 	height: 100%;
-	// }
+	&.touch
+	{
+		// overflow: hidden;
+		// overflow-y: scroll; /* has to be scroll, not auto */
+	// // 	// overflow: scroll;
+	// overflow-y: auto;
+		// -webkit-overflow-scrolling: touch;
+		// height: 100%;
+	}
 }
 
 /**
@@ -39,19 +41,26 @@
  {
  	margin: 0;
  	padding: 0;
- 	position: relative;
+ 	// position: relative;
  	color: $text-color;
  	font-family: $base-font-family;
  	font-size: $base-font-size;
  	letter-spacing: normal;
 
-	// .touch &
-	// {
-	// 	overflow-x: hidden;
-	// 	overflow-y: scroll; /* has to be scroll, not auto */
-	// 	-webkit-overflow-scrolling: touch;
-	// 	height: 100%;
-	// }
+	.touch &
+	{
+
+		// overflow: hidden;
+		// overflow-y: scroll; /* has to be scroll, not auto */
+	// // 	// overflow: hidden;
+		// -webkit-overflow-scrolling: touch;
+		// height: 100%;
+	// 	// white-space: nowrap;
+	// overflow-x: scroll;
+	// overflow-y: scroll;
+	// -webkit-overflow-scrolling: touch;
+// overflow-y: auto;
+	}
 
 }
 
