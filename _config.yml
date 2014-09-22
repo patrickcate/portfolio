@@ -16,8 +16,26 @@ include:        ['.htaccess']
 port: 3000
 host: localhost
 
+picture:
+  markup: 'picture'
+  source: '_source/images'
+  output: 'images'
+  presets:
+    default:
+      ppi: [1, 1.5, 2.0]
+      attr:
+        class: "img"
+      # source_large:
+      #   width: '720'
+      #   media: '(min-width: 720)'
+      # source_medium:
+      #   width: '640'
+      #   media: '(min-width: 640px)'
+      source_default:
+        width: '640'
+
 collections:
-- _projects
+- project
 
 exclude: [
     '*.json',

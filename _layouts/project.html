@@ -1,0 +1,40 @@
+<section class="l-section l-section--work">
+	<div class="l-section__content">
+		<article class="gallery">
+			<div class="gallery__content">
+				<div class="gallery__thumbnail">
+					{% for image in page.images limit: 1 %}
+						{% if image.large_url != nil %}
+							<a href="{{ image.large_url }}" class="lightbox-popup {% if image.border == true %}img-border{% endif %}">
+						{% else %}
+							<div{% if image.border == true %} class="img-border"{% endif %}>
+						{% endif %}
+						<img src="{{ image.url }}" alt="{{ image.alt }}" class="img">
+						{% if image.large_url != nil %}
+							</a>
+						{% else %}
+							</div>
+						{% endif %}
+					{% endfor %}
+				</div>
+				<h3 class="gallery__title">{{ page.title }}</h3>
+				<h5 class="gallery__categories">
+					{% assign categories = page.categories | sort: page.category %}
+					{% for category in categories %}{% if forloop.last %}<span class="gallery__category--{{category | classify}}">{{category | titlecase }}</span>{% else %}<span class="gallery__category--{{category | classify}}">{{category | titlecase }}</span>/{% endif %}{% endfor %}</h5>
+				{{ content }}
+			</div>
+			{% assign image_number = page.images | size %}
+			{% if image_number > 1 %}
+				<div class="thumbnail-grid clear">
+					{% for image in page.images offset: 1 %}
+						<div class="thumbnail-grid__item">
+							<a href="{{ image.large_url }}" class="lightbox-popup {% if image.border == true %}img-border{% endif %}">
+								<img src="{{ image.url }}" alt="{{ image.alt }}" class="img">
+							</a>
+						</div>
+					{% endfor %}
+				</div>
+			{% endif %}
+		</article>
+	</div>
+</section>

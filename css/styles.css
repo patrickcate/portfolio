@@ -735,10 +735,6 @@ svg:not(:root) {
     max-width: 350px;
   }
 }
-.l-section--work:nth-child(even) .gallery .gallery__thumbnail {
-  float: right;
-  margin-left: 20px;
-}
 
 .gallery__content {
   margin-bottom: 20px;
@@ -756,7 +752,7 @@ svg:not(:root) {
   color: #b51414;
 }
 
-.gallery__category--identity {
+.gallery__category--identity, .gallery__category--brand-identity {
   color: #5028a3;
 }
 
@@ -1114,16 +1110,16 @@ svg:not(:root) {
 }
 
 .l-content__inner {
-  padding-top: 90px;
+  padding-top: 140px;
 }
 @media (min-width: 22.5em) {
   .l-content__inner {
-    padding-top: 95px;
+    padding-top: 145px;
   }
 }
 @media (min-width: 37.5em) {
   .l-content__inner {
-    padding-top: 90px;
+    padding-top: 140px;
   }
 }
 .touch .l-content__inner {
@@ -1153,8 +1149,8 @@ svg:not(:root) {
 }
 
 .l-section__divider {
-  background: transparent url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAECAIAAADAusJtAAAADklEQVQIW2NgKNrJgIQBIowErfsoY/YAAAAASUVORK5CYII=') repeat-x center scroll;
   height: 4px;
+  background-color: #0074bc;
 }
 .l-section__divider + .l-section {
   border-top: none;
@@ -1168,6 +1164,7 @@ svg:not(:root) {
   height: 50px;
   width: 50px;
   margin: 0 auto;
+  z-index: 1;
 }
 
 .l-section__header {
