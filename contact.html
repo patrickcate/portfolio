@@ -10,23 +10,26 @@ id: contact
 	<div class="l-section__content">
 		<header class="l-section__header"><h2 class="l-section__title"><span class="uppercase">Contact Me</span> <small class="l-section__subtitle">(How you can hire me)</small></h2></header>
 
-		<form action="" class="form">
+		<form action="http://getsimpleform.com/messages?form_api_token=921255819e3dc4cdd301cf95526611a8" method="post" class="form">
 			<p class="text-center">You can contact me directly by filling out the form below:</p>
 			<div class="form__item">
-				<label class="form__label">Your Name:</label>
-				<input type="textfield" class="form__element form__textfield">
+				<label class="form__label is-required">Your Name:</label>
+				<input required type="textfield" name="name" class="form__element form__textfield">
+				<div class="form__instructions is-hidden">Who should I say is e-mailing?</div>
 			</div>
 			<div class="form__item">
 				<label class="form__label">Your E-Mail:</label>
-				<input type="textfield" class="form__element form__textfield">
+				<input required type="email" name="email" class="form__element form__textfield">
+				<div class="form__instructions is-hidden">Where can I reply?</div>
 			</div>
 			<div class="form__item">
 				<label class="form__label form__label--textarea">Message:</label>
-				<textarea class="form__element form__textarea"></textarea>
+				<textarea required name="message" class="form__element form__textarea"></textarea>
+				<div class="form__instructions is-hidden">What's the matter about?</div>
 			</div>
 			<div class="form__item">
 				<div class="form__label"></div>
-				<button class="form__element form__button icon--send" onClick="alert('Successfully Sent!');return false;">Submit</button>
+				<button type="submit" class="form__element form__button icon--send">Submit</button>
 			</div>
 		</form>
 	</div>

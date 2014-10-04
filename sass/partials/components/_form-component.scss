@@ -31,6 +31,17 @@
 		text-align: right;
 		margin-right: $quarter-grid-padding;
 	}
+
+	&.is-required
+	{
+		// &:before
+		// {
+		// 	content: '*';
+		// 	font-family: $serif-font;
+		// 	color: $red;
+		// 	font-size: 30px;
+		// }
+	}
 }
 
 .form__label--textarea
@@ -103,7 +114,7 @@
 		transition: transform 0.25s ease-in-out;
 	}
 
-	&:hover
+	&:hover, &:focus
 	{
 		background-color: shade($blue, 25%);
 

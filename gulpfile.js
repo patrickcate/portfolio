@@ -112,11 +112,12 @@ function handleError(err)
  	.pipe(concat('libs.min.js'))
  	.pipe(gulp.dest('./js/'));
  	gulp.src([
+ 	// './js/links.min.js',
  	'./js/headroom.min.js',
  	'./js/jquery.headroom.min.js',
  	// './js/jquery.onscreen.min.js',
- 	// './js/jquery.malihu.PageScroll2id.min.js',
  	'./js/magnific-popup.min.js',
+
  	])
  	.pipe(concat('scripts.min.js'))
  	.pipe(gulp.dest('./js/'))

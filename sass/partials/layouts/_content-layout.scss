@@ -40,17 +40,18 @@
 .l-content__inner
 {
 	@extend %clearfix;
+	@extend %noise-background;
 
-	padding-top: 100px + ($grid-padding * 2);
+	padding-top: 50px + ($grid-padding * 2);
 
 	@include breakpoint(360px)
 	{
-		padding-top: 100px + $quarter-grid-padding + ($grid-padding * 2);
+		padding-top: 50px + $quarter-grid-padding + ($grid-padding * 2);
 	}
 
 	@include breakpoint($break-small)
 	{
-		padding-top: 100px + ($grid-padding * 2);
+		padding-top: 50px + ($grid-padding * 2);
 	}
 
 	// padding-top: 126px;
@@ -81,6 +82,7 @@
 .l-section
 {
 	@extend %noise-background;
+	background-color: $white;
 	position: relative;
 
 	&:nth-of-type(odd)
@@ -93,6 +95,7 @@
 		border-top: 1px solid $content-border-color;
 	}
 }
+
 
 .l-section__content
 {
@@ -132,6 +135,11 @@
 	// {
 	// 	padding-bottom: 0;
 	// }
+}
+
+.l-section__divider--work, .l-section__divider--contact
+{
+	margin-top: 50px;
 }
 
 $section-icon-size: 50px;
