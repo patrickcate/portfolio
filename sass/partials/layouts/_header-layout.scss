@@ -6,7 +6,7 @@
 	color: $white;
 	text-shadow: $drop-text-shadow;
 	width: 100%;
-	z-index: 1;
+	z-index: 1000;
 	position: fixed;
 	left: 0;
 	right: 0;
@@ -29,12 +29,12 @@
 
 	// &.headroom--unpinned
 	// {
-	// 	transform: translateY( -#{image-height('logo/logo.png') + $half-grid-padding} );
+	// 	transform: translateY( -#{image-height('logo/logo.png') + $half-grid-padding} )!important;
 	// }
 
-	// &.headroom--pinned
+	// &.headroom--pinned, &:hover
 	// {
-	// 	transform: translateY(0);
+	// 	transform: translateY(0)!important;
 	// }
 
 	// @include breakpoint( (min-height $break-small, $break-small) )
@@ -59,10 +59,17 @@
 	// @extend %clearfix;
 	@extend %container;
 	padding: $half-grid-padding $grid-padding 0 $grid-padding;
+	// transition: padding 0.25s ease-in-out;
 
-	@include breakpoint($break-small)
+	@include breakpoint($break-tiny)
 	{
 		padding: $half-grid-padding $grid-padding $quarter-grid-padding $grid-padding;
+
+		// .headroom--unpinned &
+		// {
+		// 	padding: $quarter-grid-padding $grid-padding $quarter-grid-padding $grid-padding;
+		// 	// background-color: red;
+		// }
 	}
 }
 
@@ -70,11 +77,13 @@
 {
 	// @extend %clearfix;
 	// @include span(first 12);
+	// width: 240px;
 
-	@include breakpoint($break-small)
+	@include breakpoint($break-tiny)
 	{
 		float: left;
-		width: 260px;
+		margin-right: $half-grid-padding;
+		// width: 260px;
 		// @include span(first 10);
 	}
 }
@@ -97,20 +106,53 @@ $logo-size--medium: 75px;
 	{
 		width: $logo-size--small - 1px;
 		height: $logo-size--small;
+		transition: height 0.25s ease-in-out, width 0.25s ease-in-out;
 		// filter: drop-shadow($drop-text-shadow);
 
 		@include breakpoint($break-small)
 		{
 			width: $logo-size--medium - 1px;
 			height: $logo-size--medium;
+
+			// .headroom--unpinned &
+			// {
+			// 	width: $logo-size--small - 1px;
+			// 	height: $logo-size--small;
+			// }
 		}
 	}
 }
 
 .site-headline
 {
+	margin-top: $quarter-grid-padding / 2;
+	// @include breakpoint($break-tiny)
+	// {
+	// 	margin-top: $quarter-grid-padding;
+	// }
+
 	@include breakpoint($break-small)
 	{
 		margin-top: $half-grid-padding;
+
+		// .headroom--unpinned &
+		// {
+		// 	margin-top: 0;
+		// }
+	}
+}
+
+.site-tagline
+{
+	@include breakpoint($break-tiny)
+	{
+		font-size: $h6-font-size;
+		line-height: $h6-line-height;
+	}
+
+	@include breakpoint($break-small)
+	{
+		font-size: $h5-font-size;
+		line-height: $h5-line-height;
 	}
 }

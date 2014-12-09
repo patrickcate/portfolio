@@ -12,11 +12,11 @@
 			// var local = document.domain;
 			$('#js-header a').click(function()
 			{
-				var a = $(this).attr('href');
+				// var a = $(this).attr('href');
 	// 			if ( a.match('http://' + local) || a.match('http://www.' + local) )
 	// 			{
 					event.preventDefault();
-					document.location.href = a;
+					document.location.href = $(this).attr('href');;
 	// 			}
 			});
 		}

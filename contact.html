@@ -10,11 +10,13 @@ id: contact
 	<div class="l-section__content">
 		<header class="l-section__header"><h2 class="l-section__title"><span class="uppercase">Contact Me</span> <small class="l-section__subtitle">(How you can hire me)</small></h2></header>
 
-		<form action="http://getsimpleform.com/messages?form_api_token=921255819e3dc4cdd301cf95526611a8" method="post" class="form">
+		<form id="js-contact-form" action="http://getsimpleform.com/messages?form_api_token=921255819e3dc4cdd301cf95526611a8" method="post" class="form">
 			<p class="text-center">You can contact me directly by filling out the form below:</p>
+			<!-- <div class="alert alert--success">Message successfully sent!</div>
+			<div class="alert alert--error">Oops, there was an error sending. Please try again.</div> -->
 			<div class="form__item">
 				<label class="form__label is-required">Your Name:</label>
-				<input required type="textfield" name="name" class="form__element form__textfield">
+				<input required autofocus type="textfield" name="name" class="form__element form__textfield">
 				<div class="form__instructions is-hidden">Who should I say is e-mailing?</div>
 			</div>
 			<div class="form__item">
@@ -34,3 +36,4 @@ id: contact
 		</form>
 	</div>
 </section>
+<script src="js/parsley.min.js"></script>

@@ -2,31 +2,31 @@
 {
 	$(document).ready(function()
 	{
-		$('#js-header').headroom(
-		{
-			// vertical offset in px before element is first unpinned
-			offset: 0,
-			// or scroll tolerance per direction
-			tolerance:
-			{
-				down: 0,
-				up: 0
-			},
-			// css classes to apply
-			// classes:
-			// {
-			// 	// when element is initialised
-			// 	// initial: 'header--is-pinnable',
-			// 	// when scrolling up
-			// 	pinned: 'header--scrolling-up',
-			// 	// when scrolling down
-			// 	unpinned: 'header--scrolling-up',
-			// 	// when above offset
-			// 	top: 'headroom--not-pinned',
-			// 	// when below offset
-			// 	notTop: 'headroom--is-pinned'
-			// },
-		});
+		// $('#js-header').headroom(
+		// {
+		// 	// vertical offset in px before element is first unpinned
+		// 	offset: 200,
+		// 	// or scroll tolerance per direction
+		// 	tolerance:
+		// 	{
+		// 		down: 0,
+		// 		up: 0
+		// 	},
+		// 	// css classes to apply
+		// 	// classes:
+		// 	// {
+		// 	// 	// when element is initialised
+		// 	// 	// initial: 'header--is-pinnable',
+		// 	// 	// when scrolling up
+		// 	// 	pinned: 'header--scrolling-up',
+		// 	// 	// when scrolling down
+		// 	// 	unpinned: 'header--scrolling-up',
+		// 	// 	// when above offset
+		// 	// 	top: 'headroom--not-pinned',
+		// 	// 	// when below offset
+		// 	// 	notTop: 'headroom--is-pinned'
+		// 	// },
+		// });
 
 		// $('.js-initially-hidden').onScreen(
 		// {
@@ -48,12 +48,12 @@
 		// 	debug: false
 		// });
 
-	$('.gallery').each(function()
-	{
-		$(this).magnificPopup({
-			type: 'image',
-			delegate: 'a',
-			mainClass: 'lightbox-popup',
+$('.gallery').each(function()
+{
+	$(this).magnificPopup({
+		type: 'image',
+		delegate: 'a',
+		mainClass: 'lightbox-popup',
 			// disableOn: 400,
 			closeOnBgClick: true,
 			closeOnContentClick: true,
@@ -82,12 +82,35 @@
 				{
 					// console.log(this.currItem);
 					// re-appends controls inside the main container
-					// this.contentContainer.append(this.arrowLeft.add(this.arrowRight));
+					this.contentContainer.append(this.arrowLeft.add(this.arrowRight));
 				}
 			}
 		});
-	});
-
 });
+
+try {
+	$('#js-contact-form').parsley(
+	{
+		errorsMessagesDisabled: true,
+		successClass: 'form__element--is-valid',
+		errorClass: 'form__element--is-invalid',
+		errorsWrapper: '',
+		errorTemplate: '',
+	});
+}
+catch(err)
+{
+
+}
+});
+
+if (window.navigator.standalone === true)
+{
+	$('html').addClass('webapp');
+}
+else
+{
+	$('html').addClass('no-webapp');
+}
 
 }( jQuery ));

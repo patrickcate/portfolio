@@ -1,0 +1,35 @@
+// Alert Component
+
+.alert
+{
+	// display: none;
+	color: $white;
+	font-weight: bold;
+	padding: $grid-padding;
+	margin-bottom: $grid-padding;
+
+	&:before
+	{
+		@extend %icon--before;
+	}
+}
+
+.alert--success
+{
+	background-color: $green;
+
+	&:before
+	{
+		@extend %icon--send;
+	}
+}
+
+.alert--error
+{
+	background-color: $red;
+
+	&:before
+	{
+		@extend %icon--send;
+	}
+}

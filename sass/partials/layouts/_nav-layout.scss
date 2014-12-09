@@ -12,16 +12,27 @@
 	@extend %clearfix;
 	clear: both;
 	padding: $quarter-grid-padding 0 $half-grid-padding 0;
+	// transition: padding 0.25s ease-in-out;
 	// @include span(first 14);
 
-	@include breakpoint($break-small)
+	@include breakpoint($break-tiny)
 	{
 		// @include span(first 14);
-		padding: ($grid-padding + $quarter-grid-padding) 0 $grid-padding 0;
+		padding: ($half-grid-padding + $quarter-grid-padding) 0 $grid-padding 0;
 		text-align: right;
 		clear: none;
 		float: right;
-		width: 280px;
+		// width: 280px;
+
+		// .headroom--unpinned &
+		// {
+		// 	padding: ($half-grid-padding + $quarter-grid-padding) 0 $grid-padding 0;
+		// }
+	}
+
+	@include breakpoint($break-small)
+	{
+		padding: ($grid-padding + $quarter-grid-padding) 0 $grid-padding 0;
 	}
 }
 
@@ -36,7 +47,7 @@
 		@include first;
 	}
 
-	@include breakpoint($break-small)
+	@include breakpoint($break-tiny)
 	{
 		width: auto;
 		float: none;
@@ -46,6 +57,11 @@
 	+ .nav__item
 	{
 		// margin-left: $half-grid-padding;
+
+		@include breakpoint($break-tiny)
+		{
+			margin-left: $half-grid-padding;
+		}
 
 		@include breakpoint($break-small)
 		{
@@ -75,7 +91,7 @@
 		// vertical-align: inherit;
 		margin-right: $quarter-grid-padding;
 
-		@include breakpoint(380px)
+		@include breakpoint($break-small)
 		{
 			font-size: $h5-font-size;
 		}
@@ -95,7 +111,7 @@
 		}
 	}
 
-	@include breakpoint(380px)
+	@include breakpoint($break-small)
 	{
 		font-size: $h4-font-size;
 		line-height: $h4-line-height;
@@ -226,7 +242,7 @@
 		content: "\e601";
 		font-size: $h5-font-size;
 
-		@include breakpoint(380px)
+		@include breakpoint($break-small)
 		{
 			font-size: $h4-font-size;
 		}

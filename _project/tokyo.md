@@ -6,27 +6,27 @@ weight: 90
 images:
   - url: images/tokyo/tokyo-1.png
     large_url:
-    alt: Tokyo Travel
+    alt: Tokyo Travel Cover
     border: true
 
   - url: images/tokyo/tokyo-2.jpg
     large_url: images/tokyo/tokyo-2--large.jpg
-    alt: Tokyo Travel
+    alt: Tokyo Travel First Panel
     border: true
 
   - url: images/tokyo/tokyo-3.jpg
     large_url: images/tokyo/tokyo-3--large.jpg
-    alt: Tokyo Travel
+    alt: Tokyo Travel Secondary Panel
     border: true
 
   - url: images/tokyo/tokyo-4.jpg
     large_url: images/tokyo/tokyo-4--large.jpg
-    alt: Tokyo Travel
+    alt: Tokyo Travel Accordion
     border: true
 
   - url: images/tokyo/tokyo-5.jpg
     large_url: images/tokyo/tokyo-5--large.jpg
-    alt: Tokyo Travel
+    alt: Tokyo Travel Back
     border: true
 ---
 

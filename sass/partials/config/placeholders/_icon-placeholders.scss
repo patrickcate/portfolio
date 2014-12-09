@@ -41,3 +41,30 @@
 		content: "\e605";
 	}
 }
+
+%icon--required
+{
+	&:before
+	{
+		@extend %icon--before;
+		content: "\e603";
+	}
+}
+
+%icon--checkmark
+{
+	&:before
+	{
+		@extend %icon--before;
+		content: "\e603";
+	}
+}
+
+%icon--refresh
+{
+	&:before
+	{
+		@extend %icon--before;
+		content: "\e603";
+	}
+}

@@ -59,7 +59,7 @@
 	transition: color 0.25s ease-in-out;
 }
 
-.mfp-image-holder .mfp-close
+.mfp-image-holder .mfp-close.mfp-close
 {
 	cursor: pointer;
 	background-color: $black;
@@ -134,7 +134,7 @@ img.mfp-img
 
 button.mfp-arrow
 {
-	transition: opacity .25s ease-in-out;
+	transition: all .25s ease-in-out;
 	cursor: pointer;
 	background-color: $black;
 	width: $grid-padding * 3;
@@ -144,13 +144,33 @@ button.mfp-arrow
 	line-height: 1;
 	// opacity: 0;
 	// position: relative;
-	margin-top: -#{$grid-padding + $half-grid-padding};
+	top: auto;
+	bottom: -#{($grid-padding * 3) + $half-grid-padding};
+	transform: scale(.75);
+	// margin-top: -#{$grid-padding + $half-grid-padding};
+
+	@include breakpoint($break-medium)
+	{
+		// background-color: $black;
+		margin-top: -#{$grid-padding + $half-grid-padding};
+		top: 50%;
+	}
+
+	@include breakpoint($break-large)
+	{
+		transform: scale(1);
+	}
 
 	&:before
 	{
 		margin-top: ( ($grid-padding * 3) / 2 ) - ($grid-padding + $half-grid-padding);
 		position: relative;
 		opacity: .65;
+
+		// @include breakpoint($break-medium)
+		// {
+		// 	opacity: .65;
+		// }
 	}
 
 	&:hover
@@ -185,9 +205,14 @@ button.mfp-arrow-left
 	left: $grid-padding;
 	// transform: translateX(0);
 
-	@include breakpoint($break-small)
+	@include breakpoint($break-medium)
 	{
-		left: $grid-padding * 2;
+		left: -#{$grid-padding * 3};
+	}
+
+	@include breakpoint($break-large)
+	{
+		left: -#{$grid-padding * 4};
 	}
 
 	&:before
@@ -196,6 +221,11 @@ button.mfp-arrow-left
 		border-top-width: $half-grid-padding + $quarter-grid-padding;
 		border-bottom-width: $half-grid-padding + $quarter-grid-padding;
 		margin-left: -4px;
+
+		// @include breakpoint($break-medium)
+		// {
+		// 	border-right-color: $white;
+		// }
 	}
 }
 
@@ -204,9 +234,14 @@ button.mfp-arrow-right
 	// transform: translateX(0);
 	right: $grid-padding;
 
-	@include breakpoint($break-small)
+	@include breakpoint($break-medium)
 	{
-		right: $grid-padding * 2;
+		right: -#{$grid-padding * 3};
+	}
+
+	@include breakpoint($break-large)
+	{
+		right: -#{$grid-padding * 4};
 	}
 
 	&:before
@@ -215,5 +250,10 @@ button.mfp-arrow-right
 		border-top-width: $half-grid-padding + $quarter-grid-padding;
 		border-bottom-width: $half-grid-padding + $quarter-grid-padding;
 		margin-left: 22px;
+
+		// @include breakpoint($break-medium)
+		// {
+		// 	border-left-color: $white;
+		// }
 	}
 }

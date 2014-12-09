@@ -10,10 +10,6 @@
 	position: relative;
 	// overflow: hidden;
 
-
-
-
-
 	.img
 	{
 		display: block;
@@ -22,6 +18,9 @@
 
 	&.lightbox-popup
 	{
+		backface-visibility: hidden;
+		transform: scale(1);
+
 		&:before, &:after
 		{
 			transition: z-index 0.25s ease-in-out, opacity 0.25s ease-in-out, transform 0.15s ease-in-out;
@@ -75,7 +74,7 @@
 
 .lightbox-popup
 {
-	display: block;
+	display: inline-block;
 
 	&:hover
 	{

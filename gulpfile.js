@@ -29,8 +29,8 @@ function handleError(err)
  * Build the Jekyll Site
  */
  gulp.task('jekyll-build', function (done) {
- 	browserSync.notify(messages.jekyllBuild);
- 	return cp.spawn('bundle', ['exec', 'jekyll', 'build'], {stdio: 'inherit'}).on('error', handleError).on('close', done);
+	browserSync.notify(messages.jekyllBuild);
+	return cp.spawn('bundle', ['exec', 'jekyll', 'build'], {stdio: 'inherit'}).on('error', handleError).on('close', done);
  });
 
 
@@ -38,7 +38,7 @@ function handleError(err)
  * Rebuild Jekyll & do page reload
  */
  gulp.task('jekyll-rebuild', ['jekyll-build'], function () {
- 	browserSync.reload();
+	browserSync.reload();
  });
 
 
@@ -46,11 +46,11 @@ function handleError(err)
  * Wait for jekyll-build, then launch the Server
  */
  gulp.task('browser-sync', ['sass', 'jekyll-build'], function() {
- 	browserSync({
- 		server: {
- 			baseDir: '_site'
- 		}
- 	});
+	browserSync({
+		server: {
+			baseDir: '_site'
+		}
+	});
  });
 
 
@@ -60,35 +60,35 @@ function handleError(err)
  gulp.task('sass', function ()
  {
 
- 	return gulp.src('sass/**/*.scss')
- 	.pipe(compass({
- 		config_file: './config.rb',
- 		bundle_exec: true,
- 		onError: browserSync.notify
- 	}))
- 	.on('error', handleError)
- 	.pipe(prefix(
- 	'last 6 Chrome versions',
- 	'last 6 Firefox versions',
- 	'last 4 iOS versions',
- 	'last 4 Safari versions',
- 	'Explorer >= 9',
- 	'last 5 Opera versions',
- 	'Android >= 4',
+	return gulp.src('sass/**/*.scss')
+	.pipe(compass({
+		config_file: './config.rb',
+		bundle_exec: true,
+		onError: browserSync.notify
+	}))
+	.on('error', handleError)
+	.pipe(prefix(
+	'last 6 Chrome versions',
+	'last 6 Firefox versions',
+	'last 4 iOS versions',
+	'last 4 Safari versions',
+	'Explorer >= 9',
+	'last 5 Opera versions',
+	'Android >= 4',
 		// 'last 4 ChromeAndroid',
 		// 'last 4 FirefoxAndroid',
 		// 'ExplorerMobile >= 10',
 		{
 			cascade: false
 		}))
- 	.pipe(gulp.dest('css'))
- 	.pipe(gulp.dest('_site/css'))
- 	.pipe(browserSync.reload({stream:true}))
- 	.pipe(notify({
- 		onLast: true,
- 		title: 'Compass',
- 		message: 'Sass has finished compiling.'
- 	}));
+	.pipe(gulp.dest('css'))
+	.pipe(gulp.dest('_site/css'))
+	.pipe(browserSync.reload({stream:true}))
+	.pipe(notify({
+		onLast: true,
+		title: 'Compass',
+		message: 'Sass has finished compiling.'
+	}));
  });
 
 
@@ -97,63 +97,68 @@ function handleError(err)
  */
  gulp.task('js', function()
  {
- 	gulp.src(['./js/*.js', '!./js/*.min.js'])
- 	.pipe(rename({
- 		suffix: '.min'
- 	}))
- 	.pipe(uglify({
- 		mangle: false
- 	}))
- 	.pipe(gulp.dest('./js/'));
- 	gulp.src([
- 	'./js/modernizr.min.js',
- 	'./js/jquery-1.11.1.min.js',
- 	])
- 	.pipe(concat('libs.min.js'))
- 	.pipe(gulp.dest('./js/'));
- 	gulp.src([
- 	// './js/links.min.js',
- 	'./js/headroom.min.js',
- 	'./js/jquery.headroom.min.js',
- 	// './js/jquery.onscreen.min.js',
- 	'./js/magnific-popup.min.js',
-
- 	])
- 	.pipe(concat('scripts.min.js'))
- 	.pipe(gulp.dest('./js/'))
- 	.pipe(browserSync.reload({stream:true}))
- 	.pipe(notify({
- 		onLast: true,
- 		title: 'JavaScript',
- 		message: 'JS has finished compiling.'
- 	}));
+	gulp.src(['./js/*.js', '!./js/*.min.js'])
+	.pipe(rename({
+		suffix: '.min'
+	}))
+	.pipe(uglify({
+		mangle: false
+	}))
+	.pipe(gulp.dest('./js/'));
+	gulp.src([
+	'./js/modernizr.min.js',
+	'./js/jquery-1.11.1.min.js',
+	])
+	.pipe(concat('libs.min.js'))
+	.pipe(gulp.dest('./js/'));
+	gulp.src([
+	'./js/webapplinks.min.js',
+	'./js/headroom.min.js',
+	'./js/jquery.headroom.min.js',
+	// './js/jquery.onscreen.min.js',
+	'./js/magnific-popup.min.js',
+	])
+	.pipe(concat('scripts.min.js'))
+	.pipe(gulp.dest('./js/'))
+	.pipe(gulp.dest('./_site/js/'));
+	gulp.src([
+	'./js/init.js',
+	])
+	.pipe(gulp.dest('./js/'))
+	.pipe(gulp.dest('./_site/js/'))
+	.pipe(browserSync.reload({stream:true}))
+	.pipe(notify({
+		onLast: true,
+		title: 'JavaScript',
+		message: 'JS has finished compiling.'
+	}));
  });
 
  function transformSvg (svg, cb)
  {
- 	svg.find('//*[@fill').forEach(function (child) {
- 		child.attr('fill').remove();
- 	});
- 	cb(null);
+	svg.find('//*[@fill').forEach(function (child) {
+		child.attr('fill').remove();
+	});
+	cb(null);
  }
 
  gulp.task('svg-sprite', function ()
  {
- 	return gulp.src('./_source/assets/svg-sprite-icons/*.svg')
- 	.pipe(svgmin())
- 	.pipe(svgstore(
- 	{
- 		fileName: 'svg-sprite.svg',
- 		prefix: '',
- 		transformSvg: function (svg, cb) {
- 			svg.attr({ style: 'display:none' });
- 			svg.find('//*[@fill="none"]').forEach(function (child) {
- 				child.attr('fill').remove();
- 			});
- 			cb(null);
- 		}
- 	}))
- 	.pipe(gulp.dest('./_includes/'));
+	return gulp.src('./_source/assets/svg-sprite-icons/*.svg')
+	.pipe(svgmin())
+	.pipe(svgstore(
+	{
+		fileName: 'svg-sprite.svg',
+		prefix: '',
+		transformSvg: function (svg, cb) {
+			svg.attr({ style: 'display:none' });
+			svg.find('//*[@fill="none"]').forEach(function (child) {
+				child.attr('fill').remove();
+			});
+			cb(null);
+		}
+	}))
+	.pipe(gulp.dest('./_includes/'));
  });
 
 
@@ -179,9 +184,9 @@ function handleError(err)
  * Watch html/md files, run jekyll & reload BrowserSync
  */
  gulp.task('watch', function () {
- 	gulp.watch('./sass/**/*.scss', ['sass']);
- 	gulp.watch(['./js/*.js', '!./js/*.min.js', '!./js/scripts.js'], ['js']);
- 	gulp.watch(['index.html', 'work.html', 'contact.html', '_layouts/*.html', '_includes/*', '_project/*'], ['jekyll-rebuild']);
+	gulp.watch('./sass/**/*.scss', ['sass']);
+	gulp.watch(['./js/*.js', '!./js/*.min.js', '!./js/scripts.js'], ['js']);
+	gulp.watch(['index.html', 'work.html', 'contact.html', '_layouts/*.html', '_includes/*', '_project/*'], ['jekyll-rebuild']);
  });
 
 /**

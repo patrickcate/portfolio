@@ -55,6 +55,16 @@
 	margin: 0;
 }
 
+.webapp-visible
+{
+	display: none;
+
+	.webapp &
+	{
+		display: block;
+	}
+}
+
 // .js .js-initially-hidden
 // {
 // 	transition: opacity 1s ease-in-out .5s, transform 1s ease-in-out .5s;
