@@ -5,11 +5,11 @@
 				<div class="gallery__thumbnail">
 					{% for image in page.images limit: 1 %}
 						{% if image.large_url != nil %}
-							<a href="{{ image.large_url }}" class="lightbox-popup {% if image.border == true %}img-border{% endif %}">
+							<a href="/{{ image.large_url }}" class="lightbox-popup {% if image.border == true %}img-border{% endif %}">
 						{% else %}
 							<div{% if image.border == true %} class="img-border"{% endif %}>
 						{% endif %}
-						<img src="{{ image.url }}" alt="{{ image.alt }}" class="img">
+						<img src="/{{ image.url }}" alt="{{ image.alt }}" class="img">
 						{% if image.large_url != nil %}
 							</a>
 						{% else %}
@@ -28,8 +28,8 @@
 				<div class="thumbnail-grid clear">
 					{% for image in page.images offset: 1 %}
 						<div class="thumbnail-grid__item">
-							<a href="{{ image.large_url }}" class="lightbox-popup {% if image.border == true %}img-border{% endif %}">
-								<img src="{{ image.url }}" alt="{{ image.alt }}" class="img">
+							<a href="/{{ image.large_url }}" class="lightbox-popup {% if image.border == true %}img-border{% endif %}">
+								<img src="/{{ image.url }}" alt="{{ image.alt }}" class="img">
 							</a>
 						</div>
 					{% endfor %}

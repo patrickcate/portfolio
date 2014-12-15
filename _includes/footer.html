@@ -2,13 +2,11 @@
 		<div class="l-footer__inner"><h6 class="l-footer__copyright">All content is copyright &copy; <script>document.write(new Date().getFullYear());</script> Patick Cate</h6></div>
 	</footer>
 
-	<script src="js/scripts.min.js"></script>
-	<script src="js/init.js"></script>
-	<!--<script type="text/javascript" src="//use.typekit.net/xiz8xjx.js"></script>
-	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-	<script>window.jQuery || document.write('<script src="/js/jquery.min.js"><\/script>')</script>
-	<script src="/js/socialcount.min.js"></script>-->
+	<script src="/js/scripts.min.js"></script>
+	{% if page.id == 'contact' %}
+	<script src="/js/parsley.min.js"></script>
+	{% endif %}
+	<!--<script src="/js/init.js"></script>-->
 
 	<!--<script>
 	var _gaq=[['_setAccount','UA-7560343-1'],['_trackPageview']];
@@ -16,7 +14,3 @@
 		g.src='//www.google-analytics.com/ga.js';
 		s.parentNode.insertBefore(g,s)}(document,'script'));
 	</script>
-
-	{% devonly %}
-	<script src="http://localhost:35729/livereload.js"></script>
-	{% enddevonly %}-->

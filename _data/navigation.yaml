@@ -1,8 +1,8 @@
   - id: about
-    url: index.html
+    url: /
 
   - id: work
-    url: work.html
+    url: /work
 
   - id: contact
-    url: contact.html
+    url: /contact

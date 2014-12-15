@@ -5,7 +5,7 @@ categories: [print]
 weight: 90
 images:
   - url: images/tokyo/tokyo-1.png
-    large_url:
+    large_url: images/tokyo/tokyo-1--large.png
     alt: Tokyo Travel Cover
     border: true
 

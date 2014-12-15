@@ -6,27 +6,27 @@ weight: 60
 images:
   - url: images/muse-mix/muse-mix.png
     large_url:
-    alt: Muse Mix
+    alt: Muse Mix Site Preview
     border: false
 
   - url: images/muse-mix/muse-mix-1.jpg
     large_url: images/muse-mix/muse-mix-1--large.jpg
-    alt: Muse Mix
+    alt: Muse Mix Homepage
     border: true
 
   - url: images/muse-mix/muse-mix-2.jpg
     large_url: images/muse-mix/muse-mix-2--large.jpg
-    alt: Muse Mix
+    alt: Muse Mix Fever Ray Page
     border: true
 
   - url: images/muse-mix/muse-mix-3.jpg
     large_url: images/muse-mix/muse-mix-3--large.jpg
-    alt: Muse Mix
+    alt: Muse Mix Belle & Sebastian Page
     border: true
 
   - url: images/muse-mix/muse-mix-4.jpg
-    large_url: images/muse-mix/muse-mix-5--large.jpg
-    alt: Muse Mix
+    large_url: images/muse-mix/muse-mix-4--large.jpg
+    alt: Muse Mix Blonde Redhead Page
     border: true
 ---
 
