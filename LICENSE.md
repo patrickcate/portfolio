@@ -10,8 +10,8 @@ of the Software, and to permit persons to whom the Software is furnished to do
 so, subject to the following conditions:
 
 The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software. All porfolio images and logo
-are aopyright (c) 2014  Patrick Cate and may not be used without express written
+copies or substantial portions of the Software. All porfolio images and logos
+are copyright (c) 2014  Patrick Cate and may not be used without express written
 permission.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR

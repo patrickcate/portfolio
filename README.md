@@ -20,6 +20,7 @@ TODO:
 # Add portfolio retina images.
 # Optimize portfolio images.
 # Remove non-concatenated js files from site folder.
+# Add activity icon to form submit.
 
 Separate sections into 4 pages:
 * ~~Home~~
