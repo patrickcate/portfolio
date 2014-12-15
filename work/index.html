@@ -1,0 +1,23 @@
+---
+layout: default
+title: Work | Patrick Cate's Portfolio
+description: The portfolio site for Patrick Cate
+id: work
+---
+
+<section id="l-anchor--work" class="l-section l-section--work">
+	<div class="l-section__divider l-section__divider--work"><svg class="l-section__icon l-section__icon--work"><use xlink:href="#section__icon--work"></use></svg>
+	</div>
+	<div class="l-section__content">
+		<header class="l-section__header"><h2 class="l-section__title"><span class="uppercase">My Work</span> <small class="l-section__subtitle">(What I've Done)</small></h2></header>
+		{% assign projects = site.project | sort: 'weight' %}
+		{% for project in projects | limit: 1 %}
+		{{ project.output }}
+		{% endfor %}
+	</div>
+</section>
+
+{% assign projects = site.project | sort: 'weight' %}
+{% for project in projects | offset: 1 %}
+{{ project.output }}
+{% endfor %}
