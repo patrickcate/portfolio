@@ -1,4 +1,4 @@
-.list--column
+.list-column
 {
 	text-align: left;
 
@@ -6,14 +6,14 @@
 	{
 		text-align: center;
 
-		+ .list--column
+		+ .list-column
 		{
 			margin-left: $grid-padding;
 		}
 	}
 }
 
-.list--column__header
+.list-column__header
 {
 	margin-bottom: $quarter-grid-padding;
 	text-align: center;
@@ -21,7 +21,7 @@
 	color: $black;
 }
 
-.list--column__item
+.list-column__item
 {
 	display: inline-block;
 	vertical-align: top;
@@ -29,19 +29,30 @@
 
 	@include breakpoint($break-medium)
 	{
-		+ .list--column__item
+		+ .list-column__item
 		{
 			margin-left: $grid-padding;
 		}
 	}
 }
 
-.list--skills
+.list-column--skills
 {
+	.list-column__item
+	{
+		&:first-child
+		{
+			margin: 0;
 
+			@include breakpoint($break-tiny)
+			{
+				margin: 0 0 $grid-padding 0;
+			}
+		}
+	}
 }
 
-.list--tools
+.list-column--tools
 {
 
 }

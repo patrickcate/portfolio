@@ -1,9 +1,10 @@
 @import "partials/config";
 
 @include font-face('k8ticon', 'font/k8ticon', normal, normal);
-// @include font-face('Janson', 'fonts/janson-italic', normal, italic);
-// @include font-face('Janson', 'fonts/janson-bold', bold, normal);
-// @include font-face('Janson', 'fonts/janson-bold-italic', bold, italic);
+@include font-face('Avenir', 'font/avenir', normal, normal);
+@include font-face('Avenir', 'font/avenir-italic', normal, italic);
+@include font-face('Avenir', 'font/avenir-bold', bold, normal);
+@include font-face('Avenir', 'font/avenir-bold-italic', bold, italic);
 
 @import "partials/base";
 @import "partials/components";

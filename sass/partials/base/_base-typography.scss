@@ -8,7 +8,8 @@
  	@include transition(color .25s ease-in-out);
  	background: transparent;
  	text-decoration: underline;
- 	-webkit-tap-highlight-color: rgba(0,0,0,0.5);
+ 	// -webkit-tap-highlight-color: rgba(0,0,0,0.5);
+ 	-webkit-tap-highlight-color: rgba(0,0,0,0);
  }
 
 /**
@@ -37,6 +38,7 @@ abbr[title]
  b, strong, .bold
  {
  	font-weight: bold;
+ 	font-weight: $font-weight-bold;
  }
 
 /**
@@ -65,6 +67,7 @@ abbr[title]
  #{headings()}
  {
  	font-weight: normal;
+ 	// font-weight: $font-weight-normal;
  }
 
  h1, .h1

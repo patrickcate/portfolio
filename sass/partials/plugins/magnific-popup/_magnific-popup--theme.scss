@@ -145,7 +145,7 @@ button.mfp-arrow
 	// opacity: 0;
 	// position: relative;
 	top: auto;
-	bottom: -#{($grid-padding * 3) + $half-grid-padding};
+	bottom: -#{($grid-padding * 3) + $quarter-grid-padding};
 	transform: scale(.75);
 	// margin-top: -#{$grid-padding + $half-grid-padding};
 

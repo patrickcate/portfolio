@@ -52,12 +52,12 @@ h3, .h3 {
   line-height: 26px;
 }
 
-h4, .h4, .button, .form__button {
+h4, .h4, .button {
   font-size: 16px;
   line-height: 20px;
 }
 @media (min-width: 37.5em) {
-  h4, .h4, .button, .form__button {
+  h4, .h4, .button {
     font-size: 20px;
     line-height: 22px;
   }
@@ -78,9 +78,10 @@ p, .p {
   line-height: 20px;
 }
 
-.icon--pdf:before, .icon--send:before, .alert--success:before, .alert--error:before, .icon--download:before, .alert:before, .nav__link:before {
+.icon--pdf:before, .icon--send:before, .alert--success:before, .alert--error:before, .icon--download:before, .form__label.is-required:before, .icon--required:before, .icon--checkmark:before, .icon--refresh:before, .icon--delete:before, .alert:before, .nav__link:before {
   display: inline-block;
   vertical-align: inherit;
+  vertical-align: initial;
   text-decoration: none;
   text-transform: none;
   font-weight: normal;
@@ -103,12 +104,56 @@ p, .p {
   content: "\e605";
 }
 
+.form__label.is-required:before, .icon--required:before {
+  content: "\e609";
+}
+
+.icon--checkmark:before {
+  content: "\e607";
+}
+
+.icon--refresh:before {
+  content: "\e608";
+}
+
+.icon--delete:before {
+  content: "\e606";
+}
+
 @font-face {
   font-family: "k8ticon";
   font-style: normal;
   font-weight: normal;
   src: url("font/k8ticon.eot");
-  src: url("font/k8ticon.eot?#iefix") format("embedded-opentype"), url("font/k8ticon.woff") format("woff"), url("font/k8ticon.ttf") format("truetype"), url("font/k8ticon.svg#k8ticon") format("svg");
+  src: url("font/k8ticon.eot?#iefix") format("embedded-opentype"), url("font/k8ticon.woff2") format("woff2"), url("font/k8ticon.woff") format("woff"), url("font/k8ticon.ttf") format("truetype"), url("font/k8ticon.svg#k8ticon") format("svg");
+}
+@font-face {
+  font-family: "Avenir";
+  font-style: normal;
+  font-weight: normal;
+  src: url("font/avenir.eot");
+  src: url("font/avenir.eot?#iefix") format("embedded-opentype"), url("font/avenir.woff2") format("woff2"), url("font/avenir.woff") format("woff"), url("font/avenir.ttf") format("truetype"), url("font/avenir.svg#Avenir") format("svg");
+}
+@font-face {
+  font-family: "Avenir";
+  font-style: italic;
+  font-weight: normal;
+  src: url("font/avenir-italic.eot");
+  src: url("font/avenir-italic.eot?#iefix") format("embedded-opentype"), url("font/avenir-italic.woff2") format("woff2"), url("font/avenir-italic.woff") format("woff"), url("font/avenir-italic.ttf") format("truetype"), url("font/avenir-italic.svg#Avenir") format("svg");
+}
+@font-face {
+  font-family: "Avenir";
+  font-style: normal;
+  font-weight: bold;
+  src: url("font/avenir-bold.eot");
+  src: url("font/avenir-bold.eot?#iefix") format("embedded-opentype"), url("font/avenir-bold.woff2") format("woff2"), url("font/avenir-bold.woff") format("woff"), url("font/avenir-bold.ttf") format("truetype"), url("font/avenir-bold.svg#Avenir") format("svg");
+}
+@font-face {
+  font-family: "Avenir";
+  font-style: italic;
+  font-weight: bold;
+  src: url("font/avenir-bold-italic.eot");
+  src: url("font/avenir-bold-italic.eot?#iefix") format("embedded-opentype"), url("font/avenir-bold-italic.woff2") format("woff2"), url("font/avenir-bold-italic.woff") format("woff"), url("font/avenir-bold-italic.ttf") format("truetype"), url("font/avenir-bold-italic.svg#Avenir") format("svg");
 }
 /**
  * 1. Set default font family to sans-serif.
@@ -139,7 +184,7 @@ body {
   margin: 0;
   padding: 0;
   color: #444444;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Avenir", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px;
   letter-spacing: normal;
 }
@@ -175,24 +220,24 @@ template {
  * Remove the gray background color from active links in IE 10.
  */
 a {
-  color: #0076bd;
+  color: #0074bc;
   -webkit-transition: color 0.25s ease-in-out;
   transition: color 0.25s ease-in-out;
   background: transparent;
   text-decoration: underline;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0.5);
+  -webkit-tap-highlight-color: transparent;
 }
 a:visited {
-  color: #0076bd;
+  color: #0074bc;
 }
 a:focus {
-  color: #0076bd;
+  color: #0074bc;
 }
 a:hover {
-  color: #0064a0;
+  color: #00629f;
 }
 a:active {
-  color: #0076bd;
+  color: #0074bc;
 }
 
 /**
@@ -213,6 +258,7 @@ abbr[title] {
  * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
  */
 b, strong, .bold {
+  font-weight: bold;
   font-weight: bold;
 }
 
@@ -332,7 +378,7 @@ blockquote cite {
   display: block;
   text-transform: uppercase;
   font-style: normal;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Avenir", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 ul, ol, dl {
@@ -581,13 +627,13 @@ svg:not(:root) {
   overflow: hidden;
 }
 
-.button, .form__button {
+.button {
   color: white;
   -webkit-transition: background-color .25s ease-in-out;
           transition: background-color .25s ease-in-out;
   text-align: center;
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.85);
-  background-color: #0076bd;
+  background-color: #0074bc;
   color: white;
   border: none;
   padding: 10px 20px;
@@ -597,27 +643,41 @@ svg:not(:root) {
   display: block;
   border-radius: 5px;
 }
-.button:visited, .form__button:visited {
+.button:visited {
   color: white;
 }
-.button:focus, .form__button:focus {
+.button:focus {
   color: white;
 }
-.button:hover, .form__button:hover {
+.button:hover {
   color: white;
 }
-.button:active, .form__button:active {
+.button:active {
   color: white;
 }
-.button:hover, .form__button:hover {
-  background-color: #00588d;
+.button:hover, .button:focus {
+  background-color: #00578d;
 }
 @media (min-width: 50em) {
-  .button, .form__button {
+  .button {
     float: right;
     margin-top: -60px;
     margin-bottom: 0;
   }
+}
+
+.button--success {
+  background-color: #2ba52b;
+}
+.button--success:hover, .button--success:focus {
+  background-color: #207b20;
+}
+
+.button--danger {
+  background-color: #b51414;
+}
+.button--danger:hover, .button--danger:focus {
+  background-color: #870f0f;
 }
 
 .block-grid {
@@ -682,33 +742,42 @@ svg:not(:root) {
   text-transform: uppercase;
 }
 
-.list--column {
+.list-column {
   text-align: left;
 }
 @media (min-width: 30em) {
-  .list--column {
+  .list-column {
     text-align: center;
   }
-  .list--column + .list--column {
+  .list-column + .list-column {
     margin-left: 20px;
   }
 }
 
-.list--column__header {
+.list-column__header {
   margin-bottom: 5px;
   text-align: center;
   text-transform: uppercase;
   color: black;
 }
 
-.list--column__item {
+.list-column__item {
   display: inline-block;
   vertical-align: top;
   text-align: left;
 }
 @media (min-width: 50em) {
-  .list--column__item + .list--column__item {
+  .list-column__item + .list-column__item {
     margin-left: 20px;
+  }
+}
+
+.list-column--skills .list-column__item:first-child {
+  margin: 0;
+}
+@media (min-width: 30em) {
+  .list-column--skills .list-column__item:first-child {
+    margin: 0 0 20px 0;
   }
 }
 
@@ -735,7 +804,7 @@ svg:not(:root) {
 }
 
 .gallery__title {
-  color: #0076bd;
+  color: #0074bc;
 }
 
 .gallery__category--print {
@@ -751,7 +820,7 @@ svg:not(:root) {
 }
 
 .gallery__category--drupal {
-  color: #0076bd;
+  color: #0074bc;
 }
 
 .gallery__category--email {
@@ -882,6 +951,7 @@ svg:not(:root) {
 .form__label {
   display: inline-block;
   cursor: pointer;
+  line-height: 22px;
 }
 @media (min-width: 30em) {
   .form__label {
@@ -891,6 +961,10 @@ svg:not(:root) {
     text-align: right;
     margin-right: 5px;
   }
+}
+.form__label.is-required:before {
+  margin-right: 5px;
+  font-size: 13px;
 }
 
 .form__label--textarea {
@@ -921,7 +995,7 @@ svg:not(:root) {
   -webkit-appearance: none;
 }
 .form__textfield:focus, .form__textarea:focus {
-  border-color: #0076bd;
+  border-color: #0074bc;
   border-left-width: 5px;
 }
 
@@ -942,10 +1016,7 @@ svg:not(:root) {
   -webkit-transition: -webkit-transform 0.25s ease-in-out;
           transition: transform 0.25s ease-in-out;
 }
-.form__button:hover, .form__button:focus {
-  background-color: #00588d;
-}
-.no-touch .form__button:hover:before, .no-touch .form__button:focus:before {
+.no-touch .form__button.icon--send:hover:before, .no-touch .form__button.icon--send:focus:before {
   -webkit-transform: translateY(-3px);
       -ms-transform: translateY(-3px);
           transform: translateY(-3px);
@@ -956,6 +1027,20 @@ svg:not(:root) {
   font-size: 13px;
   line-height: 16px;
   color: #b51414;
+  margin-top: 2.5px;
+  width: 95%;
+  max-width: 450px;
+  font-weight: bold;
+}
+.form__instructions:before {
+  display: inline-block;
+  content: '';
+}
+@media (min-width: 30em) {
+  .form__instructions:before {
+    width: 35%;
+    max-width: 150px;
+  }
 }
 
 .alert {
@@ -976,7 +1061,7 @@ svg:not(:root) {
 .l-header {
   -webkit-transition: -webkit-transform .25s ease-in-out;
           transition: transform .25s ease-in-out;
-  background-color: rgba(0, 118, 189, 0.95);
+  background-color: rgba(0, 116, 188, 0.95);
   color: white;
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.85);
   width: 100%;
@@ -1115,7 +1200,7 @@ svg:not(:root) {
     font-size: 16px;
   }
 }
-.nav__link:hover .nav__text {
+.nav__link:hover .nav__text, .nav__link:focus .nav__text {
   text-decoration: underline;
 }
 @media (min-width: 37.5em) {
@@ -1169,6 +1254,11 @@ svg:not(:root) {
     padding-top: 95px;
   }
 }
+@media (min-width: 30em) {
+  .l-content__inner {
+    padding-top: 70px;
+  }
+}
 @media (min-width: 37.5em) {
   .l-content__inner {
     padding-top: 90px;
@@ -1203,7 +1293,7 @@ svg:not(:root) {
 
 .l-section__divider {
   height: 4px;
-  background-color: #0076bd;
+  background-color: #0074bc;
 }
 .l-section__divider + .l-section {
   border-top: none;
@@ -1211,6 +1301,10 @@ svg:not(:root) {
 
 .l-section__divider--work, .l-section__divider--contact {
   margin-top: 50px;
+}
+
+.l-section__divider--work + .l-section__content {
+  padding: 20px 0 0 0;
 }
 
 .l-section__icon {
@@ -1229,7 +1323,7 @@ svg:not(:root) {
 }
 
 .l-section__title {
-  color: #0076bd;
+  color: #0074bc;
   margin: 5px 0;
 }
 
@@ -1239,8 +1333,9 @@ svg:not(:root) {
 }
 
 .l-footer {
-  background-color: #0076bd;
+  background-color: #0074bc;
   color: white;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.85);
 }
 
 .l-footer__inner {
@@ -1772,7 +1867,7 @@ button.mfp-arrow {
   border-radius: 100px;
   line-height: 1;
   top: auto;
-  bottom: -70px;
+  bottom: -65px;
   -webkit-transform: scale(0.75);
       -ms-transform: scale(0.75);
           transform: scale(0.75);
@@ -1906,7 +2001,7 @@ button.mfp-arrow-right:before {
 }
 
 .text-blue {
-  color: #0076bd;
+  color: #0074bc;
 }
 
 .text-red {

@@ -7,8 +7,9 @@ $base-line-height: 20px;
 $relative-font-sizing: false;
 $round-to-nearest-half-line: true;
 
-$base-font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-$condensed-font: 'HelveticaNeue-CondensedBold', 'Helvetica Neue Condensed Bold', 'Arial Narrow', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$base-font-family: 'Avenir', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+// $base-font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$condensed-font: 'Avenir Condensed', 'HelveticaNeue-CondensedBold', 'Helvetica Neue Condensed Bold', 'Arial Narrow', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $sans-serif-font: $base-font-family;
 $serif-font: Georgia, 'Times New Roman', Times, serif;
 $mono-font: Courier, 'Courier New', monospace;
@@ -16,6 +17,11 @@ $icon-font: 'k8ticon';
 
 $hero-font-size: 68px;
 // $h1-font-size: 48px;
+
+$font-weight-normal: 500;
+$font-weight-bold: 600;
+$font-weight-normal: normal;
+$font-weight-bold: bold;
 
 // $h2-font-size: 34px;
 

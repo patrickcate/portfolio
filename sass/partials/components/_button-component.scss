@@ -16,7 +16,7 @@
 	display: block;
 	border-radius: $quarter-grid-padding;
 
-	&:hover
+	&:hover, &:focus
 	{
 		background-color: shade($blue, 25%);
 	}
@@ -29,16 +29,22 @@
 	}
 }
 
-// .icon--pdf
-// {
-// 	&:before
-// 	{
-// 		content: '';
-// 		display: inline-block;
-// 		vertical-align: text-bottom;
-// 		margin-right: 5px;
-// 		background: transparent image-url('icons/icon--pdf.png') no-repeat 0 0 scroll;
-// 		height: image-height('icons/icon--pdf.png');
-// 		width: image-width('icons/icon--pdf.png');
-// 	}
-// }
+.button--success
+{
+	background-color: $green;
+
+	&:hover, &:focus
+	{
+		background-color: shade($green, 25%);
+	}
+}
+
+.button--danger
+{
+	background-color: $red;
+
+	&:hover, &:focus
+	{
+		background-color: shade($red, 25%);
+	}
+}

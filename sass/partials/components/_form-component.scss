@@ -20,8 +20,7 @@
 {
 	display: inline-block;
 	cursor: pointer;
-	// vertical-align: middle;
-	// margin-bottom: 2px;
+	line-height: $h4-line-height;
 
 	@include breakpoint($break-tiny)
 	{
@@ -34,13 +33,12 @@
 
 	&.is-required
 	{
-		// &:before
-		// {
-		// 	content: '*';
-		// 	font-family: $serif-font;
-		// 	color: $red;
-		// 	font-size: 30px;
-		// }
+		&:before
+		{
+			@extend %icon--required;
+			margin-right: $quarter-grid-padding;
+			font-size: $h6-font-size;
+		}
 	}
 }
 
@@ -107,37 +105,24 @@
 
 .form__button
 {
-	@extend .button;
-	// @extend %h4;
-	// transition: background-color 0.25s ease-in-out;
-	// text-align: center;
-	// text-shadow: $drop-text-shadow;
-	// width: 60%;
-	// max-width: 300px;
-	// margin-left: 35%;
-	// background-color: $blue;
-	// color: $white;
-	// border: none;
 	float: none;
 	margin: 0;
-	// display: inline-block;
-	// padding: $half-grid-padding 0;
-	// border: 1px solid shade($blue, 25%);
 
 	&:before
 	{
 		transition: transform 0.25s ease-in-out;
 	}
 
-	&:hover, &:focus
+	&.icon--send
 	{
-		background-color: shade($blue, 25%);
-
-		.no-touch &
+		&:hover, &:focus
 		{
-			&:before
+			.no-touch &
 			{
-				transform: translateY(-3px);
+				&:before
+				{
+					transform: translateY(-3px);
+				}
 			}
 		}
 	}
@@ -154,4 +139,23 @@
 	font-size: $h6-font-size;
 	line-height: $h6-line-height;
 	color: $red;
+	margin-top: $quarter-grid-padding / 2;
+	width: 95%;
+	max-width: 450px;
+	font-weight: bold;
+
+	&:before
+	{
+		display: inline-block;
+		content: '';
+	}
+
+	@include breakpoint($break-tiny)
+	{
+		&:before
+		{
+			width: 35%;
+			max-width: 150px;
+		}
+	}
 }

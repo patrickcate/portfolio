@@ -22,3 +22,35 @@
 		@extend %icon--download;
 	}
 }
+
+.icon--required
+{
+	&:before
+	{
+		@extend %icon--required;
+	}
+}
+
+.icon--checkmark
+{
+	&:before
+	{
+		@extend %icon--checkmark;
+	}
+}
+
+.icon--refresh
+{
+	&:before
+	{
+		@extend %icon--refresh;
+	}
+}
+
+.icon--delete
+{
+	&:before
+	{
+		@extend %icon--delete;
+	}
+}

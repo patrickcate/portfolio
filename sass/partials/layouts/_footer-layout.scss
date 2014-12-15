@@ -2,14 +2,8 @@
 {
 	@extend %noise-background;
 	background-color: $blue;
-	// background-image: image-url('bg/noise-background.png');
 	color: $white;
-	// @extend %clearfix;
-	// position: absolute;
-	// left: 0;
-	// right: 0;
-	// bottom: 0;
-	// height: 100px;
+	text-shadow: $drop-text-shadow;
 }
 
 .l-footer__inner

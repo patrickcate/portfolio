@@ -49,12 +49,16 @@
 		padding-top: 50px + $quarter-grid-padding + ($grid-padding * 2);
 	}
 
+	@include breakpoint($break-tiny)
+	{
+		padding-top: 50px + $grid-padding;
+	}
+
 	@include breakpoint($break-small)
 	{
 		padding-top: 50px + ($grid-padding * 2);
 	}
 
-	// padding-top: 126px;
 	.touch &
 	{
 		position: absolute;
@@ -65,18 +69,7 @@
 		overflow-x: hidden;
 		overflow-y: scroll;
 		height: 100%;
-
-
-	// 	// overflow-x: hidden;
-	// 	// overflow-y: scroll; /* has to be scroll, not auto */
-	// 	// overflow: hidden;
-	// 	// -webkit-overflow-scrolling: touch;
-	// 	height: 100%;
-	// 	// white-space: nowrap;
-	// overflow-x: hidden;
-	// overflow-y: scroll;
-	// -webkit-overflow-scrolling: touch;
-}
+	}
 }
 
 .l-section
@@ -106,40 +99,26 @@
 
 .l-section__divider
 {
-	// background-color: red;
-	// text-align: center;
-	// background: transparent inline-image('bg/section-divider.png') repeat-x center scroll;
-	// position: absolute;
-	// height: image-height('bg/section-divider.png');
 	height: 4px;
 	background-color: $blue;
-
-	&:before
-	{
-		// content: '';
-		// display: block;
-		// height: image-height('icon/icon--about.png');
-		// width: image-width('icon/icon--about.png');
-		// margin: 0 auto;
-		// height: 4px;
-		// width: 100%;
-		// background-color: $blue;
-	}
 
 	+ .l-section
 	{
 		border-top: none;
 	}
-
-	// + .l-section__content
-	// {
-	// 	padding-bottom: 0;
-	// }
 }
 
 .l-section__divider--work, .l-section__divider--contact
 {
 	margin-top: 50px;
+}
+
+.l-section__divider--work
+{
+	 + .l-section__content
+	 {
+	 	padding: $grid-padding 0 0 0;
+	 }
 }
 
 $section-icon-size: 50px;
@@ -164,86 +143,6 @@ $section-icon-size: 50px;
 	}
 }
 
-.l-section__icon--about
-{
-// 	&:before
-// 	{
-	// @include sprite-background-position($icon-1x-sprites, 'icon-about');
-	// background: transparent sprite-url($icon-1x-sprites) no-repeat 0 0 scroll;
-	// }
-
-	// @include breakpoint($break-retina)
-	// {
-	// 	@include sprite-background-position($icon-2x-sprites, 'icon-about2x');
-	// }
-}
-
-.l-section__icon--skills
-{
-	// &:before
-	// {
-		// @include sprite-background-position($icon-1x-sprites, 'icon-skills');
-	// }
-
-	// @include breakpoint($break-retina)
-	// {
-	// 	@include sprite-background-position($icon-2x-sprites, 'icon-skills2x');
-	// }
-}
-
-.l-section__icon--tools
-{
-	// &:before
-	// {
-		// @include sprite-background-position($icon-1x-sprites, 'icon-tools');
-	// }
-
-	// @include breakpoint($break-retina)
-	// {
-	// 	@include sprite-background-position($icon-2x-sprites, 'icon-tools2x');
-	// }
-}
-
-.l-section__icon--work
-{
-	// &:before
-	// {
-		// @include sprite-background-position($icon-1x-sprites, 'icon-work');
-	// }
-
-	// @include breakpoint($break-retina)
-	// {
-	// 	@include sprite-background-position($icon-2x-sprites, 'icon-work2x');
-	// }
-}
-
-.l-section__icon--contact
-{
-	// &:before
-	// {
-		// @include sprite-background-position($icon-1x-sprites, 'icon-contact');
-	// }
-
-	// @include breakpoint($break-retina)
-	// {
-	// 	@include sprite-background-position($icon-2x-sprites, 'icon-contact2x');
-	// }
-}
-
-%section-divider__icon
-{
-	// background: transparent url('http://placehold.it/20x20') no-repeat;
-	// height: image-height('icon/icon--about.png');
-	// width: image-width('icon/icon--about.png');
-	// margin: 0 auto;
-}
-
-// .section-divider__icon--intro
-// {
-// 	background: transparent url('icon/icon--about.png') no-repeat 0 0 scroll;
-// }
-
-
 .l-section__header
 {
 	text-align: center;
@@ -260,32 +159,3 @@ $section-icon-size: 50px;
 	display: inline-block;
 	font-size: $h4-font-size;
 }
-
-
-
-
-	// @include span(12);
-
-	// &:nth-child(even)
-	// {
-	// 	@include span(last 12);
-	// }
-
-	// @include breakpoint($break-small)
-	// {
-	// 	@include span(6);
-
-	// 	&:last-child
-	// 	{
-	// 		@include span(last 6);
-	// 	}
-	// }
-
-
-// .l-section-anchor
-// {
-// 	z-index: -1;
-// 	position: relative;
-// 	top: -#{( image-height('logo/logo.png') + image-height('icon/icon--about.png') )};
-// 	clear: both;
-// }
