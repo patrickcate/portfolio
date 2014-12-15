@@ -54,38 +54,39 @@ $('.gallery').each(function()
 		type: 'image',
 		delegate: 'a',
 		mainClass: 'lightbox-popup',
-			// disableOn: 400,
-			closeOnBgClick: true,
-			closeOnContentClick: true,
-			showCloseBtn: true,
-			closeBtnInside: true,
-			enableEscapeKey: true,
-			modal: false,
-			preload: [1,3],
-			gallery:
+		// disableOn: 400,
+		closeOnBgClick: true,
+		closeOnContentClick: true,
+		showCloseBtn: true,
+		closeBtnInside: true,
+		enableEscapeKey: true,
+		modal: false,
+		preload: [1,3],
+		gallery:
+		{
+			enabled: true
+		},
+		zoom:
+		{
+			enabled: false,
+			duration: 250,
+			easing: 'ease-in-out',
+			// opener: function(openerElement)
+			// {
+			//	return openerElement.is('img') ? openerElement : openerElement.find('img');
+			// }
+		},
+		callbacks:
+		{
+			buildControls: function()
 			{
-				enabled: true
-			},
-			zoom:
-			{
-				enabled: false,
-				duration: 250,
-				easing: 'ease-in-out',
-				// opener: function(openerElement)
-				// {
-				//	return openerElement.is('img') ? openerElement : openerElement.find('img');
-				// }
-			},
-			callbacks:
-			{
-				buildControls: function()
-				{
-					// console.log(this.currItem);
-					// re-appends controls inside the main container
-					this.contentContainer.append(this.arrowLeft.add(this.arrowRight));
-				}
+				// console.log(this.currItem);
+				// re-appends controls inside the main container
+				// this.contentContainer.append(this.arrowLeft.add(this.arrowRight));
+				this.contentContainer.append(this.arrowLeft, this.arrowRight);
 			}
-		});
+		}
+	});
 });
 
 try {
@@ -96,6 +97,25 @@ try {
 		errorClass: 'form__element--is-invalid',
 		errorsWrapper: '',
 		errorTemplate: '',
+	});
+
+	$('#js-contact-form').submit(function()
+	{
+		$('#js-form__button').text('Sending...');
+
+		$.ajax({
+			dataType: 'jsonp',
+			url: "http://getsimpleform.com/messages/ajax?form_api_token=921255819e3dc4cdd301cf95526611a8",
+			data: $('#js-contact-form').serialize()
+		}).done(function()
+		{
+			// Callback which can be used to show a thank you message and reset the form
+			// alert('Thank you, for contacting us');
+			$('#js-form__button').addClass('icon--checkmark button--success').removeClass('icon--send').text('Message Sent!');
+			$('#js-contact-form #name, #js-contact-form #email, #js-contact-form #message').val('');
+		});
+		// Stop the form from submitting
+		return false;
 	});
 }
 catch(err)

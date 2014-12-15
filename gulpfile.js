@@ -113,19 +113,20 @@ function handleError(err)
 	.pipe(gulp.dest('./js/'));
 	gulp.src([
 	'./js/webapplinks.min.js',
-	'./js/headroom.min.js',
-	'./js/jquery.headroom.min.js',
+	// './js/headroom.min.js',
+	// './js/jquery.headroom.min.js',
 	// './js/jquery.onscreen.min.js',
 	'./js/magnific-popup.min.js',
+	'./js/init.min.js',
 	])
 	.pipe(concat('scripts.min.js'))
 	.pipe(gulp.dest('./js/'))
-	.pipe(gulp.dest('./_site/js/'));
-	gulp.src([
-	'./js/init.js',
-	])
-	.pipe(gulp.dest('./js/'))
 	.pipe(gulp.dest('./_site/js/'))
+	// gulp.src([
+	// './js/init.js',
+	// ])
+	// .pipe(gulp.dest('./js/'))
+	// .pipe(gulp.dest('./_site/js/'))
 	.pipe(browserSync.reload({stream:true}))
 	.pipe(notify({
 		onLast: true,
@@ -186,7 +187,7 @@ function handleError(err)
  gulp.task('watch', function () {
 	gulp.watch('./sass/**/*.scss', ['sass']);
 	gulp.watch(['./js/*.js', '!./js/*.min.js', '!./js/scripts.js'], ['js']);
-	gulp.watch(['index.html', 'work.html', 'contact.html', '_layouts/*.html', '_includes/*', '_project/*'], ['jekyll-rebuild']);
+	gulp.watch(['index.html', 'work/*.html', 'contact/*.html', '_layouts/*.html', '_includes/*', '_project/*'], ['jekyll-rebuild']);
  });
 
 /**
