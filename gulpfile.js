@@ -5,15 +5,15 @@ var compass     = require('gulp-compass');
 var prefix      = require('gulp-autoprefixer');
 var cp          = require('child_process');
 
-var uglify = require('gulp-uglify');
-var notify = require("gulp-notify");
-var rename = require('gulp-rename');
-var concat = require('gulp-concat');
-var svgmin = require('gulp-svgmin');
-var svgstore = require('gulp-svgstore');
-var fontcustom = require('gulp-fontcustom');
+var uglify 		= require('gulp-uglify');
+var notify 		= require("gulp-notify");
+var rename 		= require('gulp-rename');
+var concat 		= require('gulp-concat');
+var svgmin 		= require('gulp-svgmin');
+var svgstore 	= require('gulp-svgstore');
+var htmlmin 	= require('gulp-htmlmin');
 // Show messages
-var messages = {
+var messages 	= {
 	jekyllBuild: '<div style="color: grey;left:0;right:auto;position:fixes;width:100%;">Running:</div> $ jekyll build'
 };
 
@@ -59,7 +59,6 @@ function handleError(err)
  */
  gulp.task('sass', function ()
  {
-
 	return gulp.src('sass/**/*.scss')
 	.pipe(compass({
 		config_file: './config.rb',
@@ -75,12 +74,12 @@ function handleError(err)
 	'Explorer >= 9',
 	'last 5 Opera versions',
 	'Android >= 4',
-		// 'last 4 ChromeAndroid',
-		// 'last 4 FirefoxAndroid',
-		// 'ExplorerMobile >= 10',
-		{
-			cascade: false
-		}))
+	// 'last 4 ChromeAndroid',
+	// 'last 4 FirefoxAndroid',
+	// 'ExplorerMobile >= 10',
+	{
+		cascade: false
+	}))
 	.pipe(gulp.dest('css'))
 	.pipe(gulp.dest('_site/css'))
 	.pipe(browserSync.reload({stream:true}))
@@ -143,6 +142,8 @@ function handleError(err)
 	cb(null);
  }
 
+
+// Generate SVG sprite.
  gulp.task('svg-sprite', function ()
  {
 	return gulp.src('./_source/assets/svg-sprite-icons/*.svg')
@@ -165,19 +166,22 @@ function handleError(err)
 
 
 /**
- * Create Icon font
+ * Minify HTML
  */
+gulp.task('htmlmin', function()
+{
+  gulp.src('_site/**/*.html')
+    .pipe(htmlmin({
+    	collapseWhitespace: true,
+    	conservativeCollapse: false,
+    	removeComments: true,
+    	preserveLineBreaks: true,
+    	caseSensitive: true,
+		keepClosingSlash: true,
+    }))
+    .pipe(gulp.dest('_site'))
+});
 
- // gulp.task('iconfont', function ()
- // {
- // 	return gulp.src('./_source/assets/svg-sprite-icons/*.svg')
-
- // 	.pipe(fontcustom(
- // 	{
- // 		font_name: 'k8tfont'
- // 	}))
- // 	.pipe(gulp.dest("./css/font"))
- // });
 
 
 /**
@@ -188,7 +192,10 @@ function handleError(err)
 	gulp.watch('./sass/**/*.scss', ['sass']);
 	gulp.watch(['./js/*.js', '!./js/*.min.js', '!./js/scripts.js'], ['js']);
 	gulp.watch(['index.html', 'work/*.html', 'contact/*.html', '_layouts/*.html', '_includes/*', '_project/*'], ['jekyll-rebuild']);
+	gulp.watch(['_site/index.html', '_site/work/*.html', '_site/contact/*.html'], ['htmlmin']);
  });
+
+
 
 /**
  * Default task, running just `gulp` will compile the sass,

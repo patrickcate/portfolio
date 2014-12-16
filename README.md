@@ -10,6 +10,7 @@ TODO:
 # ~~Convert icons to sprites.~~
 # ~~Convert link icons to icon fonts.~~
 # ~~Setup gulp.~~
+# ~~Minify HTML~~
 # Convert zoom icon to svg sprite.
 # Limit paragraph line length to about 75 characters.
 # Remove unneeded icon font icons.

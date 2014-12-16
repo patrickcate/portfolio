@@ -41,6 +41,7 @@ exclude: [
     '*.json',
     '*.log',
     '*.map',
+    '*.zip',
     '*.sublime-project',
     '*.sublime-workspace',
     'config.rb',
