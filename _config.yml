@@ -16,6 +16,10 @@ include:        ['.htaccess']
 port: 3000
 host: localhost
 
+gems: [
+    'jekyll_version_plugin'
+    ]
+
 picture:
   markup: 'picture'
   source: '_source/images'

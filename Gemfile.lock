@@ -58,6 +58,7 @@ GEM
       sass (~> 3.2)
     jekyll-watch (1.1.1)
       listen (~> 2.7)
+    jekyll_version_plugin (1.0.1)
     kramdown (1.4.2)
     liquid (2.6.1)
     listen (2.7.9)
@@ -111,6 +112,7 @@ DEPENDENCIES
   compass (~> 1.0.1)
   jekyll (~> 2.4)
   jekyll-contentblocks (~> 0.0.3)
+  jekyll_version_plugin
   mini_magick (~> 3.8)
   octopress-filters (~> 1.2)
   oily_png
