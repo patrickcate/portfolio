@@ -12,10 +12,10 @@ var concat 		= require('gulp-concat');
 var svgmin 		= require('gulp-svgmin');
 var svgstore 	= require('gulp-svgstore');
 var htmlmin 	= require('gulp-htmlmin');
+var imagemin 	= require('gulp-imagemin');
+
 // Show messages
-var messages 	= {
-	jekyllBuild: '<div style="color: grey;left:0;right:auto;position:fixes;width:100%;">Running:</div> $ jekyll build'
-};
+var messages 	= {jekyllBuild: '<div style="color: grey;left:0;right:auto;position:fixes;width:100%;">Running:</div> $ jekyll build'};
 
 // Handle any compass compiling errors
 function handleError(err)
@@ -103,14 +103,14 @@ function handleError(err)
 	.pipe(uglify({
 		mangle: false
 	}))
-	.pipe(gulp.dest('./js/'));
+	// .pipe(gulp.dest('./js/'));
+	// gulp.src([
+	// './js/jquery-1.11.1.min.js',
+	// ])
+	// .pipe(concat('libs.min.js'))
+	// .pipe(gulp.dest('./js/'));
 	gulp.src([
 	'./js/modernizr.min.js',
-	'./js/jquery-1.11.1.min.js',
-	])
-	.pipe(concat('libs.min.js'))
-	.pipe(gulp.dest('./js/'));
-	gulp.src([
 	'./js/webapplinks.min.js',
 	// './js/headroom.min.js',
 	// './js/jquery.headroom.min.js',
@@ -160,9 +160,9 @@ function handleError(err)
 			cb(null);
 		}
 	}))
+	.pipe(svgmin())
 	.pipe(gulp.dest('./_includes/'));
  });
-
 
 
 /**
@@ -182,6 +182,17 @@ gulp.task('htmlmin', function()
     .pipe(gulp.dest('_site'))
 });
 
+
+/**
+ * Losslessly compress images
+ */
+gulp.task('imagemin', function()
+{
+  gulp.src(['_site/**/*.png', '_site/**/*.jpg'])
+    .pipe(imagemin({
+    }))
+    .pipe(gulp.dest('_site'))
+});
 
 
 /**

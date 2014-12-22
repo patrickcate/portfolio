@@ -3,7 +3,8 @@ description: Patrick Cate's Portfolio
 markdown: kramdown
 highlighter: pygments
 relative_permalinks: true
-doctor:          true
+doctor: true
+url: http://portfolio.patrickcate.com
 
 timezone:       America/New_York
 source:         .
@@ -19,6 +20,9 @@ host: localhost
 gems: [
     'jekyll_version_plugin'
     ]
+
+sitemap:
+  file: '/sitemap.xml'
 
 picture:
   markup: 'picture'
