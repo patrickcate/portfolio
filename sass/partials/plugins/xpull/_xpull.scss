@@ -1,0 +1,166 @@
+/*
+ Xpull - pull to refresh jQuery plugin for iOS and Android
+ by Slobodan Jovanovic
+ Initially made for Spreya app spreya.com
+*/
+
+// .pull-indicator{
+//     width:25px;
+//     height:41px;
+//     margin-left:auto;
+//     margin-right:auto;
+//     margin-bottom:0px;
+//     margin-top:0px;
+
+//     -webkit-transform: translate3d(0px,0px,0px) rotate(0deg);
+
+//     position:relative;
+//     top:-41px;
+//     -webkit-transition: -webkit-transform 300ms ease;
+
+// }
+// .triangle-down {
+//     width: 0; height: 0;
+//     border-left: 5px solid transparent;
+//     border-right: 5px solid transparent;
+//     border-top: 6px solid #CACACA;
+//     margin-left:auto;
+//     margin-right:auto;
+// }
+// .arrow-body{
+//     width:4px;
+//     height:10px;
+//     margin-left:auto;
+//     margin-right:auto;
+//     background-color:#CACACA;
+//     -webkit-border-top-left-radius: 3px;
+//     -webkit-border-top-right-radius: 3px;
+//     -moz-border-radius-topleft: 3px;
+//     -moz-border-radius-topright: 3px;
+//     border-top-left-radius: 3px;
+//     border-top-right-radius: 3px;
+// }
+// .arrow-rotate-180{
+//     -webkit-transform: rotate(-180deg) !important;
+//     -webkit-transition: -webkit-transform 300ms ease !important;
+// }
+// .pull-spinner {
+//     display:none;
+//     height:25px;
+//     width:25px;
+//     margin:0px auto;
+//     position:relative;
+//     left:-4px;
+//     -webkit-animation: rotation .6s infinite linear;
+//     -moz-animation: rotation .6s infinite linear;
+//     -o-animation: rotation .6s infinite linear;
+//     animation: rotation .6s infinite linear;
+//     border-left:4px solid rgba(202,202,202,.15);
+//     border-right:4px solid rgba(202,202,202,.15);
+//     border-bottom:4px solid rgba(202,202,202,.15);
+//     border-top:4px solid rgba(202,202,202,.9);
+//     border-radius:100%;
+// }
+
+
+$spinner-size: 40px;
+
+%spinner
+{
+    position: relative;
+    width: $spinner-size;
+    height: $spinner-size;
+    margin: 0 auto;
+    border: 4px double $blue;
+    border-top: 4px solid $blue;
+    border-radius: $grid-padding * 4;
+    top: #{$spinner-size / 2};
+    // text-align: center;
+}
+
+.pull-indicator
+{
+    // display: block;
+    position: relative;
+    top: -#{$spinner-size / 2};
+    // top: -100px;
+    // top: 0!important;
+    width: $spinner-size;
+    // width: 100%;
+    // height: $spinner-size * 3;
+    height: $spinner-size * 2;
+    margin: 0 auto;
+    // padding-bottom: $grid-padding;
+    // transition: transform $duration-fast ease-in-out, top $duration-fast ease-in-out;
+    // transition-timing-function: $swing-timing;
+    transform: translate3d(0,0,0) rotate(0deg);
+}
+
+.triangle-down
+{
+    display: none!important;
+}
+
+.arrow-body
+{
+    @extend %spinner;
+    // top: #{$spinner-size / 2};
+    transition: transform $duration-medium $swing-timing!important;
+}
+
+.arrow-rotate-180
+{
+    // @extend %spinner;
+    .arrow-body
+    {
+        transform: rotate(-180deg);
+        // transform-origin: 50% 50%;
+        // animation: rotation $duration-medium 1 $swing-timing;
+
+    }
+
+
+    // animation: half-rotation .5s infinite linear;
+}
+
+// .pull-spinner
+// {
+//     position: relative;
+//     left: -4px;
+
+//     display: none;
+
+//     width: 25px;
+//     height: 25px;
+//     margin: 0 auto;
+
+//     animation: rotation .6s infinite linear;
+
+//     border-top: 4px solid rgba(202,202,202,.9);
+//     border-right: 4px solid rgba(202,202,202,.15);
+//     border-bottom: 4px solid rgba(202,202,202,.15);
+//     border-left: 4px solid rgba(202,202,202,.15);
+//     border-radius: 100%;
+// }
+
+
+
+.pull-spinner
+{
+    @extend %spinner;
+    display: none;
+
+    // margin: 0 auto;
+    // margin: $grid-padding auto;
+    animation: rotation $duration-medium infinite linear;
+
+    // &:before
+    // {
+    //     content: '';
+    //     display: block;
+    //     width: 100%;
+    //     position: relative;
+    //     // margin: $grid-padding 0;
+    // }
+}
+

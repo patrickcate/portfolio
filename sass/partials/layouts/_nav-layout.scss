@@ -1,33 +1,16 @@
-// $icon-1x-clean-up: true;
-// $icon-1x-layout: smart;
-
-// $icon-2x-clean-up: true;
-// $icon-2x-layout: smart;
-
-// @import "icons/sprite/icon-1x/*.png";
-// @import "icons/sprite/icon-2x/*.png";
 
 .l-navigation
 {
 	@extend %clearfix;
 	clear: both;
-	padding: $quarter-grid-padding 0 $half-grid-padding 0;
-	// transition: padding 0.25s ease-in-out;
-	// @include span(first 14);
+	padding: $half-grid-padding 0 0 0;
 
 	@include breakpoint($break-tiny)
 	{
-		// @include span(first 14);
-		padding: ($half-grid-padding + $quarter-grid-padding) 0 $grid-padding 0;
+		padding: ($grid-padding) 0 0 0;
 		text-align: right;
 		clear: none;
 		float: right;
-		// width: 280px;
-
-		// .headroom--unpinned &
-		// {
-		// 	padding: ($half-grid-padding + $quarter-grid-padding) 0 $grid-padding 0;
-		// }
 	}
 
 	@include breakpoint($break-small)
@@ -39,8 +22,6 @@
 .nav__item
 {
 	@include span(8 of 24);
-	// margin: 0;
-	// display: inline-block;
 
 	&:first-child
 	{
@@ -256,151 +237,37 @@
 	}
 }
 
-// 	&:before
-// 	{
-// 		// @extend %nav__link--icon;
-// 		// background: transparent image-url('icons/icon--nav-about.png') no-repeat 0 center scroll;
-// 		// height: image-height('icons/icon--nav-about.png');
-// 		// width: image-width('icons/icon--nav-about.png');
-// 	}
-
-// 	.no-touch &
-// 	{
-// 		&:hover
-// 		{
-// 			&:before
-// 			{
-// 				// background-image: image-url('icons/icon--nav-about-active.png');
-// 			}
-// 		}
-// 	}
-
-// 	&.nav__link--is-active-first
-// 	{
-// 		&:before
-// 		{
-// 			// background-image: image-url('icons/icon--nav-about-active.png');
-// 		}
-// 	}
-// }
-
-// .nav__link--skills
+// .button--refresh
 // {
-// 	&:before
-// 	{
-// 		// @extend %nav__link--icon;
-// 		background: transparent image-url('icons/icon--nav-skills.png') no-repeat 0 center scroll;
-// 		height: image-height('icons/icon--nav-skills.png');
-// 		width: image-width('icons/icon--nav-skills.png');
-// 	}
-
-// 	.no-touch &
-// 	{
-// 		&:hover
-// 		{
-// 			&:before
-// 			{
-// 				background-image: image-url('icons/icon--nav-skills-active.png');
-// 			}
-// 		}
-// 	}
-
-// 	&.nav__link--is-active-first
-// 	{
-// 		&:before
-// 		{
-// 			background-image: image-url('icons/icon--nav-skills-active.png');
-// 		}
-// 	}
-// }
-
-
-// .nav__link--tools
-// {
-// 	&:before
-// 	{
-// 		// @extend %nav__link--icon;
-// 		background: transparent image-url('icons/icon--nav-tools.png') no-repeat 0 center scroll;
-// 		height: image-height('icons/icon--nav-tools.png');
-// 		width: image-width('icons/icon--nav-tools.png');
-// 	}
-
-// 	.no-touch &
-// 	{
-// 		&:hover
-// 		{
-// 			&:before
-// 			{
-// 				background-image: image-url('icons/icon--nav-tools-active.png');
-// 			}
-// 		}
-// 	}
-
-// 	&.nav__link--is-active-first
-// 	{
-// 		&:before
-// 		{
-// 			background-image: image-url('icons/icon--nav-tools-active.png');
-// 		}
-// 	}
-// }
-
-
+// 	@include link-colors($white, $gold, $white, $white, inherit);
+// 	transition: color 0.25s ease-in-out;
+// 	background: none;
+// 	margin: 0;
+// 	padding: 0;
+// 	border: none;
+// 	text-shadow: $drop-text-shadow;
+// 	float: right;
+// 	font-size: $h2-font-size;
+// 	line-height: $h2-line-height;
+// 	margin-top: $half-grid-padding;
 
 // 	&:before
 // 	{
-
-// 		// @extend %nav__link--icon;
-// 		background: transparent image-url('icons/icon--nav-work.png') no-repeat 0 center scroll;
-// 		height: image-height('icons/icon--nav-work.png');
-// 		width: image-width('icons/icon--nav-work.png');
+// 		margin-right: 0;
 // 	}
 
-// 	.no-touch &
+// 	@include breakpoint($break-tiny)
 // 	{
-// 		&:hover
-// 		{
-// 			&:before
-// 			{
-// 				background-image: image-url('icons/icon--nav-work-active.png');
-// 			}
-// 		}
+// 		margin-left: $grid-padding;
 // 	}
 
-// 	&.nav__link--is-active-first
+// 	@include breakpoint($break-small)
 // 	{
-// 		&:before
-// 		{
-// 			background-image: image-url('icons/icon--nav-work-active.png');
-// 		}
-// 	}
-// }
-
-
-// 	&:before
-// 	{
-// 		// @extend %nav__link--icon;
-// 		background: transparent image-url('icons/icon--nav-contact.png') no-repeat 0 center scroll;
-// 		height: image-height('icons/icon--nav-contact.png');
-// 		width: image-width('icons/icon--nav-contact.png');
+// 		margin-top: $grid-padding;
 // 	}
 
-// 	.no-touch &
+// 	@include breakpoint($break-medium)
 // 	{
-// 		&:hover
-// 		{
-// 			&:before
-// 			{
-// 				background-image: image-url('icons/icon--nav-contact-active.png');
-// 			}
-// 		}
-// 	}
-
-// 	&.nav__link--is-active-first
-// 	{
-// 		&:before
-// 		{
-// 			background-image: image-url('icons/icon--nav-contact-active.png');
-// 		}
+// 		margin-left: $grid-padding * 2;
 // 	}
 // }

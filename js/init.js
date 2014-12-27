@@ -124,13 +124,32 @@ catch(err)
 }
 });
 
+// Add HTML class when viewed as a webapp.
 if (window.navigator.standalone === true)
 {
 	$('html').addClass('webapp');
+
+	$('#js-content__inner').xpull(
+	{
+	 	pullThreshold: 100, // Pull threshold - amount in  pixels required to pull to enable release callback
+	    spinnerTimeout: 2000, // timeout in miliseconds after which the loading indicator stops spinning. If set to 0 - the loading will be indefinite
+	    callback:function()
+	    {
+
+	    }, // triggers after user pulls the content over pull threshold and releases
+	});
 }
 else
 {
 	$('html').addClass('no-webapp');
 }
+
+// Page refresh button
+// $('#js-button--refresh').click(function()
+// {
+//     location.reload();
+// });
+
+
 
 }( jQuery ));

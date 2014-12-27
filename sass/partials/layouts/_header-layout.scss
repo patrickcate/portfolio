@@ -13,94 +13,43 @@
 	top: 0;
 	bottom: auto;
 	padding: 0;
-
-	// position: sticky;
-	// -webkit-backface-visibility: hidden;
-
-	// .csspositionsticky &
-	// {
-	// 	position: sticky;
-
-	// 	+ .l-content
-	// 	{
-	// 		padding-top: 0!important;
-	// 	}
-	// }
-
-	// &.headroom--unpinned
-	// {
-	// 	transform: translateY( -#{image-height('logo/logo.png') + $half-grid-padding} )!important;
-	// }
-
-	// &.headroom--pinned, &:hover
-	// {
-	// 	transform: translateY(0)!important;
-	// }
-
-	// @include breakpoint( (min-height $break-small, $break-small) )
-	// {
-	// 	&.headroom--unpinned, &.headroom--pinned
-	// 	{
-	// 		transform: translateY(0);
-	// 	}
-	// }
-
-	// @include breakpoint( (min-height $break-small) )
-	// {
-	// 	&.l-header.headroom--unpinned, &.l-header.headroom--pinned
-	// 	{
-	// 		transform: translateY(0);
-	// 	}
-	// }
 }
 
 .l-header__inner
 {
-	// @extend %clearfix;
 	@extend %container;
-	padding: $half-grid-padding $grid-padding 0 $grid-padding;
-	// transition: padding 0.25s ease-in-out;
+	padding: $half-grid-padding $grid-padding $half-grid-padding $grid-padding;
 
 	@include breakpoint($break-tiny)
 	{
-		padding: $half-grid-padding $grid-padding $quarter-grid-padding $grid-padding;
-
-		// .headroom--unpinned &
-		// {
-		// 	padding: $quarter-grid-padding $grid-padding $quarter-grid-padding $grid-padding;
-		// 	// background-color: red;
-		// }
+		// padding: $half-grid-padding $grid-padding $quarter-grid-padding $grid-padding;
 	}
 }
 
 .l-headline
 {
-	// @extend %clearfix;
-	// @include span(first 12);
-	// width: 240px;
-
 	@include breakpoint($break-tiny)
 	{
 		float: left;
 		margin-right: $half-grid-padding;
-		// width: 260px;
-		// @include span(first 10);
 	}
 }
 
 $logo-size--small: 50px;
 $logo-size--medium: 75px;
+$logo-size--large: 75px;
 
 .site-logo
 {
 	display: block;
 	float: left;
-	// background-repeat: no-repeat;
-	// background-size: contain;
-	// background-image: image-url('logo/logo.png');
-	// height: image-height('logo/logo.png');
-	// width: image-width('logo/logo.png');
 	margin-right: $half-grid-padding;
+	height: $logo-size--small;
+
+	@include breakpoint($break-small)
+	{
+		height: $logo-size--medium;
+	}
 
 	.logo
 	{
@@ -113,32 +62,17 @@ $logo-size--medium: 75px;
 		{
 			width: $logo-size--medium - 1px;
 			height: $logo-size--medium;
-
-			// .headroom--unpinned &
-			// {
-			// 	width: $logo-size--small - 1px;
-			// 	height: $logo-size--small;
-			// }
 		}
 	}
 }
 
 .site-headline
 {
-	margin-top: $quarter-grid-padding / 2;
-	// @include breakpoint($break-tiny)
-	// {
-	// 	margin-top: $quarter-grid-padding;
-	// }
+	margin-top: $quarter-grid-padding;
 
 	@include breakpoint($break-small)
 	{
 		margin-top: $half-grid-padding;
-
-		// .headroom--unpinned &
-		// {
-		// 	margin-top: 0;
-		// }
 	}
 }
 

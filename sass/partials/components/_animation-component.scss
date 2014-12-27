@@ -1,56 +1,37 @@
-// Visibility Component
+// Animation Component
 
-// .hide
-// {
-// 	display: none!important;
-// }
+@keyframes rotation
+{
+    from
+    {
+        transform: rotate(0deg);
+    }
+    to
+    {
+        transform: rotate(359deg);
+    }
+}
 
-// .visible
-// {
-// 	visibility: visible!important;
-// }
+@keyframes half-rotation
+{
+    from
+    {
+        transform: rotate(0deg);
+    }
+    to
+    {
+        transform: rotate(90deg);
+    }
+}
 
-// .invisible
-// {
-// 	visibility: hidden!important;
-// }
-
-// .is-hidden
-// {
-// 	position: absolute;
-// 	z-index: -10;
-// 	visibility: hidden;
-// 	overflow: hidden;
-// 	pointer-events: none;
-// }
-
-// .is-visible
-// {
-// 	position: static;
-// 	z-index: 10;
-// 	visibility: visible;
-// 	overflow: visible;
-// 	pointer-events: auto;
-// }
-
-// .visually-hidden
-// {
-// 	position: absolute;
-// 	overflow: hidden;
-// 	clip: rect(0 0 0 0);
-// 	width: 1px;
-// 	height: 1px;
-// 	margin: -1px;
-// 	padding: 0;
-// 	border: 0;
-// }
-
-// .visually-hidden.focusable:active, .visually-hidden.focusable:focus
-// {
-// 	position: static;
-// 	overflow: visible;
-// 	clip: auto;
-// 	width: auto;
-// 	height: auto;
-// 	margin: 0;
-// }
+@keyframes quarter-rotation
+{
+    from
+    {
+        transform: rotate(0deg);
+    }
+    to
+    {
+        transform: rotate(90deg);
+    }
+}

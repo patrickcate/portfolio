@@ -31,9 +31,8 @@ $susy: (
 
 $breakpoint-list: 'tiny', 'small', 'medium', 'large', 'huge';
 
-//$breakpoint-mini: convert-length(459px, em);
+$break-mini: 360px;
 $break-tiny: 480px;
-// $break-tempsmall: 600px;
 $break-small: 600px;
 $break-medium: 800px;
 $break-large: 920px;
@@ -42,7 +41,6 @@ $break-retina: min-resolution 1.5dppx;
 
 
 $default-border-radius: 6px;
-// $tab-border-radius: $default-border-radius;
 $photo-border: 5px;
 $photo-size--tiny: 100px;
 $photo-size--small: 150px;
