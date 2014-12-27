@@ -40,6 +40,12 @@
 .gallery__title
 {
 	color: $blue;
+	margin-top: $half-grid-padding;
+
+	@include breakpoint($break-tiny)
+	{
+		margin-top: 0;
+	}
 }
 
 .gallery__thumbnail

@@ -17,11 +17,11 @@
  textarea
  {
  	color: inherit;
-		/* 1 */
-		font: inherit;
-		/* 2 */
-		margin: 0;
-		/* 3 */
+	/* 1 */
+	font: inherit;
+	/* 2 */
+	margin: 0;
+	/* 3 */
 	}
 
 /**
@@ -60,10 +60,10 @@
  input[type="submit"]
  {
  	-webkit-appearance: none;
-		/* 2 */
-		cursor: pointer;
-		/* 3 */
-		 -webkit-font-smoothing: antialiased; /* Set the anti-alias settings. Alternative: subpixel-antialiased */
+	/* 2 */
+	cursor: pointer;
+	/* 3 */
+	 -webkit-font-smoothing: antialiased; /* Set the anti-alias settings. Alternative: subpixel-antialiased */
     -moz-osx-font-smoothing: grayscale;
 	}
 

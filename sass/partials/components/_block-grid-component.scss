@@ -1,13 +1,21 @@
-// $skills-1x-clean-up: true;
-// $skills-1x-layout: smart;
+// Block grid component
 
-// $skills-2x-clean-up: true;
-// $skills-2x-layout: smart;
+$small-icon: 70px;
+$medium-icon: 75px;
 
-// @import "icons/skill-icons/icon-1x/*.png";
-// @import "icons/skill-icons/icon-2x/*.png";
+.skills-icon
+{
+	width: $small-icon;
+	height: $small-icon;
 
-.block-grid
+	@include breakpoint($break-mini)
+	{
+		width: $medium-icon;
+		height: $medium-icon;
+	}
+}
+
+.block-grid, .block-grid__item
 {
 	list-style: none;
 	padding: 0;
@@ -16,8 +24,8 @@
 
 .block-grid__item
 {
-	margin: 0;
-	padding: 0;
+	// margin: 0;
+	// padding: 0;
 
 	@include breakpoint($break-small)
 	{
@@ -30,100 +38,93 @@
 	}
 }
 
-.block-grid--tools
-{
-	.block-grid__item
-	{
-		&:first-child
-		{
-			@include first;
-		}
-
-		@include breakpoint($break-tiny)
-		{
-			@include span(12);
-		}
-
-		@include breakpoint($break-small)
-		{
-			@include span(8);
-		}
-	}
-}
-
-.skills-icon
-{
-	width: 75px;
-	height: 75px;
-}
-
-
 .block-grid__icon
 {
-	@include span(5);
-	// background: transparent sprite-url($icon-1x-sprites) no-repeat 0 0 scroll;
-	width: span(5);
-	width: 75px;
-	// height: image-height('icons/skill-icons/icon-1x/skill-icon--print.png');
-	// width: image-width('icons/skill-icons/icon-1x/skill-icon--print.png');
-	// // background-repeat: no-repeat;
-	// // background-size: contain;
+	// @include span(5);
+	// width: span(5);
+	float: left;
+	width: $small-icon;
+	// margin: 0;
 	display: table-cell;
-	// padding-bottom: $grid-padding;
 
-
-	@include breakpoint($break-retina)
+	@include breakpoint($break-mini)
 	{
-		// background: transparent sprite-url($icon-2x-sprites) no-repeat 0 0 scroll;
-		// @include background-size(image-width('generated/icons/skill-icons/icon-1x.png') image-height('generated/icons/skill-icons/icon-1x.png'));
+		width: $medium-icon;
 	}
 }
-
-// .block-grid__icon--print-design
-// {
-// 	@extend %block-grid__icon;
-// 	// @include sprite-background-position($icon-1x-sprites, 'skill-icon--print');
-// }
-
-// .block-grid__icon--web-design
-// {
-// 	@extend %block-grid__icon;
-// 	// @include sprite-background-position($icon-1x-sprites, 'skill-icon--web');
-// }
-
-// .block-grid__icon--identity-design
-// {
-// 	@extend %block-grid__icon;
-// 	// @include sprite-background-position($icon-1x-sprites, 'skill-icon--brand');
-// }
-
-// .block-grid__icon--drupal-theming
-// {
-// 	@extend %block-grid__icon;
-// 	// @include sprite-background-position($icon-1x-sprites, 'skill-icon--drupal');
-// }
-
-// .block-grid__icon--app-design
-// {
-// 	@extend %block-grid__icon;
-// 	// @include sprite-background-position($icon-1x-sprites, 'skill-icon--app');
-// }
-
-// .block-grid__icon--email-design
-// {
-// 	@extend %block-grid__icon;
-// 	// @include sprite-background-position($icon-1x-sprites, 'skill-icon--email');
-// }
 
 .block-grid__content
 {
-	// @include span(18);
-	// width: span(19);
-	padding-left: $grid-padding;
+	padding-left: $half-grid-padding;
 	display: table-cell;
+
+	@include breakpoint($break-mini)
+	{
+		padding-left: $grid-padding;
+	}
 }
 
 .block-grid__title
 {
 	text-transform: uppercase;
+}
+
+.block-grid--skills
+{
+	.block-grid__item
+	{
+		@include span(24);
+
+		&:first-child
+		{
+			@include first;
+		}
+	}
+
+	@include breakpoint($break-tiny)
+	{
+		.block-grid__item
+		{
+			@include span(12);
+		}
+	}
+}
+
+.block-grid--tools
+{
+	.block-grid__item
+	{
+		@include span(24);
+
+		&:first-child
+		{
+			@include first;
+		}
+	}
+
+	@include breakpoint($break-mini)
+	{
+		.block-grid__item
+		{
+			@include span(12);
+
+			&:nth-child(3)
+			{
+				@include span(24 at 12);
+			}
+		}
+	}
+
+	@include breakpoint($break-tiny)
+	{
+		.block-grid__item
+		{
+			@include span(8);
+
+			&:nth-child(3)
+			{
+				@include span(8);
+			}
+		}
+	}
 }

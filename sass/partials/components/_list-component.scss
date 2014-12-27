@@ -15,44 +15,39 @@
 
 .list-column__header
 {
-	margin-bottom: $quarter-grid-padding;
-	text-align: center;
-	text-transform: uppercase;
-	color: $black;
+    margin-bottom: $quarter-grid-padding;
+    text-align: center;
+    text-transform: uppercase;
+    color: $black;
 }
 
 .list-column__item
 {
-	display: inline-block;
-	vertical-align: top;
-	text-align: left;
-
-	@include breakpoint($break-medium)
-	{
-		+ .list-column__item
-		{
-			margin-left: $grid-padding;
-		}
-	}
+    display: inline-block;
+    margin-bottom: $grid-padding;
+    text-align: left;
+    vertical-align: top;
 }
 
 .list-column--skills
 {
 	.list-column__item
 	{
-		&:first-child
-		{
-			margin: 0;
+		display: block;
 
-			@include breakpoint($break-tiny)
+		&:first-of-type
+		{
+			margin-bottom: $half-grid-padding;
+		}
+
+		@include breakpoint($break-medium)
+		{
+			display: inline-block;
+
+			+ .list-column__item
 			{
-				margin: 0 0 $grid-padding 0;
+				margin-left: $grid-padding;
 			}
 		}
 	}
-}
-
-.list-column--tools
-{
-
 }
