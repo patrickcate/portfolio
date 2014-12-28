@@ -75,24 +75,15 @@ $spinner-size: 40px;
     border-top: 4px solid $blue;
     border-radius: $grid-padding * 4;
     top: #{$spinner-size / 2};
-    // text-align: center;
 }
 
 .pull-indicator
 {
-    // display: block;
     position: relative;
     top: -#{$spinner-size / 2};
-    // top: -100px;
-    // top: 0!important;
     width: $spinner-size;
-    // width: 100%;
-    // height: $spinner-size * 3;
     height: $spinner-size * 2;
     margin: 0 auto;
-    // padding-bottom: $grid-padding;
-    // transition: transform $duration-fast ease-in-out, top $duration-fast ease-in-out;
-    // transition-timing-function: $swing-timing;
     transform: translate3d(0,0,0) rotate(0deg);
 }
 
@@ -104,63 +95,20 @@ $spinner-size: 40px;
 .arrow-body
 {
     @extend %spinner;
-    // top: #{$spinner-size / 2};
     transition: transform $duration-medium $swing-timing!important;
 }
 
 .arrow-rotate-180
 {
-    // @extend %spinner;
     .arrow-body
     {
         transform: rotate(-180deg);
-        // transform-origin: 50% 50%;
-        // animation: rotation $duration-medium 1 $swing-timing;
-
     }
-
-
-    // animation: half-rotation .5s infinite linear;
 }
-
-// .pull-spinner
-// {
-//     position: relative;
-//     left: -4px;
-
-//     display: none;
-
-//     width: 25px;
-//     height: 25px;
-//     margin: 0 auto;
-
-//     animation: rotation .6s infinite linear;
-
-//     border-top: 4px solid rgba(202,202,202,.9);
-//     border-right: 4px solid rgba(202,202,202,.15);
-//     border-bottom: 4px solid rgba(202,202,202,.15);
-//     border-left: 4px solid rgba(202,202,202,.15);
-//     border-radius: 100%;
-// }
-
-
 
 .pull-spinner
 {
     @extend %spinner;
     display: none;
-
-    // margin: 0 auto;
-    // margin: $grid-padding auto;
     animation: rotation $duration-medium infinite linear;
-
-    // &:before
-    // {
-    //     content: '';
-    //     display: block;
-    //     width: 100%;
-    //     position: relative;
-    //     // margin: $grid-padding 0;
-    // }
 }
-

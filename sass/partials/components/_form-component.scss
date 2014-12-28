@@ -15,6 +15,7 @@
 	margin-bottom: $half-grid-padding;
 	vertical-align: middle;
 	position: relative;
+	transform: translate3d(0,0,0); // Fix mobile safari rendering performance.
 }
 
 .form__label
@@ -78,6 +79,7 @@
 	border: 1px solid $image-border-color;
 	text-align: left;
 	border-radius: 0;
+	color: $text-color;
 	-webkit-appearance: none;
 
 	&:focus
@@ -143,6 +145,7 @@
 	margin-top: $quarter-grid-padding / 2;
 	width: 100%;
 	font-weight: bold;
+	transform: translate3d(0,0,0);  // Fix mobile safari rendering performance.
 
 	// &:before
 	// {
