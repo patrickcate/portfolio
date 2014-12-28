@@ -23,7 +23,7 @@
 
 .mfp-ready
 {
-	transition: all 0.25s ease-in-out;
+	transition: all $duration-fast ease-in-out;
 }
 
 .mfp-wrap
@@ -56,7 +56,7 @@
 
 .mfp-arrow, .mfp-close
 {
-	transition: color 0.25s ease-in-out;
+	transition: color $duration-fast ease-in-out;
 }
 
 .mfp-image-holder .mfp-close.mfp-close
@@ -134,7 +134,7 @@ img.mfp-img
 
 button.mfp-arrow
 {
-	transition: all .25s ease-in-out;
+	transition: all $duration-fast ease-in-out;
 	cursor: pointer;
 	background-color: $black;
 	width: $grid-padding * 3;

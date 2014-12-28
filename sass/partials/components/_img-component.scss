@@ -23,7 +23,7 @@
 
 		&:before, &:after
 		{
-			transition: z-index 0.25s ease-in-out, opacity 0.25s ease-in-out, transform 0.15s ease-in-out;
+			transition: z-index $duration-fast ease-in-out, opacity $duration-fast ease-in-out, transform 0.15s ease-in-out;
 			content: '';
 			position: absolute;
 			left: 0;

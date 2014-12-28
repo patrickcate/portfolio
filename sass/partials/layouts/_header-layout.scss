@@ -1,7 +1,7 @@
 .l-header
 {
 	@extend %noise-background;
-	transition: transform .25s ease-in-out;
+	transition: transform $duration-fast ease-in-out;
 	background-color: rgba($blue, .95);
 	color: $white;
 	text-shadow: $drop-text-shadow;
@@ -55,7 +55,7 @@ $logo-size--large: 75px;
 	{
 		width: $logo-size--small - 1px;
 		height: $logo-size--small;
-		transition: height 0.25s ease-in-out, width 0.25s ease-in-out;
+		transition: height $duration-fast ease-in-out, width $duration-fast ease-in-out;
 		// filter: drop-shadow($drop-text-shadow);
 
 		@include breakpoint($break-small)

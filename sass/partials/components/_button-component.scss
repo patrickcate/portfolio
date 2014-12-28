@@ -2,7 +2,7 @@
 {
 	@include link-colors($white, $white, $white, $white, $white);
 	@extend %h4;
-	transition: background-color .25s ease-in-out;
+	transition: background-color $duration-fast ease-in-out;
 	text-align: center;
 	text-shadow: $drop-text-shadow;
 	background-color: $blue;

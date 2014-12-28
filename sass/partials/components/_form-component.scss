@@ -72,7 +72,7 @@
 
 .form__textfield, .form__textarea
 {
-	transition: border .25s ease-in-out;
+	transition: border $duration-fast ease-in-out;
 	font-family: $mono-font;
 	background-color: $white;
 	padding: $quarter-grid-padding;
