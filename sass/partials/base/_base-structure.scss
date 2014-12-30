@@ -17,20 +17,7 @@
     -ms-text-size-adjust: 100%; /* 2 */
     -webkit-font-smoothing: antialiased; /* Set the anti-alias settings. Alternative: subpixel-antialiased */
     -moz-osx-font-smoothing: grayscale;
-
     font-size: $browser-default-font-size;
-    // height: 100%;
-	// @include adjust-font-size-to($base-font-size);
-
-	&.touch
-	{
-		// overflow: hidden;
-		// overflow-y: scroll; /* has to be scroll, not auto */
-	// // 	// overflow: scroll;
-	// overflow-y: auto;
-		// -webkit-overflow-scrolling: touch;
-		// height: 100%;
-	}
 }
 
 /**
@@ -41,29 +28,10 @@
  {
  	margin: 0;
  	padding: 0;
- 	// position: relative;
-
  	color: $text-color;
  	font-family: $base-font-family;
  	font-size: $base-font-size;
- 	// font-weight: $font-weight-normal;
  	letter-spacing: normal;
-
-	.touch &
-	{
-
-		// overflow: hidden;
-		// overflow-y: scroll; /* has to be scroll, not auto */
-	// // 	// overflow: hidden;
-		// -webkit-overflow-scrolling: touch;
-		// height: 100%;
-	// 	// white-space: nowrap;
-	// overflow-x: scroll;
-	// overflow-y: scroll;
-	// -webkit-overflow-scrolling: touch;
-// overflow-y: auto;
-	}
-
 }
 
 

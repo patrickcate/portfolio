@@ -24,6 +24,11 @@
 	{
 		// padding: $half-grid-padding $grid-padding $quarter-grid-padding $grid-padding;
 	}
+
+	.webapp &
+	{
+		padding-top: $grid-padding + $quarter-grid-padding;
+	}
 }
 
 .l-headline
@@ -37,7 +42,7 @@
 
 $logo-size--small: 50px;
 $logo-size--medium: 75px;
-$logo-size--large: 75px;
+// $logo-size--large: 75px;
 
 .site-logo
 {
