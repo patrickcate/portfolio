@@ -144,12 +144,32 @@ else
 	$('html').addClass('no-webapp');
 }
 
+// Highlight form label on focus
+var form_element = $('#js-contact-form #name, #js-contact-form #email, #js-contact-form #message');
+form_element.focus(function()
+{
+	var self = $(this).siblings('.form__label');
+
+	if (self.not('.is-highlighted'))
+	{
+		self.addClass('is-highlighted');
+	}
+});
+
+form_element.blur(function()
+{
+	var self = $(this).siblings('.form__label');
+
+	if (self.hasClass('is-highlighted'))
+	{
+		self.removeClass('is-highlighted');
+	}
+});
+
 // Page refresh button
 // $('#js-button--refresh').click(function()
 // {
 //     location.reload();
 // });
-
-
 
 }( jQuery ));
