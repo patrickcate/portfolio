@@ -4,16 +4,6 @@
 	{
 
 	}
-
-	// .l-section--work:nth-child(even) &
-	// {
-	// 	.gallery__thumbnail
-	// 	{
-	// 		float: right;
-	// 		margin-left: $grid-padding;
-	// 		margin-right: 0;
-	// 	}
-	// }
 }
 
 .gallery__content
@@ -25,12 +15,6 @@
 .gallery__title
 {
 	color: $blue;
-	// margin-top: $half-grid-padding;
-
-	// @include breakpoint($break-tiny)
-	// {
-	// 	margin-top: 0;
-	// }
 }
 
 .gallery__thumbnail
@@ -101,6 +85,7 @@
 	&:nth-child(2n - 1)
 	{
 		@include first;
+		clear: left;
 	}
 
 	@include breakpoint($break-tiny)
@@ -110,12 +95,12 @@
 		&:nth-child(2n - 1)
 		{
 			margin-left: gutters(24);
+			clear: none;
 		}
 
 		&:first-child
 		{
 			@include first;
 		}
-
 	}
 }

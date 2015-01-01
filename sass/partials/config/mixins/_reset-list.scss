@@ -1,8 +1,0 @@
-// Shortcut mixin reset list styling
-
-@mixin reset-list($padding: 0, $margin: 0, $style: none)
-{
-	padding: $padding;
-	margin: $margin;
-	list-style: $style;
-}

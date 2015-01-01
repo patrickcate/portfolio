@@ -1,8 +1,0 @@
-// Shortcut mixin to apply width attributes
-
-@mixin width($width: 100%, $min-width: 0, $max-width: none)
-{
-	min-width: $min-width;
-	width: $width;
-	max-width: $max-width;
-}
