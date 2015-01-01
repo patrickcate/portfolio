@@ -21,11 +21,21 @@
 {
 	margin-bottom: $quarter-grid-padding;
 
+	a
+	{
+		display: inline-block;
+	}
+
 	@include breakpoint($break-tiny)
 	{
 		float: left;
 		margin-right: $grid-padding;
 		max-width: $photo-size--small;
+
+		a
+		{
+			display: block;
+		}
 	}
 
 	@include breakpoint($break-small)

@@ -10,7 +10,6 @@
 	background-color: $white;
 	border: 1px solid $image-border-color;
 	padding: $photo-border;
-	// display: inline-block;
 	display: block;
 	vertical-align: middle;
 	position: relative;
@@ -24,7 +23,7 @@
 
 .lightbox-popup
 {
-	display: inline-block;
+	display: block;
 	backface-visibility: hidden;
 	transform: scale(1);
 
