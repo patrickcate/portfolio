@@ -5,9 +5,8 @@
 <body>
 	{% include svg-sprite.svg %}
 	{% include header.html %}
-	<main id="js-content" class="l-content">
+	<main id="js-content" class="l-content l-content--{{page.id | classify}}">
 		<div id="js-content__inner" class="l-content__inner">
-			{% include main.html %}
 			{{ content }}
 			{% include footer.html %}
 		</div>
