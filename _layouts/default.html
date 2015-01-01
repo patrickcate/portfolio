@@ -3,7 +3,7 @@
 <!--[if gt IE 9]><!--><html class="no-js"><!--<![endif]-->
 {% include head.html %}
 <body>
-	{% include svg-sprite.svg %}
+	{% include svg-sprite--{{page.id | classify}}.svg %}
 	{% include header.html %}
 	<main id="js-content" class="l-content l-content--{{page.id | classify}}">
 		<div id="js-content__inner" class="l-content__inner">
