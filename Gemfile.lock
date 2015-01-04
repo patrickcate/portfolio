@@ -53,6 +53,7 @@ GEM
     jekyll-contentblocks (0.0.3)
       jekyll
     jekyll-gist (1.1.0)
+    jekyll-minibundle (1.5.0)
     jekyll-paginate (1.0.0)
     jekyll-sass-converter (1.2.1)
       sass (~> 3.2)
@@ -112,6 +113,7 @@ DEPENDENCIES
   compass (~> 1.0.1)
   jekyll (~> 2.4)
   jekyll-contentblocks (~> 0.0.3)
+  jekyll-minibundle (~> 1.5)
   jekyll_version_plugin
   mini_magick (~> 3.8)
   octopress-filters (~> 1.2)

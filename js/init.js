@@ -2,7 +2,6 @@
 {
 	$(document).ready(function()
 	{
-
 		$('.gallery').each(function()
 		{
 			$(this).magnificPopup({
@@ -61,7 +60,7 @@
 
 				$.ajax({
 					dataType: 'jsonp',
-					url: "http://getsimpleform.com/messages/ajax?form_api_token=921255819e3dc4cdd301cf95526611a8",
+					url: "http://getsimpleform.com/messages/ajax?form_api_token=a325ecabd25612a592081a155d6386bd",
 					data: $('#js-contact-form').serialize()
 				}).done(function()
 				{
