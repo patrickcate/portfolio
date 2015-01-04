@@ -3,8 +3,8 @@
 	&:before
 	{
 		display: inline-block;
-		vertical-align: inherit;
-		vertical-align: initial;
+		vertical-align: baseline;
+		// vertical-align: initial;
 		text-decoration: none;
 		text-transform: none;
 		font-weight: normal;
