@@ -53,3 +53,6 @@ exclude: [
     # 'css/styles.css',
     # 'js/scripts.min.js'
 ]
+
+main_image_mq: '(min-width: 800px) 240px, (min-width: 480px) calc(33vw - 20px), 50vw'
+thumbnail_grid_mq: '(min-width: 800px) 210px, (min-width: 480px) calc((100vw - 20px) / 4), calc((100vw - 20px) / 2)'

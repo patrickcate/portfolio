@@ -1,36 +1,57 @@
+<!-- Generate image markup -->
+{% capture image_markup %}
+	{% for image in page.images %}
+		{% capture srcset %}
+			{% if image.srcset != nil %}
+				{% for set in image.srcset %}{% if forloop.last %}/{{ set }}{% else %}/{{ set }}, {% endif %}{% endfor %}
+			{% endif %}
+		{% endcapture %}
+		{% if image.large_url != nil %}
+			<a href="/{{ image.large_url }}" class="lightbox-popup {% if image.border == true %}img-border{% endif %}"><svg class="icon--zoom"><use xlink:href="#icon--zoom"></use></svg>
+		{% else %}
+			<div{% if image.border == true %} class="img-border"{% endif %}>
+		{% endif %}
+			<img src="/{{ image.url }}" {% if image.srcset != nil %}srcset="{{ srcset }}"{% endif %} {% if forloop.first %}sizes="{{ site.main_image_mq }}"{% else %}sizes="{{ site.thumbnail_grid_mq }}"{% endif %} alt="{{ image.alt }}" class="img">
+		{% if image.large_url != nil %}
+			</a>
+		{% else %}
+			</div>
+		{% endif %}
+		{% if forloop.last %}
+		{% else %}~
+		{% endif %}
+	{% endfor %}
+{% endcapture %}
+{% assign imageset = image_markup | split: "~" %}
+
+<!-- Set main image size -->
+{% if page.gallery_image_size != nil %}
+	{% capture gallery_thumbnail_size %}gallery_thumbnail--{{page.gallery_image_size | classify}}{% endcapture %}
+{% else %}
+	{% assign gallery_thumbnail_size = "gallery_thumbnail--medium" %}
+{% endif %}
+
 <section class="l-section l-section--work">
 	<div class="l-section__content">
 		<article class="gallery">
 			<div class="gallery__content">
-				<div class="gallery__thumbnail">
-					{% for image in page.images limit: 1 %}
-						{% if image.large_url != nil %}
-							<a href="/{{ image.large_url }}" class="lightbox-popup {% if image.border == true %}img-border{% endif %}"><svg class="icon--zoom"><use xlink:href="#icon--zoom"></use></svg>
-						{% else %}
-							<div{% if image.border == true %} class="img-border"{% endif %}>
-						{% endif %}
-						<img src="/{{ image.url }}" alt="{{ image.alt }}" class="img">
-						{% if image.large_url != nil %}
-							</a>
-						{% else %}
-							</div>
-						{% endif %}
-					{% endfor %}
-				</div>
-				<h3 class="gallery__title">{{ page.title }}</h3>
+				<div class="gallery__header"><h3 class="gallery__title">{{ page.title }}</h3>
 				<h5 class="gallery__categories">
 					{% assign categories = page.categories | sort: page.category %}
-					{% for category in categories %}{% if forloop.last %}<span class="gallery__category--{{category | classify}}">{{category | titlecase }}</span>{% else %}<span class="gallery__category--{{category | classify}}">{{category | titlecase }}</span>/{% endif %}{% endfor %}</h5>
+					{% for category in categories %}{% if forloop.last %}<span class="gallery__category--{{category | classify}}">{{category | titlecase }}</span>{% else %}<span class="gallery__category--{{category | classify}}">{{category | titlecase }}</span>/{% endif %}{% endfor %}</h5></div>
+				<div class="gallery__thumbnail {{gallery_thumbnail_size}}">
+					{% for image in imageset limit: 1 %}
+						{{ image }}
+					{% endfor %}
+				</div>
 				{{ content }}
 			</div>
-			{% assign image_number = page.images | size %}
+			{% assign image_number = imageset | size %}
 			{% if image_number > 1 %}
 				<div class="thumbnail-grid clear">
-					{% for image in page.images offset: 1 %}
+					{% for image in imageset offset: 1 %}
 						<div class="thumbnail-grid__item">
-							<a href="/{{ image.large_url }}" class="lightbox-popup {% if image.border == true %}img-border{% endif %}"><svg class="icon--zoom"><use xlink:href="#icon--zoom"></use></svg>
-								<img src="/{{ image.url }}" alt="{{ image.alt }}" class="img">
-							</a>
+							{{ image }}
 						</div>
 					{% endfor %}
 				</div>
