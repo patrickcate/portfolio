@@ -739,14 +739,6 @@ AddDefaultCharset utf-8
 
     </IfModule>
 
-    <filesMatch "\.(js)$">
-         Header append Vary: Accept-Encoding
-         Header set Content-Encoding x-deflate
-        # Header set Content-Encoding compress
-        # Header set Content-Encoding x-gzip
-        # Header set Content-Encoding gzip
-    </filesMatch>
-
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
     # Map the following filename extensions to the specified
