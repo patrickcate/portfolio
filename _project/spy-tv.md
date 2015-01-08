@@ -4,30 +4,55 @@ title:  Spy TV
 categories: [brand identity, print]
 weight: 80
 images:
-  - url: images/spy-tv/spy-tv-logo.png
-    large_url: images/spy-tv/spy-tv-logo--large.png
+  - url: images/spy-tv/spy-tv-1--medium.png
+    large_url: images/spy-tv/spy-tv-1--large.png
     alt: Spy TV Logo
     border: false
+    srcset:
+      - images/spy-tv/spy-tv-1--mini.png 160w
+      - images/spy-tv/spy-tv-1--tiny.png 240w
+      - images/spy-tv/spy-tv-1--small.png 320w
+      - images/spy-tv/spy-tv-1--medium.png 480w
 
-  - url: images/spy-tv/spy-tv-cover.jpg
-    large_url: images/spy-tv/spy-tv-cover--large.jpg
+  - url: images/spy-tv/spy-tv-2--small.jpg
+    large_url: images/spy-tv/spy-tv-2--large.jpg
     alt: Spy TV
     border: true
+    srcset:
+      - images/spy-tv/spy-tv-2--mini.jpg 160w
+      - images/spy-tv/spy-tv-2--tiny.jpg 240w
+      - images/spy-tv/spy-tv-2--small.jpg 320w
+      - images/spy-tv/spy-tv-2--medium.jpg 480w
 
-  - url: images/spy-tv/spy-tv-spread-2.jpg
-    large_url: images/spy-tv/spy-tv-spread-2--large.jpg
+  - url: images/spy-tv/spy-tv-3--small.jpg
+    large_url: images/spy-tv/spy-tv-3--large.jpg
     alt: Spy TV
     border: true
+    srcset:
+      - images/spy-tv/spy-tv-3--mini.jpg 160w
+      - images/spy-tv/spy-tv-3--tiny.jpg 240w
+      - images/spy-tv/spy-tv-3--small.jpg 320w
+      - images/spy-tv/spy-tv-3--medium.jpg 480w
 
-  - url: images/spy-tv/spy-tv-spread-3.jpg
-    large_url: images/spy-tv/spy-tv-spread-3--large.jpg
+  - url: images/spy-tv/spy-tv-4--small.jpg
+    large_url: images/spy-tv/spy-tv-4--large.jpg
     alt: Spy TV
     border: true
+    srcset:
+      - images/spy-tv/spy-tv-4--mini.jpg 160w
+      - images/spy-tv/spy-tv-4--tiny.jpg 240w
+      - images/spy-tv/spy-tv-4--small.jpg 320w
+      - images/spy-tv/spy-tv-4--medium.jpg 480w
 
-  - url: images/spy-tv/spy-tv-spread-4.jpg
-    large_url: images/spy-tv/spy-tv-spread-4--large.jpg
+  - url: images/spy-tv/spy-tv-5--small.jpg
+    large_url: images/spy-tv/spy-tv-5--large.jpg
     alt: Spy TV
     border: true
+    srcset:
+      - images/spy-tv/spy-tv-5--mini.jpg 160w
+      - images/spy-tv/spy-tv-5--tiny.jpg 240w
+      - images/spy-tv/spy-tv-5--small.jpg 320w
+      - images/spy-tv/spy-tv-5--medium.jpg 480w
 
 ---
 

@@ -4,30 +4,55 @@ title:  Relic Magazine
 categories: [print]
 weight: 10
 images:
-  - url: images/relic/relic-cover.jpg
-    large_url: images/relic/relic-cover--large.jpg
+  - url: images/relic/relic-1--medium.jpg
+    large_url: images/relic/relic-1--large.jpg
     alt: Relic Magazine Cover
     border: true
+    srcset:
+      - images/relic/relic-1--mini.jpg 160w
+      - images/relic/relic-1--tiny.jpg 240w
+      - images/relic/relic-1--small.jpg 320w
+      - images/relic/relic-1--medium.jpg 480w
 
-  - url: images/relic/relic-toc.jpg
-    large_url: images/relic/relic-toc--large.jpg
+  - url: images/relic/relic-2--small.jpg
+    large_url: images/relic/relic-2--large.jpg
     alt: Relic Magazine Table of Contents
     border: true
+    srcset:
+      - images/relic/relic-2--mini.jpg 160w
+      - images/relic/relic-2--tiny.jpg 240w
+      - images/relic/relic-2--small.jpg 320w
+      - images/relic/relic-2--medium.jpg 480w
 
-  - url: images/relic/relic-inside-detail.jpg
-    large_url: images/relic/relic-inside-detail--large.jpg
+  - url: images/relic/relic-3--small.jpg
+    large_url: images/relic/relic-3--large.jpg
     alt: Relic Magazine First Page
     border: true
+    srcset:
+      - images/relic/relic-3--mini.jpg 160w
+      - images/relic/relic-3--tiny.jpg 240w
+      - images/relic/relic-3--small.jpg 320w
+      - images/relic/relic-3--medium.jpg 480w
 
-  - url: images/relic/relic-inside-detail-3.jpg
-    large_url: images/relic/relic-inside-detail-3--large.jpg
+  - url: images/relic/relic-4--small.jpg
+    large_url: images/relic/relic-4--large.jpg
     alt: Relic Magazine Second Page
     border: true
+    srcset:
+      - images/relic/relic-4--mini.jpg 160w
+      - images/relic/relic-4--tiny.jpg 240w
+      - images/relic/relic-4--small.jpg 320w
+      - images/relic/relic-4--medium.jpg 480w
 
-  - url: images/relic/relic-inside-detail-2.jpg
-    large_url: images/relic/relic-inside-detail-2--large.jpg
+  - url: images/relic/relic-5--small.jpg
+    large_url: images/relic/relic-5--large.jpg
     alt: Relic Magazine Second Spread
     border: true
+    srcset:
+      - images/relic/relic-5--mini.jpg 160w
+      - images/relic/relic-5--tiny.jpg 240w
+      - images/relic/relic-5--small.jpg 320w
+      - images/relic/relic-5--medium.jpg 480w
 
 ---
 

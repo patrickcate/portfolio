@@ -4,25 +4,45 @@ title:  Renwick Gallery
 categories: [print]
 weight: 1
 images:
-  - url: images/renwick/renwick-1.jpg
+  - url: images/renwick/renwick-1--small.jpg
     large_url: images/renwick/renwick-1--large.jpg
     alt: Renwick Brochure
     border: true
+    srcset:
+      - images/renwick/renwick-1--mini.jpg 160w
+      - images/renwick/renwick-1--tiny.jpg 240w
+      - images/renwick/renwick-1--small.jpg 320w
+      - images/renwick/renwick-1--medium.jpg 480w
 
-  - url: images/renwick/renwick-4.jpg
-    large_url: images/renwick/renwick-4--large.jpg
-    alt: Renwick Brochure
-    border: true
-
-  - url: images/renwick/renwick-2.jpg
+  - url: images/renwick/renwick-2--tiny.jpg
     large_url: images/renwick/renwick-2--large.jpg
     alt: Renwick Brochure
     border: true
+    srcset:
+      - images/renwick/renwick-2--mini.jpg 160w
+      - images/renwick/renwick-2--tiny.jpg 240w
+      - images/renwick/renwick-2--small.jpg 320w
+      - images/renwick/renwick-2--medium.jpg 480w
 
-  - url: images/renwick/renwick-3.jpg
+  - url: images/renwick/renwick-3--tiny.jpg
     large_url: images/renwick/renwick-3--large.jpg
     alt: Renwick Brochure
     border: true
+    srcset:
+      - images/renwick/renwick-3--mini.jpg 160w
+      - images/renwick/renwick-3--tiny.jpg 240w
+      - images/renwick/renwick-3--small.jpg 320w
+      - images/renwick/renwick-3--medium.jpg 480w
+
+  - url: images/renwick/renwick-4--tiny.jpg
+    large_url: images/renwick/renwick-4--large.jpg
+    alt: Renwick Brochure
+    border: true
+    srcset:
+      - images/renwick/renwick-4--mini.jpg 160w
+      - images/renwick/renwick-4--tiny.jpg 240w
+      - images/renwick/renwick-4--small.jpg 320w
+      - images/renwick/renwick-4--medium.jpg 480w
 
 ---
 
