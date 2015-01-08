@@ -332,13 +332,13 @@ gulp.task('svg-sprite', function ()
  gulp.task('image-sizes', function()
  {
  	var img_src = '_source/assets/portfolio-pieces/_site/**/*.{png,jpg,gif}';
- 	var img_dest = 'images/test';
+ 	var img_dest = 'images';
 
  	gulp.src([img_src])
  	.pipe(image_resize({
  		width : 160,
  		filter: 'lanczos',
- 		quality: 1,
+ 		quality: 0.8,
  	}))
  	.pipe(rename({
  		suffix: '--mini'
@@ -349,7 +349,7 @@ gulp.task('svg-sprite', function ()
  	.pipe(image_resize({
  		width : 240,
  		filter: 'lanczos',
- 		quality: 1,
+ 		quality: 0.8,
  	}))
  	.pipe(rename({
  		suffix: '--tiny'
@@ -360,7 +360,7 @@ gulp.task('svg-sprite', function ()
  	.pipe(image_resize({
  		width : 320,
  		filter: 'lanczos',
- 		quality: 1,
+ 		quality: 0.8,
  	}))
  	.pipe(rename({
  		suffix: '--small'
@@ -371,7 +371,7 @@ gulp.task('svg-sprite', function ()
  	.pipe(image_resize({
  		width : 480,
  		filter: 'lanczos',
- 		quality: 1,
+ 		quality: 0.8,
  	}))
  	.pipe(rename({
  		suffix: '--medium'
@@ -382,7 +382,7 @@ gulp.task('svg-sprite', function ()
  	.pipe(image_resize({
  		width : 640,
  		filter: 'lanczos',
- 		quality: 1,
+ 		quality: 0.8,
  	}))
  	.pipe(rename({
  		suffix: '--large'
@@ -393,10 +393,10 @@ gulp.task('svg-sprite', function ()
  	.pipe(image_resize({
  		width : 1280,
  		filter: 'lanczos',
- 		quality: 1,
+ 		quality: 0.8,
  	}))
  	.pipe(rename({
- 		suffix: '--large@2x'
+ 		suffix: '--huge'
  	}))
  	.pipe(gulp.dest(img_dest));
  });
@@ -408,7 +408,7 @@ gulp.task('svg-sprite', function ()
  */
  gulp.task('watch', function () {
  	gulp.watch('./sass/**/*.scss', ['sass']);
- 	gulp.watch(['./js/*.js', '!./js/*.min.js', '!./js/scripts.js'], ['js']);
+ 	gulp.watch(['./js/*.js', '!./js/*.min.js', '!./js/scripts.js'], ['js', 'jekyll-rebuild']);
  	gulp.watch(['index.html', 'work/*.html', 'contact/*.html', '_layouts/*.html', '_includes/*', '_project/*'], ['jekyll-rebuild']);
  	gulp.watch(['_site/index.html', '_site/work/*.html', '_site/contact/*.html'], ['htmlmin']);
  });
