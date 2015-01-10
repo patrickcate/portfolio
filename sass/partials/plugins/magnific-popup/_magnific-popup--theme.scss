@@ -78,7 +78,7 @@
 	position: absolute;
 	text-align: center;
 
-	@include breakpoint($break-medium)
+	@include breakpoint($break-large)
 	{
 		top: -10px;
 		right: -15px;
@@ -102,7 +102,7 @@
 	box-shadow: $lightbox-shadow;
 	// border-radius: 0 $grid-padding 0 0;
 
-	// @include breakpoint($break-medium)
+	// @include breakpoint($break-large)
 	// {
 	// 	border-radius: 0;
 	// }
@@ -149,14 +149,14 @@ button.mfp-arrow
 	transform: scale(.75);
 	// margin-top: -#{$grid-padding + $half-grid-padding};
 
-	@include breakpoint($break-medium)
+	@include breakpoint($break-large)
 	{
 		// background-color: $black;
 		margin-top: -#{$grid-padding + $half-grid-padding};
 		top: 50%;
 	}
 
-	@include breakpoint($break-large)
+	@include breakpoint($break-huge)
 	{
 		transform: scale(1);
 	}
@@ -167,7 +167,7 @@ button.mfp-arrow
 		position: relative;
 		opacity: .65;
 
-		// @include breakpoint($break-medium)
+		// @include breakpoint($break-large)
 		// {
 		// 	opacity: .65;
 		// }
@@ -205,12 +205,12 @@ button.mfp-arrow-left
 	left: $grid-padding;
 	// transform: translateX(0);
 
-	@include breakpoint($break-medium)
+	@include breakpoint($break-large)
 	{
 		left: -#{$grid-padding * 3};
 	}
 
-	@include breakpoint($break-large)
+	@include breakpoint($break-huge)
 	{
 		left: -#{$grid-padding * 4};
 	}
@@ -222,7 +222,7 @@ button.mfp-arrow-left
 		border-bottom-width: $half-grid-padding + $quarter-grid-padding;
 		margin-left: -4px;
 
-		// @include breakpoint($break-medium)
+		// @include breakpoint($break-large)
 		// {
 		// 	border-right-color: $white;
 		// }
@@ -234,12 +234,12 @@ button.mfp-arrow-right
 	// transform: translateX(0);
 	right: $grid-padding;
 
-	@include breakpoint($break-medium)
+	@include breakpoint($break-large)
 	{
 		right: -#{$grid-padding * 3};
 	}
 
-	@include breakpoint($break-large)
+	@include breakpoint($break-huge)
 	{
 		right: -#{$grid-padding * 4};
 	}
@@ -251,7 +251,7 @@ button.mfp-arrow-right
 		border-bottom-width: $half-grid-padding + $quarter-grid-padding;
 		margin-left: 22px;
 
-		// @include breakpoint($break-medium)
+		// @include breakpoint($break-large)
 		// {
 		// 	border-left-color: $white;
 		// }

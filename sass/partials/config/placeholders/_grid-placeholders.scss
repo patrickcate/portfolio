@@ -1,7 +1,6 @@
 %container
 {
 	@include container;
-	max-width: $break-medium;
 	padding-left: $grid-padding;
 	padding-right: $grid-padding;
 }

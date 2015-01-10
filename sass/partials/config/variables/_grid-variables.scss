@@ -14,31 +14,30 @@ $half-grid-padding: convert-length(($grid-padding / 2), px);
 $quarter-gutter-width: convert-length(($grid-padding / 4), px);
 $quarter-grid-padding: convert-length(($grid-padding / 4), px);
 
+$breakpoint-list: 'tiny', 'small', 'medium', 'large', 'huge';
+
+$break-tiny: 360px;
+$break-small: 480px;
+$break-medium: 600px;
+$break-large: 800px;
+$break-huge: 920px;
+// $break-huge: 960px;
+$break-retina: min-resolution 1.5dppx;
+
 $susy: (
         // the basics
         columns: $total-columns,
         gutters: $gutter-width / $column-width,
-       	column-width: $column-width,
+        column-width: $column-width,
         global-box-sizing: border-box,
         gutter-position: before,
 
         // advanced
-        // container: $container-width,
+        container: $break-large,
         math: fluid,
         flow: ltr,
         last-flow: from,
         );
-
-$breakpoint-list: 'tiny', 'small', 'medium', 'large', 'huge';
-
-$break-mini: 360px;
-$break-tiny: 480px;
-$break-small: 600px;
-$break-medium: 800px;
-$break-large: 920px;
-$break-huge: 960px;
-$break-retina: min-resolution 1.5dppx;
-
 
 $default-border-radius: 6px;
 $photo-border: 5px;

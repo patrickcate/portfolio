@@ -21,7 +21,7 @@
 		background-color: shade($blue, 25%);
 	}
 
-	@include breakpoint($break-medium)
+	@include breakpoint($break-large)
 	{
 		float: right;
 		margin-top: -#{$grid-padding * 3};

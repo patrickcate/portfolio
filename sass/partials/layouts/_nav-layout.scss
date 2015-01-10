@@ -5,7 +5,7 @@
 	clear: both;
 	padding: $half-grid-padding 0 0 0;
 
-	@include breakpoint($break-tiny)
+	@include breakpoint($break-small)
 	{
 		padding: ($grid-padding) 0 0 0;
 		text-align: right;
@@ -13,7 +13,7 @@
 		float: right;
 	}
 
-	@include breakpoint($break-small)
+	@include breakpoint($break-medium)
 	{
 		padding: ($grid-padding + $quarter-grid-padding) 0 $grid-padding 0;
 	}
@@ -28,7 +28,7 @@
 		@include first;
 	}
 
-	@include breakpoint($break-tiny)
+	@include breakpoint($break-small)
 	{
 		width: auto;
 		float: none;
@@ -39,12 +39,12 @@
 	{
 		// margin-left: $half-grid-padding;
 
-		@include breakpoint($break-tiny)
+		@include breakpoint($break-small)
 		{
 			margin-left: $half-grid-padding;
 		}
 
-		@include breakpoint($break-small)
+		@include breakpoint($break-medium)
 		{
 			margin-left: $half-grid-padding + $quarter-grid-padding;
 		}
@@ -57,22 +57,14 @@
 	@include link-colors($white, $gold, $white, $white, inherit);
 	display: block;
 	text-decoration: none;
-	// text-align: center;
 
 	&:before
 	{
 		@extend %icon--before;
-		// font-family: $icon-font;
-		// font-size: inherit;
 		font-size: $h6-font-size;
-		// text-decoration: none;
-		// font-weight: normal;
-		// speak: none;
-		// line-height: 1;
-		// vertical-align: inherit;
 		margin-right: $quarter-grid-padding;
 
-		@include breakpoint($break-small)
+		@include breakpoint($break-medium)
 		{
 			font-size: $h5-font-size;
 		}
@@ -80,19 +72,13 @@
 
 	&:hover, &:focus
 	{
-
-		// .nav__icon
-		// {
-		// 	fill: $gold;
-		// }
-
 		.nav__text
 		{
 			text-decoration: underline;
 		}
 	}
 
-	@include breakpoint($break-small)
+	@include breakpoint($break-medium)
 	{
 		font-size: $h4-font-size;
 		line-height: $h4-line-height;
@@ -223,7 +209,7 @@
 		content: "\e601";
 		font-size: $h5-font-size;
 
-		@include breakpoint($break-small)
+		@include breakpoint($break-medium)
 		{
 			font-size: $h4-font-size;
 		}
@@ -256,17 +242,17 @@
 // 		margin-right: 0;
 // 	}
 
-// 	@include breakpoint($break-tiny)
+// 	@include breakpoint($break-small)
 // 	{
 // 		margin-left: $grid-padding;
 // 	}
 
-// 	@include breakpoint($break-small)
+// 	@include breakpoint($break-medium)
 // 	{
 // 		margin-top: $grid-padding;
 // 	}
 
-// 	@include breakpoint($break-medium)
+// 	@include breakpoint($break-large)
 // 	{
 // 		margin-left: $grid-padding * 2;
 // 	}

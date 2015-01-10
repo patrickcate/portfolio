@@ -2,7 +2,7 @@
 {
 	text-align: left;
 
-	@include breakpoint($break-tiny)
+	@include breakpoint($break-small)
 	{
 		text-align: center;
 
@@ -40,7 +40,7 @@
 			margin-bottom: $half-grid-padding;
 		}
 
-		@include breakpoint($break-medium)
+		@include breakpoint($break-large)
 		{
 			display: inline-block;
 

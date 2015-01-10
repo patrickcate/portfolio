@@ -8,7 +8,7 @@ $medium-icon: 75px;
 	width: $small-icon;
 	height: $small-icon;
 
-	@include breakpoint($break-mini)
+	@include breakpoint($break-tiny)
 	{
 		width: $medium-icon;
 		height: $medium-icon;
@@ -27,7 +27,7 @@ $medium-icon: 75px;
 	// margin: 0;
 	// padding: 0;
 
-	@include breakpoint($break-small)
+	@include breakpoint($break-medium)
 	{
 		@include span(12);
 
@@ -47,7 +47,7 @@ $medium-icon: 75px;
 	// margin: 0;
 	display: table-cell;
 
-	@include breakpoint($break-mini)
+	@include breakpoint($break-tiny)
 	{
 		width: $medium-icon;
 	}
@@ -58,7 +58,7 @@ $medium-icon: 75px;
 	padding-left: $half-grid-padding;
 	display: table-cell;
 
-	@include breakpoint($break-mini)
+	@include breakpoint($break-tiny)
 	{
 		padding-left: $grid-padding;
 	}
@@ -81,7 +81,7 @@ $medium-icon: 75px;
 		}
 	}
 
-	@include breakpoint($break-tiny)
+	@include breakpoint($break-small)
 	{
 		.block-grid__item
 		{
@@ -102,7 +102,7 @@ $medium-icon: 75px;
 		}
 	}
 
-	@include breakpoint($break-mini)
+	@include breakpoint($break-tiny)
 	{
 		.block-grid__item
 		{
@@ -115,7 +115,7 @@ $medium-icon: 75px;
 		}
 	}
 
-	@include breakpoint($break-tiny)
+	@include breakpoint($break-small)
 	{
 		.block-grid__item
 		{

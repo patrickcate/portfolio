@@ -10,7 +10,7 @@
 	line-height: $h1-line-height--small;
 	margin-bottom: 0;
 
-	@include breakpoint($break-small)
+	@include breakpoint($break-medium)
 	{
 		font-size: $h1-font-size;
 		line-height: $h1-line-height;
@@ -23,7 +23,7 @@
 	line-height: $h2-line-height--small;
 	margin-bottom: 0;
 
-	@include breakpoint($break-small)
+	@include breakpoint($break-medium)
 	{
 		font-size: $h2-font-size;
 		line-height: $h2-line-height;
@@ -36,7 +36,7 @@
 	// line-height: $h3-line-height--small;
 	margin-bottom: 0;
 
-	// @include breakpoint($break-small)
+	// @include breakpoint($break-medium)
 	// {
 		font-size: $h3-font-size;
 		line-height: $h3-line-height;
@@ -45,14 +45,14 @@
 
 %h4
 {
-	font-size: $h4-font-size--small;
-	line-height: $h4-line-height--small;
+	// font-size: $h4-font-size--small;
+	// line-height: $h4-line-height--small;
 
-	@include breakpoint($break-small)
-	{
+	// @include breakpoint($break-medium)
+	// {
 		font-size: $h4-font-size;
 		line-height: $h4-line-height;
-	}
+	// }
 }
 
 %h5

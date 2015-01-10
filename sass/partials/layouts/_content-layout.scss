@@ -8,9 +8,9 @@
 {
 	.touch &
 	{
-		width: 100%;
 		overflow-x: hidden;
 		overflow-y: scroll;
+		width: 100%;
 		height: 100%;
 	}
 }
@@ -28,7 +28,7 @@
 		padding-top: 100px + $half-grid-padding + $quarter-grid-padding;
 	}
 
-	@include breakpoint($break-tiny)
+	@include breakpoint($break-small)
 	{
 		padding-top: 50px + $grid-padding;
 
@@ -38,7 +38,7 @@
 		}
 	}
 
-	@include breakpoint($break-small)
+	@include breakpoint($break-medium)
 	{
 		padding-top: 50px + ($grid-padding * 2);
 		padding-top: 95px;
@@ -52,13 +52,13 @@
 	.touch &
 	{
 		position: absolute;
-		-webkit-overflow-scrolling: touch;
 		top: 0;
-		width: 100%;
 		overflow: auto;
 		overflow-x: hidden;
 		overflow-y: scroll;
+		width: 100%;
 		height: 100%;
+		-webkit-overflow-scrolling: touch;
 	}
 }
 
