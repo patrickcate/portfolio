@@ -18,11 +18,11 @@
 .l-header__inner
 {
 	@extend %container;
-	padding-top: $grid-padding + $quarter-grid-padding;
+	padding: ($grid-padding + $quarter-grid-padding) $grid-padding $half-grid-padding $grid-padding;
 
 	.no-webapp &
 	{
-		padding: $half-grid-padding $grid-padding $half-grid-padding $grid-padding;
+		padding-top: $half-grid-padding;
 	}
 }
 
