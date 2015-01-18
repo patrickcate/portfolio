@@ -20,6 +20,21 @@
 // .mfp-with-zoom.mfp-removing.mfp-bg {
 //   opacity: 0;
 // }
+.mfp-s-loading
+{
+	.mfp-preloader
+	{
+		&:before
+		{
+			@extend %spinner;
+			display: block;
+			content: '';
+			border-color: $white;
+			animation: rotation $duration-medium infinite linear;
+			top: -#{$spinner-size / 2};
+		}
+	}
+}
 
 .mfp-ready
 {
