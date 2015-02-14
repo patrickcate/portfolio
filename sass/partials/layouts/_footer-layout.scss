@@ -4,6 +4,11 @@
 	background-color: $blue;
 	color: $white;
 	text-shadow: $drop-text-shadow;
+
+	a
+	{
+		@include link-colors($white, $gold, $white, $white, inherit);
+	}
 }
 
 .l-footer__inner
