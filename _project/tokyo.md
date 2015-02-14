@@ -4,8 +4,8 @@ title:  Tokyo Travel
 categories: [print]
 weight: 90
 images:
-  - url: images/tokyo/tokyo-1--small.png
-    large_url: images/tokyo/tokyo-1--large.png
+  - url: images/tokyo/tokyo-1--small.jpg
+    large_url: images/tokyo/tokyo-1--large.jpg
     alt: Tokyo Travel Cover
     border: true
     srcset:
