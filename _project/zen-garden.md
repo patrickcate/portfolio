@@ -2,7 +2,7 @@
 layout: project
 title:  CSS Zen Garden
 categories: [Web]
-weight: 120
+weight: 30
 images:
   - url: images/zen-garden/zen-garden-1--small.png
     large_url: images/zen-garden/zen-garden-2--large.jpg

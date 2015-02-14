@@ -2,7 +2,7 @@
 layout: project
 title:  Wavewear
 categories: [brand identity]
-weight: 30
+weight: 70
 images:
   - url: images/wavewear/wavewear-1--medium.png
     large_url: images/wavewear/wavewear-1--large.png
