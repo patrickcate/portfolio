@@ -13,10 +13,7 @@ plugins:        ./_plugins
 layouts:        ./_layouts
 include: [
           '.htaccess',
-          'jquery-1.11.2.min.js',
-          'parsley-2.0.6.min.js',
-          'scripts-*.min.js',
-          'init-*.min.js'
+          'js/*.js'
          ]
 
 # Serving
@@ -25,11 +22,14 @@ host: localhost
 
 gems: [
     'jekyll_version_plugin',
-    'jekyll/minibundle'
+    # 'jekyll/minibundle'
     ]
 
 sitemap:
   file: '/sitemap.xml'
+
+minibundle:
+  # mode: development
 
 collections:
 - project
@@ -39,7 +39,7 @@ exclude: [
     '*.log',
     '*.map',
     '*.zip',
-    'js/*.js',
+    'js/**/*.*',
     '*.sublime-project',
     '*.sublime-workspace',
     'config.rb',
@@ -50,8 +50,6 @@ exclude: [
     'gulpfile.js',
     'node_modules',
     'sass',
-    # 'css/styles.css',
-    # 'js/scripts.min.js'
 ]
 
 main_image_mq: '(min-width: 800px) 240px, (min-width: 480px) calc(33vw - 20px), 50vw'

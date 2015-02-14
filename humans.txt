@@ -1,0 +1,19 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Patrick Cate -- Designer/Developer
+
+# THANKS
+
+    Open Source Develoers
+
+# SITE
+    Site Name: Patrick Cate's Portfolio
+    Site URL: http://portfolio.patrickcate.com/
+    Language: English
+    Doctype: HTML5
+    Standards: HTML5, CSS3, JavaScript, Ruby
+    Components: Jekyll, Modernizr, Normalize.css, Gulp
+    Software: Sublime Text, Photoshop, Illustrator
