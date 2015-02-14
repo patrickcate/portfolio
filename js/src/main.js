@@ -63,8 +63,19 @@ require(['modernizr'], function()
 
 require(['xpull'], function()
 {
-    // Do stuff
     // console.log('xpull loaded...');
+    if (window.navigator.standalone === true)
+	{
+		$('#js-content__inner').xpull(
+		{
+		 	pullThreshold: 100, // Pull threshold - amount in  pixels required to pull to enable release callback
+		    spinnerTimeout: 2000, // timeout in miliseconds after which the loading indicator stops spinning. If set to 0 - the loading will be indefinite
+		    callback:function()
+		    {
+
+		    }, // triggers after user pulls the content over pull threshold and releases
+		});
+	}
 });
 
 

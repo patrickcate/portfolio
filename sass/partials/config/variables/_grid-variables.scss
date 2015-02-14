@@ -14,7 +14,7 @@ $half-grid-padding: convert-length(($grid-padding / 2), px);
 $quarter-gutter-width: convert-length(($grid-padding / 4), px);
 $quarter-grid-padding: convert-length(($grid-padding / 4), px);
 
-$breakpoint-list: 'tiny', 'small', 'medium', 'large', 'huge';
+// $breakpoint-list: 'tiny', 'small', 'medium', 'large', 'huge';
 
 $break-tiny: 360px;
 $break-small: 480px;

@@ -14,7 +14,7 @@ images:
       - images/cake-bites/cake-bites-1--small.png 320w
       - images/cake-bites/cake-bites-1--medium.png 480w
 
-  - url: images/cake-bites/cake-bites-2--small.jpg.jpg
+  - url: images/cake-bites/cake-bites-2--small.jpg
     large_url: images/cake-bites/cake-bites-2--large.jpg
     alt: Custom Cake Bites Letterhead
     border: true

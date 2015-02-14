@@ -18,6 +18,16 @@
     -webkit-font-smoothing: antialiased; /* Set the anti-alias settings. Alternative: subpixel-antialiased */
     -moz-osx-font-smoothing: grayscale;
     font-size: $browser-default-font-size;
+
+    &.touch
+	{
+		overflow: hidden;
+	// 	// overflow-x: hidden;
+	// 	// overflow-y: scroll;
+	// 	// -webkit-overflow-scrolling: touch;
+		width: 100%;
+		height: 100%;
+	}
 }
 
 /**
@@ -32,6 +42,27 @@
  	font-family: $base-font-family;
  	font-size: $base-font-size;
  	letter-spacing: normal;
+
+ // 	.touch &
+	// {
+	// 	// position: absolute;
+	// 	top: 0;
+	// 	overflow: auto;
+	// 	overflow-x: hidden;
+	// 	overflow-y: scroll;
+	// 	width: 100%;
+	// 	height: 100%;
+	// 	-webkit-overflow-scrolling: touch;
+	// }
+	.touch &
+	{
+		overflow: hidden;
+		// overflow-x: hidden;
+		// overflow-y: scroll;
+		// -webkit-overflow-scrolling: touch;
+		width: 100%;
+		height: 100%;
+	}
 }
 
 
