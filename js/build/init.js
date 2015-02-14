@@ -8,17 +8,18 @@
 				type: 'image',
 				delegate: 'a',
 				mainClass: 'lightbox-popup',
-				// disableOn: 400,
+				disableOn: 0,
 				closeOnBgClick: true,
 				closeOnContentClick: true,
 				showCloseBtn: true,
 				closeBtnInside: true,
 				enableEscapeKey: true,
 				modal: false,
+				verticalFit: false, // Fits image in area vertically
 				preload: [1,3],
 				retina:
 				{
-				    ratio: 1.5, // Increase this number to enable retina image support.
+				    ratio: 2, // Increase this number to enable retina image support.
 				    // Image in popup will be scaled down by this number.
 				    // Option can also be a function which should return a number (in case you support multiple ratios). For example:
 				    // ratio: function() { return window.devicePixelRatio === 1.5 ? 1.5 : 2  }
@@ -56,43 +57,43 @@
 					}
 				}
 			});
-});
+		});
 
-try
-{
-	$('#js-contact-form').parsley(
-	{
-		errorsMessagesDisabled: true,
-		successClass: 'form__element--is-valid',
-		errorClass: 'form__element--is-invalid',
-		errorsWrapper: '',
-		errorTemplate: '',
-	});
-
-	$('#js-contact-form').submit(function()
-	{
-		$('#js-form__button').text('Sending...');
-
-		$.ajax({
-			dataType: 'jsonp',
-			url: "http://getsimpleform.com/messages/ajax?form_api_token=a325ecabd25612a592081a155d6386bd",
-			data: $('#js-contact-form').serialize()
-		}).done(function()
+		try
 		{
-					// Callback which can be used to show a thank you message and reset the form
-					// alert('Thank you, for contacting us');
-					$('#js-form__button').addClass('icon--checkmark button--success').removeClass('icon--send').text('Message Sent!');
-					$('#js-contact-form #name, #js-contact-form #email, #js-contact-form #message').val('');
-				});
-
-				// Stop the form from submitting
-				return false;
+			$('#js-contact-form').parsley(
+			{
+				errorsMessagesDisabled: true,
+				successClass: 'form__element--is-valid',
+				errorClass: 'form__element--is-invalid',
+				errorsWrapper: '',
+				errorTemplate: '',
 			});
-}
-catch(err)
-{
 
-}
+			$('#js-contact-form').submit(function()
+			{
+				$('#js-form__button').text('Sending...');
+
+				$.ajax({
+					dataType: 'jsonp',
+					url: "http://getsimpleform.com/messages/ajax?form_api_token=a325ecabd25612a592081a155d6386bd",
+					data: $('#js-contact-form').serialize()
+				}).done(function()
+				{
+							// Callback which can be used to show a thank you message and reset the form
+							// alert('Thank you, for contacting us');
+							$('#js-form__button').addClass('icon--checkmark button--success').removeClass('icon--send').text('Message Sent!');
+							$('#js-contact-form #name, #js-contact-form #email, #js-contact-form #message').val('');
+						});
+
+						// Stop the form from submitting
+						return false;
+					});
+		}
+		catch(err)
+		{
+
+		}
 
 		// Add HTML class when viewed as a webapp.
 		if (window.navigator.standalone === true)
