@@ -2,7 +2,6 @@
 layout: project
 title:  Living Light Exhibition
 categories: [print]
-weight: 80
 gallery_image_size: small
 images:
   - url: images/living-light/living-light-1--medium.png

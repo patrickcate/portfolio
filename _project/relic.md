@@ -2,7 +2,6 @@
 layout: project
 title:  Relic Magazine
 categories: [print]
-weight: 50
 images:
   - url: images/relic/relic-1--medium.jpg
     large_url: images/relic/relic-1--large.jpg

@@ -2,7 +2,6 @@
 layout: project
 title:  Tokyo Travel
 categories: [print]
-weight: 1
 images:
   - url: images/tokyo/tokyo-1--small.jpg
     large_url: images/tokyo/tokyo-1--large.jpg

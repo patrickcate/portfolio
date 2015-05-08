@@ -2,7 +2,6 @@
 layout: project
 title:  Baskerville Poster
 categories: [Print]
-weight: 60
 images:
   - url: images/baskerville/baskerville-1--small.png
     large_url: images/baskerville/baskerville-2--large.jpg

@@ -2,7 +2,6 @@
 layout: project
 title:  Custom Cake Bites
 categories: [print, web, brand identity]
-weight: 40
 images:
   - url: images/cake-bites/cake-bites-1--medium.png
     large_url: images/cake-bites/cake-bites-1--large.png

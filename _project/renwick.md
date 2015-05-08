@@ -2,7 +2,6 @@
 layout: project
 title:  Renwick Gallery
 categories: [print]
-weight: 20
 images:
   - url: images/renwick/renwick-1--small.jpg
     large_url: images/renwick/renwick-1--large.jpg

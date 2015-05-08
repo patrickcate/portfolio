@@ -2,7 +2,6 @@
 layout: project
 title:  Muse Mix
 categories: [web]
-weight: 10
 images:
   - url: images/muse-mix/muse-mix-1--medium.png
     large_url:

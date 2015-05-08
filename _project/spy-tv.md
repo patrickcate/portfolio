@@ -2,7 +2,6 @@
 layout: project
 title:  Spy TV
 categories: [brand identity, print]
-weight: 80
 images:
   - url: images/spy-tv/spy-tv-1--medium.png
     large_url: images/spy-tv/spy-tv-1--large.png
