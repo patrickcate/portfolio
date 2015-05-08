@@ -26,7 +26,7 @@ require(['main'], function() {
 		{
 			$(this).magnificPopup({
 				type: 'image',
-				delegate: 'a',
+				delegate: 'a.lightbox-popup',
 				mainClass: 'lightbox-popup',
 				disableOn: 0,
 				closeOnBgClick: true,

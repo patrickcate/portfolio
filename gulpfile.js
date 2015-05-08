@@ -16,7 +16,7 @@ var imagemin        = require('gulp-imagemin');
 var advpng          = require('imagemin-advpng');
 var pngcrush        = require('imagemin-pngcrush');
 var mozjpeg         = require('imagemin-mozjpeg');
-// var responsive  = require('gulp-responsive');
+var responsive      = require('gulp-responsive');
 var image_resize    = require('gulp-image-resize');
 var rjs             = require('requirejs');
 
@@ -419,71 +419,84 @@ gulp.task('svg-sprite', function ()
 /**
  * Generate responsive image sizes
  */
-//  gulp.task('image-sizes', function()
-//  {
-//      gulp.src(['_source/assets/portfolio-pieces/_site/**/*.jpg'])
-//      .pipe(responsive(
-//      {
-//          '*.jpg':
-//          [{
-//              width: 160,
-//              rename:
-//              {
-//                  suffix: '--mini'
-//              }
-//          }]
-//      },
-//      {
-//          strictMatchImages: false,
-//          strictMatchConfig: true
-//      }
-//      ))
-//          // '*.jpg':
-//          // [{
-//          //  width: 160,
-//          //  rename:
-//          //  {
-//          //      suffix: '--mini'
-//          //  }
-//          // },
-//          // {
-//          //  width: 240,
-//          //  rename:
-//          //  {
-//          //      suffix: '--tiny'
-//          //  }
-//          // },
-//          // {
-//          //  width: 320,
-//          //  rename:
-//          //  {
-//          //      suffix: '--small'
-//          //  }
-//          // },
-//          // {
-//          //  width: 480,
-//          //  rename:
-//          //  {
-//          //      suffix: '--medium'
-//          //  }
-//          // },
-//          // {
-//          //  width: 640,
-//          //  rename:
-//          //  {
-//          //      suffix: '--large'
-//          //  }
-//          // },
-//          // {
-//          //  width: 1280,
-//          //  rename:
-//          //  {
-//          //      suffix: '--huge'
-//          //  }
-//          // }]
-//      // }]))
-//  .pipe(gulp.dest('images/test'));
-// });
+ gulp.task('responsive-images', function()
+ {
+     gulp.src(['_source/assets/portfolio-pieces/_site/**/*'])
+     .pipe(responsive(
+     {
+        '**/*':
+        [
+        {
+            width: 160,
+            height: 160,
+            rename:
+            {
+                suffix: '--mini'
+            },
+            max: true
+        },
+        {
+            width: 240,
+            height: 240,
+            rename:
+            {
+              suffix: '--tiny'
+            },
+            max: true
+        },
+        ]
+     },
+     {
+        strictMatchImages: false,
+        strictMatchConfig: true,
+     }
+     ))
+         // '*.jpg':
+         // [{
+         //  width: 160,
+         //  rename:
+         //  {
+         //      suffix: '--mini'
+         //  }
+         // },
+         // {
+         //  width: 240,
+         //  rename:
+         //  {
+         //      suffix: '--tiny'
+         //  }
+         // },
+         // {
+         //  width: 320,
+         //  rename:
+         //  {
+         //      suffix: '--small'
+         //  }
+         // },
+         // {
+         //  width: 480,
+         //  rename:
+         //  {
+         //      suffix: '--medium'
+         //  }
+         // },
+         // {
+         //  width: 640,
+         //  rename:
+         //  {
+         //      suffix: '--large'
+         //  }
+         // },
+         // {
+         //  width: 1280,
+         //  rename:
+         //  {
+         //      suffix: '--huge'
+         //  }
+         // }]
+     // }]))
+ .pipe(gulp.dest('images/test'));
+});
 
 /**
  * Generate responsive image sizes
@@ -569,7 +582,7 @@ gulp.task('svg-sprite', function ()
     gulp.watch('./sass/**/*.scss', ['sass']);
     gulp.watch('./js/src/*.js', ['requirejs']);
     gulp.watch('./js/build/*.js', ['js']);
-    gulp.watch(['index.html', 'work/*.*', 'contact/*.*', '_layouts/*.*', '_includes/*.*', '_project/*', './css/**/*.css', './js/*.js', '!./js/build/*.js'], ['jekyll-rebuild']);
+    gulp.watch(['index.html', '_data/*.*', 'work/*.*', 'contact/*.*', '_layouts/*.*', '_includes/*.*', '_project/*', './css/**/*.css', './js/*.js', '!./js/build/*.js'], ['jekyll-rebuild']);
     gulp.watch(['_site/index.html', '_site/work/*.html', '_site/contact/*.html'], ['htmlmin']);
  });
 

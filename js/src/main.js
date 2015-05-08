@@ -34,21 +34,26 @@ require(['jquery'], function($)
 	// console.log('jquery loaded...');
 
 	// Add HTML class when viewed as a webapp.
-	if (window.navigator.standalone === true)
+	if (window.navigator.standalone == true)
 	{
-		$('html').removeClass('no-webapp');
 		$('html').addClass('webapp');
+		$('html').removeClass('no-webapp');
 
-		$('#js-content__inner').xpull(
-		{
-		 	pullThreshold: 100, // Pull threshold - amount in  pixels required to pull to enable release callback
-		    spinnerTimeout: 2000, // timeout in miliseconds after which the loading indicator stops spinning. If set to 0 - the loading will be indefinite
-		    callback:function()
-		    {
+		// $('#js-content__inner').xpull(
+		// {
+		//  	pullThreshold: 100, // Pull threshold - amount in  pixels required to pull to enable release callback
+		//     spinnerTimeout: 2000, // timeout in miliseconds after which the loading indicator stops spinning. If set to 0 - the loading will be indefinite
+		//     callback:function()
+		//     {
 
-		    }, // triggers after user pulls the content over pull threshold and releases
-		});
+		//     }, // triggers after user pulls the content over pull threshold and releases
+		// });
 	}
+	// else
+	// {
+	// 	$('html').removeClass('webapp');
+	// 	$('html').addClass('no-webapp');
+	// }
 
 	// console.log('jquery end...');
 });
@@ -64,7 +69,7 @@ require(['modernizr'], function()
 require(['xpull'], function()
 {
     // console.log('xpull loaded...');
-    if (window.navigator.standalone === true)
+    if (window.navigator.standalone == true)
 	{
 		$('#js-content__inner').xpull(
 		{

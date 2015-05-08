@@ -7,17 +7,40 @@
 	// Make iOS web app links open in web app view.
 	(function ($)
 	{
-		if (window.navigator.standalone === true)
-		{
-			// var local = document.domain;
-			$('#js-header a').click(function()
-			{
-				// var a = $(this).attr('href');
-	// 			if ( a.match('http://' + local) || a.match('http://www.' + local) )
-	// 			{
-					event.preventDefault();
-					document.location.href = $(this).attr('href');;
-	// 			}
-			});
+
+	// 	if (window.navigator.standalone == true)
+	// 	{
+	// 		// var local = document.domain;
+	// 		$('#js-header a').click(function()
+	// 		{
+	// 			// var a = $(this).attr('href');
+	// // 			if ( a.match('http://' + local) || a.match('http://www.' + local) )
+	// // 			{
+	// 				event.preventDefault();
+	// 				document.location.href = $(this).attr('href');;
+	// // 			}
+	// 		});
+
+	// 		$('a.lightbox-popup').click(function()
+	// 		{
+	// 			// var a = $(this).attr('href');
+	// // 			if ( a.match('http://' + local) || a.match('http://www.' + local) )
+	// // 			{
+	// 				event.stopPropagation();
+	// 				// document.location.href = $(this).attr('href');;
+	// // 			}
+	// 		});
+	// 	}
+
+if (window.navigator.standalone) {
+	var local = document.domain;
+	$('a').click(function() {
+		var a = $(this).attr('href');
+		if ( a.match('http://' + local) || a.match('http://www.' + local) ){
+			event.preventDefault();
+			document.location.href = a;
 		}
+	});
+}
+
 	}( jQuery ));

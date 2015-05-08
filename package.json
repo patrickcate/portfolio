@@ -22,7 +22,7 @@
     "gulp-livereload": "~2.1.1",
     "gulp-notify": "~1.2.5",
     "gulp-rename": "~1.2.0",
-    "gulp-responsive": "~1.0.4",
+    "gulp-responsive": "^1.0.7",
     "gulp-run-seq": "^1.2.2",
     "gulp-sass": "~0.7.3",
     "gulp-svgmin": "~0.4.6",
