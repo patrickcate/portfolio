@@ -4,9 +4,9 @@ requirejs.config(
 	paths:
 	{
 		// 'main': 'main',
-		'picturefill': '../../js/picturefill.min',
-	// 	'jquery': 'jquery-1.11.2.min',
-	// 	'magnific-popup': 'jquery.magnific-popup.min',
+		// 'picturefill': '../../js/picturefill.min',
+		// 'jquery': 'jquery-1.11.2.min',
+		// 'magnific-popup': 'jquery.magnific-popup.min',
 	},
 });
 

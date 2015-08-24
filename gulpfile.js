@@ -158,7 +158,7 @@ function handleError(err)
     gulp.src('./js/build/require-form.js')
     .pipe(rename('forms.js'))
     .pipe(gulp.dest('./js'));
-    gulp.src(['./js/build/main.js', './js/src/picturefill.min.js', './js/src/require.min.js'])
+    gulp.src(['./js/build/main.js', './js/src/require.min.js'])
     .pipe(gulp.dest('./js'))
     .pipe(browserSync.reload({stream:true}))
     .pipe(notify({

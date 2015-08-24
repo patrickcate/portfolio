@@ -1,7 +1,7 @@
 
 main.js
 ----------------
-jquery-1.11.2.min.js
+jquery-1.11.3.min.js
 modernizr.min.js
 xpull.js
 webapplinks.js
@@ -15,5 +15,6 @@ require-lightbox.js
 
 require-form.js
 ----------------
-parsley-2.0.6.min.js
+parsley.min.js
+parse-1.4.2.min.js
 require-form.js

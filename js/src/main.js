@@ -5,11 +5,12 @@ requirejs.config(
 	{
 		'modernizr': 'modernizr.min',
 		'picturefill': 'picturefill.min',
-		'jquery': 'jquery-1.11.2.min',
+		'jquery': 'jquery-1.11.3.min',
 		'magnific-popup': 'jquery.magnific-popup.min',
 		'xpull': 'xpull',
 		'webapplinks': 'webapplinks',
-		'parsley': 'parsley-2.0.6.min',
+		'parsley': 'parsley.min',
+		'parse': 'parse-1.4.2.min',
 	},
 	shim:
 	{
@@ -21,10 +22,10 @@ requirejs.config(
         {
 			deps: ['jquery'],
         },
-        'picturefill':
-        {
-			// deps: ['jquery'],
-        },
+   //      'picturefill':
+   //      {
+			// // deps: ['jquery'],
+   //      },
     }
 });
 
@@ -88,3 +89,4 @@ require(['jquery', 'webapplinks'], function($)
 {
 	// console.log('webapplinks Loaded');
 });
+
