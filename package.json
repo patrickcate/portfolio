@@ -2,6 +2,7 @@
   "name": "Portfolio",
   "version": "2.0.0",
   "description": "Grunt/Gulp plugins for portfolio site development.",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/patrickcate/portfolio"
@@ -9,7 +10,7 @@
   "dependencies": {},
   "devDependencies": {
     "browser-sync": "~1.3.6",
-    "gulp": "^3.8.11",
+    "gulp": "^3.9.0",
     "gulp-autoprefixer": "0.0.7",
     "gulp-changed": "~0.3.0",
     "gulp-clean": "~0.2.4",
@@ -26,7 +27,7 @@
     "gulp-run-seq": "^1.2.2",
     "gulp-sass": "~0.7.3",
     "gulp-svgmin": "~0.4.6",
-    "gulp-svgstore": "~1.0.1",
+    "gulp-svgstore": "^5.0.4",
     "gulp-uglify": "~0.2.1",
     "gulp-util": "~2.2.14",
     "imagemin-advpng": "~3.0.0",

@@ -2,6 +2,7 @@
 layout: project
 title:  Muse Mix
 categories: [web]
+gallery_image_size: large
 images:
   - url: images/muse-mix/muse-mix-1--medium.png
     large_url:
@@ -12,6 +13,7 @@ images:
       - images/muse-mix/muse-mix-1--tiny.png 240w
       - images/muse-mix/muse-mix-1--small.png 320w
       - images/muse-mix/muse-mix-1--medium.png 480w
+      - images/muse-mix/muse-mix-1--large.png 640w
 
   - url: images/muse-mix/muse-mix-2--small.jpg
     large_url: images/muse-mix/muse-mix-2--large.jpg

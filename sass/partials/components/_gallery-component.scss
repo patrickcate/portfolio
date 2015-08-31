@@ -31,6 +31,19 @@
 	}
 }
 
+.gallery__thumbnail--large
+{
+	+ .gallery__header
+	{
+		@include breakpoint($break-small)
+		{
+			@include span(14 of 24);
+			margin: 0;
+			float: right;
+		}
+	}
+}
+
 .gallery__title, .gallery__categories
 {
 
@@ -50,7 +63,13 @@
 	{
 		@include span(first 8 of 24);
 		margin-right: gutter(24);
+
+		&.gallery__thumbnail--large
+		{
+			@include span(first 10 of 24);
+		}
 	}
+
 }
 
 // .gallery__body

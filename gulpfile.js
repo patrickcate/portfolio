@@ -16,7 +16,6 @@ var imagemin        = require('gulp-imagemin');
 var advpng          = require('imagemin-advpng');
 var pngcrush        = require('imagemin-pngcrush');
 var mozjpeg         = require('imagemin-mozjpeg');
-var responsive      = require('gulp-responsive');
 var image_resize    = require('gulp-image-resize');
 var rjs             = require('requirejs');
 
@@ -326,33 +325,6 @@ gulp.task('svg-sprite', function ()
 
 
 /**
- * Generate HTML5 Cache Manifest
- */
-// gulp.task('manifest', function(){
-//     gulp.src([
-//     // '_site/index.html',
-//     // '_site/**/work/*.html',
-//     // '_site/**/contact/*.html',
-//     // '_site/**/css/*.css',
-//     // '_site/**/js/*.js',
-//     '_site/**/css/font/*.woff',
-//     '_site/**/css/font/*.woff2',
-//     // '_site/**/css/img/bg/*.*',
-//     // '_site/**/*',
-//     // '_site/contact/**/index.html'
-//     ])
-//     .pipe(manifest({
-//         hash: true,
-//         preferOnline: true,
-//         network: ['http://*', 'https://*', '*'],
-//         filename: 'app.manifest',
-//         exclude: 'app.manifest'
-//     }))
-//     .pipe(gulp.dest('./'));
-// });
-
-
-/**
  * Losslessly compress images
  */
  gulp.task('imagemin', [[['imagemin-1'], ['imagemin-2'], ['imagemin-3'], ['imagemin-4']]], function()
@@ -415,88 +387,6 @@ gulp.task('svg-sprite', function ()
     .on('end', end);
  });
 
-
-/**
- * Generate responsive image sizes
- */
- gulp.task('responsive-images', function()
- {
-     gulp.src(['_source/assets/portfolio-pieces/_site/**/*'])
-     .pipe(responsive(
-     {
-        '**/*':
-        [
-        {
-            width: 160,
-            height: 160,
-            rename:
-            {
-                suffix: '--mini'
-            },
-            max: true
-        },
-        {
-            width: 240,
-            height: 240,
-            rename:
-            {
-              suffix: '--tiny'
-            },
-            max: true
-        },
-        ]
-     },
-     {
-        strictMatchImages: false,
-        strictMatchConfig: true,
-     }
-     ))
-         // '*.jpg':
-         // [{
-         //  width: 160,
-         //  rename:
-         //  {
-         //      suffix: '--mini'
-         //  }
-         // },
-         // {
-         //  width: 240,
-         //  rename:
-         //  {
-         //      suffix: '--tiny'
-         //  }
-         // },
-         // {
-         //  width: 320,
-         //  rename:
-         //  {
-         //      suffix: '--small'
-         //  }
-         // },
-         // {
-         //  width: 480,
-         //  rename:
-         //  {
-         //      suffix: '--medium'
-         //  }
-         // },
-         // {
-         //  width: 640,
-         //  rename:
-         //  {
-         //      suffix: '--large'
-         //  }
-         // },
-         // {
-         //  width: 1280,
-         //  rename:
-         //  {
-         //      suffix: '--huge'
-         //  }
-         // }]
-     // }]))
- .pipe(gulp.dest('images/test'));
-});
 
 /**
  * Generate responsive image sizes

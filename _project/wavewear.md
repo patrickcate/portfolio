@@ -2,6 +2,7 @@
 layout: project
 title:  Wavewear
 categories: [brand identity]
+gallery_image_size: large
 images:
   - url: images/wavewear/wavewear-1--medium.png
     large_url: images/wavewear/wavewear-1--large.png
@@ -12,6 +13,7 @@ images:
       - images/wavewear/wavewear-1--tiny.png 240w
       - images/wavewear/wavewear-1--small.png 320w
       - images/wavewear/wavewear-1--medium.png 480w
+      - images/wavewear/wavewear-1--large.png 640w
 
   - url: images/wavewear/wavewear-2--small.jpg
     large_url: images/wavewear/wavewear-2--large.jpg
