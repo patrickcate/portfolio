@@ -6,6 +6,8 @@
 
 **Implemented enhancements:**
 
+- Create alternative gallery main image sizes. [\#28](https://github.com/patrickcate/portfolio/issues/28)
+
 - Lightbox loading indicator [\#21](https://github.com/patrickcate/portfolio/issues/21)
 
 - Add github link in footer. [\#19](https://github.com/patrickcate/portfolio/issues/19)
@@ -26,7 +28,11 @@
 
 - Change portfolio piece order [\#25](https://github.com/patrickcate/portfolio/issues/25)
 
+- Change label colors [\#24](https://github.com/patrickcate/portfolio/issues/24)
+
 - Switch to gulp-hash for cache control [\#23](https://github.com/patrickcate/portfolio/issues/23)
+
+- Add gulp wiki information [\#22](https://github.com/patrickcate/portfolio/issues/22)
 
 - Add picturefill.js [\#7](https://github.com/patrickcate/portfolio/issues/7)
 
