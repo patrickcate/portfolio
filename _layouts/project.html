@@ -1,11 +1,10 @@
+---
+layout: compress
+---
 <!-- Generate image markup -->
 {% capture image_markup %}
 	{% for image in page.images %}
-		{% capture srcset %}
-			{% if image.srcset != nil %}
-				{% for set in image.srcset %}{% if forloop.last %}/{{ set }}{% else %}/{{ set }}, {% endif %}{% endfor %}
-			{% endif %}
-		{% endcapture %}
+		{% capture srcset %}{% if image.srcset != nil %}{% for set in image.srcset %}{% if forloop.last %}/{{ set }}{% else %}/{{ set }}, {% endif %}{% endfor %}{% endif %}{% endcapture %}
 		{% if image.large_url != nil %}
 			<a href="/{{ image.large_url }}" class="lightbox-popup {% if image.border == true %}img-border{% endif %}"><svg class="icon--zoom"><use xlink:href="#icon--zoom"></use></svg>
 		{% else %}
