@@ -37,8 +37,6 @@
 
 	+ .nav__item
 	{
-		// margin-left: $half-grid-padding;
-
 		@include breakpoint($break-small)
 		{
 			margin-left: $half-grid-padding;

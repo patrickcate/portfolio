@@ -1,3 +1,9 @@
+@include placeholder-text
+{
+	font-style: italic;
+	color: $light-grey;
+}
+
 .form
 {
 	margin: 0 auto;
@@ -40,6 +46,7 @@
 			@extend %icon--required;
 			margin-right: $quarter-grid-padding;
 			font-size: $h6-font-size;
+			color: $red;
 		}
 	}
 

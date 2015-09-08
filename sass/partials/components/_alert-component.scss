@@ -4,8 +4,9 @@
 {
 	// display: none;
 	color: $white;
-	font-weight: bold;
-	padding: $grid-padding;
+	// font-weight: bold;
+	border-radius: $default-border-radius / 2;
+	padding: $half-grid-padding;
 	margin-bottom: $grid-padding;
 
 	&:before
@@ -20,7 +21,7 @@
 
 	&:before
 	{
-		@extend %icon--send;
+		@extend %icon--checkmark;
 	}
 }
 
@@ -30,6 +31,6 @@
 
 	&:before
 	{
-		@extend %icon--send;
+		@extend %icon--delete;
 	}
 }
