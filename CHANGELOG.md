@@ -1,8 +1,8 @@
 # Change Log
 
-## [Unreleased](https://github.com/patrickcate/portfolio/tree/HEAD)
+## [v2.2](https://github.com/patrickcate/portfolio/tree/v2.2) (2015-09-08)
 
-[Full Changelog](https://github.com/patrickcate/portfolio/compare/v2.1...HEAD)
+[Full Changelog](https://github.com/patrickcate/portfolio/compare/v2.1...v2.2)
 
 **Implemented enhancements:**
 
