@@ -21,7 +21,7 @@
 	margin-bottom: $half-grid-padding;
 	vertical-align: middle;
 	position: relative;
-	transform: translate3d(0,0,0); // Fix mobile safari rendering performance.
+	transform: translate3d(0, 0, 0); // Fix mobile safari rendering performance.
 }
 
 .form__label
@@ -89,7 +89,7 @@
 
 .form__textfield, .form__textarea
 {
-	transition: border $duration-fast ease-in-out;
+	transition: border $duration-fast $default-timing;
 	font-family: $mono-font;
 	background-color: $white;
 	padding: $quarter-grid-padding;
@@ -130,7 +130,7 @@
 
 	&:before
 	{
-		transition: transform 0.25s ease-in-out;
+		transition: transform 0.25s $default-timing;
 	}
 
 	&.icon--send

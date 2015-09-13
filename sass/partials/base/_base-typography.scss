@@ -5,10 +5,9 @@
  a
  {
  	@include link-colors( $blue, shade($blue, 15%), $blue, $blue, $blue );
- 	transition: color .25s ease-in-out;
+ 	transition: color .25s $default-timing;
  	background: transparent;
  	text-decoration: underline;
- 	// -webkit-tap-highlight-color: rgba(0,0,0,0.5);
  	-webkit-tap-highlight-color: rgba(0,0,0,0);
  }
 

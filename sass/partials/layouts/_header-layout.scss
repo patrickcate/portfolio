@@ -1,18 +1,18 @@
 .l-header
 {
 	@extend %noise-background;
-	transition: transform $duration-fast ease-in-out;
-	background-color: rgba($blue, .95);
-	color: $white;
-	text-shadow: $drop-text-shadow;
-	width: 100%;
-	z-index: 1000;
 	position: fixed;
-	left: 0;
-	right: 0;
+	z-index: 1000;
 	top: 0;
+	right: 0;
 	bottom: auto;
+	left: 0;
+	width: 100%;
 	padding: 0;
+	transition: transform $duration-fast $default-timing;
+	color: $white;
+	background-color: rgba($blue, 0.95);
+	text-shadow: $drop-text-shadow;
 }
 
 .l-header__inner
@@ -43,8 +43,8 @@ $logo-size--medium: 75px;
 {
 	display: block;
 	float: left;
-	margin-right: $half-grid-padding;
 	height: $logo-size--small;
+	margin-right: $half-grid-padding;
 
 	@include breakpoint($break-medium)
 	{
@@ -55,8 +55,7 @@ $logo-size--medium: 75px;
 	{
 		width: $logo-size--small - 1px;
 		height: $logo-size--small;
-		transition: height $duration-fast ease-in-out, width $duration-fast ease-in-out;
-		// filter: drop-shadow($drop-text-shadow);
+		transition: height $duration-fast $default-timing, width $duration-fast $default-timing;
 
 		@include breakpoint($break-medium)
 		{

@@ -7,26 +7,26 @@ requirejs.config(
 		'picturefill': 'picturefill.min',
 		'jquery': 'jquery-1.11.3.min',
 		'magnific-popup': 'jquery.magnific-popup.min',
-		'xpull': 'xpull',
-		'webapplinks': 'webapplinks',
+		// 'xpull': 'xpull',
+		// 'webapplinks': 'webapplinks',
 		'parsley': 'parsley.min',
 		'parse': 'parse-1.4.2.min',
 	},
-	shim:
-	{
-        'xpull':
-        {
-			deps: ['jquery'],
-        },
-        'webapplinks':
-        {
-			deps: ['jquery'],
-        },
-   //      'picturefill':
-   //      {
-			// // deps: ['jquery'],
-   //      },
-    }
+	// shim:
+	// {
+  //       'xpull':
+  //       {
+	// 		deps: ['jquery'],
+  //       },
+  //       'webapplinks':
+  //       {
+	// 		deps: ['jquery'],
+  //       },
+  //  //      'picturefill':
+  //  //      {
+	// 		// // deps: ['jquery'],
+  //  //      },
+  //   }
 });
 
 
@@ -67,26 +67,25 @@ require(['modernizr'], function()
 });
 
 
-require(['xpull'], function()
-{
-    // console.log('xpull loaded...');
-    if (window.navigator.standalone == true)
-	{
-		$('#js-content__inner').xpull(
-		{
-		 	pullThreshold: 100, // Pull threshold - amount in  pixels required to pull to enable release callback
-		    spinnerTimeout: 2000, // timeout in miliseconds after which the loading indicator stops spinning. If set to 0 - the loading will be indefinite
-		    callback:function()
-		    {
+// require(['xpull'], function()
+// {
+//     // console.log('xpull loaded...');
+//     if (window.navigator.standalone == true)
+// 	{
+// 		$('#js-content__inner').xpull(
+// 		{
+// 		 	pullThreshold: 100, // Pull threshold - amount in  pixels required to pull to enable release callback
+// 		    spinnerTimeout: 2000, // timeout in miliseconds after which the loading indicator stops spinning. If set to 0 - the loading will be indefinite
+// 		    callback:function()
+// 		    {
+//
+// 		    }, // triggers after user pulls the content over pull threshold and releases
+// 		});
+// 	}
+// });
 
-		    }, // triggers after user pulls the content over pull threshold and releases
-		});
-	}
-});
 
-
-require(['jquery', 'webapplinks'], function($)
-{
-	// console.log('webapplinks Loaded');
-});
-
+// require(['jquery', 'webapplinks'], function($)
+// {
+// 	// console.log('webapplinks Loaded');
+// });

@@ -111,7 +111,7 @@
 
 .nav__icon
 {
-	// transition: fill 0.25s ease-in-out;
+	// transition: fill 0.25s $default-timing;
 	// display: inline-block;
 	// margin-right: $quarter-grid-padding;
 	// vertical-align: middle;
@@ -189,7 +189,7 @@
 
 // .nav__link--about
 // {
-// 	// transition: all 1s ease-in-out;
+// 	// transition: all 1s $default-timing;
 
 
 .nav__link--about
@@ -224,7 +224,7 @@
 // .button--refresh
 // {
 // 	@include link-colors($white, $gold, $white, $white, inherit);
-// 	transition: color 0.25s ease-in-out;
+// 	transition: color 0.25s $default-timing;
 // 	background: none;
 // 	margin: 0;
 // 	padding: 0;

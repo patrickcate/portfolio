@@ -1,4 +1,4 @@
-@import "partials/config";
+@import 'partials/config';
 
 @include font-face('k8ticon', 'font/k8ticon', normal, normal);
 @include font-face('Avenir', 'font/avenir', normal, normal);
@@ -6,8 +6,8 @@
 @include font-face('Avenir', 'font/avenir-bold', bold, normal);
 @include font-face('Avenir', 'font/avenir-bold-italic', bold, italic);
 
-@import "partials/base";
-@import "partials/components";
-@import "partials/layouts";
-@import "partials/plugins";
-@import "partials/helpers";
+@import 'partials/base';
+@import 'partials/components';
+@import 'partials/layouts';
+@import 'partials/plugins';
+@import 'partials/helpers';

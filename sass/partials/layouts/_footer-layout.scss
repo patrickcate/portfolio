@@ -1,8 +1,8 @@
 .l-footer
 {
 	@extend %noise-background;
-	background-color: $blue;
 	color: $white;
+	background-color: $blue;
 	text-shadow: $drop-text-shadow;
 
 	a
@@ -14,6 +14,7 @@
 .l-footer__inner
 {
 	@extend %container;
+
 	padding: ($grid-padding * 2) $grid-padding;
 }
 

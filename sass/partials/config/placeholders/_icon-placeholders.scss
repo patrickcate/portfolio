@@ -3,16 +3,15 @@
 	&:before
 	{
 		display: inline-block;
+		margin-right: $quarter-grid-padding + ($quarter-grid-padding / 2);
 		vertical-align: baseline;
-		// vertical-align: initial;
 		text-decoration: none;
 		text-transform: none;
+		font-family: $icon-font;
 		font-weight: normal;
 		font-style: normal;
-		font-family: $icon-font;
 		line-height: 1;
 		speak: none;
-		margin-right: $quarter-grid-padding + ($quarter-grid-padding / 2);
 	}
 }
 
@@ -21,7 +20,7 @@
 	&:before
 	{
 		@extend %icon--before;
-		content: "\e603";
+		content: '\e603';
 	}
 }
 
@@ -30,7 +29,7 @@
 	&:before
 	{
 		@extend %icon--before;
-		content: "\e604";
+		content: '\e604';
 	}
 }
 
@@ -39,7 +38,7 @@
 	&:before
 	{
 		@extend %icon--before;
-		content: "\e605";
+		content: '\e605';
 	}
 }
 
@@ -48,7 +47,7 @@
 	&:before
 	{
 		@extend %icon--before;
-		content: "\e609";
+		content: '\e609';
 	}
 }
 
@@ -57,7 +56,7 @@
 	&:before
 	{
 		@extend %icon--before;
-		content: "\e607";
+		content: '\e607';
 	}
 }
 
@@ -66,7 +65,7 @@
 	&:before
 	{
 		@extend %icon--before;
-		content: "\e608";
+		content: '\e608';
 	}
 }
 
@@ -75,6 +74,6 @@
 	&:before
 	{
 		@extend %icon--before;
-		content: "\e606";
+		content: '\e606';
 	}
 }

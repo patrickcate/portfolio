@@ -3,8 +3,6 @@ main.js
 ----------------
 jquery-1.11.3.min.js
 modernizr.min.js
-xpull.js
-webapplinks.js
 main.js
 
 require-lightbox.js

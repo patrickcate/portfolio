@@ -4,21 +4,15 @@
 {
 	&:before, &:after
 	{
-		content: " ";
 		display: table;
-		height: 0;
 		visibility: hidden;
 		overflow: hidden;
+		height: 0;
+		content: '';
 	}
 
 	&:after
 	{
 		clear: both;
 	}
-
-	@if $legacy-support-for-ie6 or $legacy-support-for-ie7
-	{
-		*zoom: 1;
-	}
-
 }

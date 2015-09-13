@@ -6,9 +6,9 @@
 
 %h1
 {
+	margin-bottom: 0;
 	font-size: $h1-font-size--small;
 	line-height: $h1-line-height--small;
-	margin-bottom: 0;
 
 	@include breakpoint($break-medium)
 	{
@@ -19,9 +19,9 @@
 
 %h2
 {
+	margin-bottom: 0;
 	font-size: $h2-font-size--small;
 	line-height: $h2-line-height--small;
-	margin-bottom: 0;
 
 	@include breakpoint($break-medium)
 	{
@@ -32,27 +32,15 @@
 
 %h3
 {
-	// font-size: $h3-font-size--small;
-	// line-height: $h3-line-height--small;
 	margin-bottom: 0;
-
-	// @include breakpoint($break-medium)
-	// {
-		font-size: $h3-font-size;
-		line-height: $h3-line-height;
-	// }
+	font-size: $h3-font-size;
+	line-height: $h3-line-height;
 }
 
 %h4
 {
-	// font-size: $h4-font-size--small;
-	// line-height: $h4-line-height--small;
-
-	// @include breakpoint($break-medium)
-	// {
-		font-size: $h4-font-size;
-		line-height: $h4-line-height;
-	// }
+	font-size: $h4-font-size;
+	line-height: $h4-line-height;
 }
 
 %h5
@@ -79,11 +67,11 @@
 	{
 		&:first-letter
 		{
-			font-size: 60px;
-			line-height: 38px;
+			float: left;
 			padding-top: 8px;
 			padding-right: 2px;
-			float: left;
+			font-size: 60px;
+			line-height: 38px;
 		}
 	}
 }

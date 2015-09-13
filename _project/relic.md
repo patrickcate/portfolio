@@ -55,4 +55,4 @@ images:
 
 ---
 
-Layout and logo design for _Relic_ magazine. The monthly magazine covers the world of archeology with a fresh mainstream and media-rich point-of-view. Rather than scholarly journal articles, Relic explains the subject which accommodates a mainstream audience without altering the facts or analysis. In particular it seeks to explain different ancient technologies, cultures and historical events, and how particular discoveries affect our modern world
+Layout and logo design for _Relic_ magazine. The monthly magazine covers the world of archeology with a fresh mainstream and media-rich point-of-view. Rather than scholarly journal articles, _Relic_ explains the subject which accommodates a mainstream audience without altering the facts or analysis. In particular it seeks to explain different ancient technologies, cultures and historical events, and how particular discoveries affect our modern world.

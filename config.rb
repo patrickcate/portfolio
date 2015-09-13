@@ -23,6 +23,10 @@ require 'oily_png'
 Compass::BrowserSupport.add_support('repeating-linear-gradient', 'webkit', 'moz', 'o', 'ms')
 Compass::BrowserSupport.add_support('repeating-radial-gradient', 'webkit', 'moz', 'o', 'ms')
 
+
+# Set sass number precision
+Sass::Script::Number.precision = 10
+
 # Turn on support for FireSASS
 firesass = false
 

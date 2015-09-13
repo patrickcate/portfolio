@@ -11,20 +11,8 @@
 
 .l-content
 {
-	// position: relative;
-	// .touch &
-	// {
-	// 	overflow-x: hidden;
-	// 	overflow-y: scroll;
-	// 	width: 100%;
-	// 	height: 100%;
-	// }
-
 	.touch &
 	{
-		// position: relative;
-		// position: absolute;
-		// top: 0;
 		overflow: auto;
 		overflow-x: hidden;
 		overflow-y: scroll;
@@ -39,7 +27,7 @@
 	@extend %clearfix;
 	@extend %noise-background;
 
-	padding-top: 50px + ($grid-padding * 2);
+	// padding-top: 50px + ($grid-padding * 2);
 	padding-top: 100px;
 
 	.webapp &
@@ -59,7 +47,7 @@
 
 	@include breakpoint($break-medium)
 	{
-		padding-top: 50px + ($grid-padding * 2);
+		// padding-top: 50px + ($grid-padding * 2);
 		padding-top: 95px;
 
 		.webapp &
@@ -67,25 +55,13 @@
 			padding-top: 95px + $half-grid-padding + $quarter-grid-padding;
 		}
 	}
-
-	// .touch &
-	// {
-	// 	position: absolute;
-	// 	top: 0;
-	// 	overflow: auto;
-	// 	overflow-x: hidden;
-	// 	overflow-y: scroll;
-	// 	width: 100%;
-	// 	height: 100%;
-	// 	-webkit-overflow-scrolling: touch;
-	// }
 }
 
 .l-section
 {
 	@extend %noise-background;
-	background-color: $white;
 	position: relative;
+	background-color: $white;
 
 	&:nth-of-type(odd)
 	{
@@ -135,21 +111,13 @@ $section-icon-size: 50px;
 .l-section__icon
 {
 	position: absolute;
-	left: 0;
-	right: 0;
-	top: -#{$section-icon-size / 2};
-	height: $section-icon-size;
-	width: $section-icon-size;
-	margin: 0 auto;
 	z-index: 1;
-	// background: transparent sprite-url($icon-1x-sprites) no-repeat 0 0 scroll;
-
-	@include breakpoint($break-retina)
-	{
-
-		// background: transparent sprite-url($icon-2x-sprites) no-repeat 0 0 scroll;
-		// @include background-size(image-width('generated/icons/section-icons/icon-1x.png') image-height('generated/icons/section-icons/icon-1x.png'));
-	}
+	top: -#{$section-icon-size / 2};
+	right: 0;
+	left: 0;
+	width: $section-icon-size;
+	height: $section-icon-size;
+	margin: 0 auto;
 }
 
 .l-section__header
@@ -159,8 +127,8 @@ $section-icon-size: 50px;
 
 .l-section__title
 {
-	color: $blue;
 	margin: $quarter-grid-padding 0;
+	color: $blue;
 }
 
 .l-section__subtitle

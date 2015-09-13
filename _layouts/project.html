@@ -6,7 +6,7 @@ layout: compress
 	{% for image in page.images %}
 		{% capture srcset %}{% if image.srcset != nil %}{% for set in image.srcset %}{% if forloop.last %}/{{ set }}{% else %}/{{ set }}, {% endif %}{% endfor %}{% endif %}{% endcapture %}
 		{% if image.large_url != nil %}
-			<a href="/{{ image.large_url }}" class="lightbox-popup {% if image.border == true %}img-border{% endif %}"><svg class="icon--zoom"><use xlink:href="#icon--zoom"></use></svg>
+			<a href="/{{ image.large_url }}" class="lightbox-popup{% if image.border == true %} img-border{% endif %}{% if image.video == true %} mfp-iframe{% endif %}"><svg class="icon--zoom"><use xlink:href="#icon--zoom"></use></svg>
 		{% else %}
 			<div{% if image.border == true %} class="img-border"{% endif %}>
 		{% endif %}
@@ -48,7 +48,7 @@ layout: compress
 			</div>
 			{% assign image_number = imageset | size %}
 			{% if image_number > 1 %}
-				<div class="thumbnail-grid clear">
+				<div class="thumbnail-grid clearfix">
 					{% for image in imageset offset: 1 %}
 						<div class="thumbnail-grid__item">
 							{{ image }}

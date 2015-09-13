@@ -1,8 +1,8 @@
 .button
 {
-	@include link-colors($white, $white, $white, $white, $white);
+	// @include link-colors($white, $white, $white, $white, $white);
 	@extend %h4;
-	transition: background-color $duration-fast ease-in-out;
+	transition: background-color $duration-fast $default-timing;
 	text-align: center;
 	text-shadow: $drop-text-shadow;
 	background-color: $blue;
@@ -10,15 +10,36 @@
 	border: none;
 	padding: $half-grid-padding $grid-padding;
 	text-decoration: none;
-	// border: 1px solid shade($blue, 25%);
 	margin-bottom: $grid-padding;
 	float: left;
 	display: block;
 	border-radius: $quarter-grid-padding;
 
-	&:hover, &:focus
+	&:link
 	{
+		color: $white;
+	}
+
+	&:visited
+	{
+		color: $white;
+	}
+
+	&:hover
+	{
+		color: $white;
 		background-color: shade($blue, 25%);
+	}
+
+	&:focus
+	{
+		color: $white;
+		background-color: shade($blue, 25%);
+	}
+
+	&:active
+	{
+		color: $white;
 	}
 
 	@include breakpoint($break-large)

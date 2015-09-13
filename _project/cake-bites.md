@@ -54,4 +54,4 @@ images:
       - images/cake-bites/cake-bites-5--medium.jpg 480w
 ---
 
-Logo and corporate identity package for the Custom Cake Bites company based in the D.C. metro area. Apart from the logo design, the package included branded letterhead, envelopes, presentation folders, business cards for employees, and DVD covers for media distribution. A separate project overhauled the company's website to include a complementary design which worked equally well on mobile devices as it would on desktops, and integrated an online ordering system.
+Logo and corporate identity package for the _Custom Cake Bites_ company based in the D.C. metro area. Apart from the logo design, the package included branded letterhead, envelopes, presentation folders, business cards for employees, and DVD covers for media distribution. A separate project overhauled the company's website to include a complementary design which worked equally well on mobile devices as it would on desktops, and integrated an online ordering system.

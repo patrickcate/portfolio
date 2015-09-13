@@ -4,11 +4,11 @@ $spinner-size: 40px;
 
 %spinner
 {
-    position: relative;
-    width: $spinner-size;
-    height: $spinner-size;
-    margin: 0 auto;
-    border: 4px double $blue;
-    border-top: 4px solid $blue;
-    border-radius: $grid-padding * 4;
+	position: relative;
+	width: $spinner-size;
+	height: $spinner-size;
+	margin: 0 auto;
+	border: 4px double $blue;
+	border-top: 4px solid $blue;
+	border-radius: $grid-padding * 4;
 }

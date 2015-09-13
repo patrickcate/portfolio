@@ -2,51 +2,56 @@
 
 .img
 {
-	transition: opacity $duration-fast ease-in-out;
+	transition: opacity $duration-fast $default-timing;
 }
 
 .img-border
 {
-	background-color: $white;
-	border: 1px solid $image-border-color;
-	padding: $photo-border;
-	display: block;
-	vertical-align: middle;
 	position: relative;
+	display: block;
+	padding: $photo-border;
+	vertical-align: middle;
+	border: 1px solid $image-border-color;
+	border-radius: 2px;
+	background-color: $white;
 
 	.img
 	{
 		display: block;
 		border: 1px solid $image-border-color;
+		border-radius: 1px;
 	}
 }
 
 .lightbox-popup
 {
 	display: block;
-	backface-visibility: hidden;
 	transform: scale(1);
+	transform: scale3d(1, 1, 1);
+
+	backface-visibility: hidden;
 
 	&:before, .icon--zoom
 	{
-		transition: z-index $duration-fast ease-in-out, opacity $duration-fast ease-in-out, transform 0.15s ease-in-out;
-		content: '';
 		position: absolute;
-		left: 0;
-		right: 0;
-		top: 0;
-		bottom: 0;
-		opacity: 0;
-		display: block;
 		z-index: -1;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		display: block;
+		content: '';
+		transition: z-index $duration-fast $default-timing, opacity $duration-fast $default-timing, transform 0.15s $default-timing;
+		opacity: 0;
 	}
 
 	.icon--zoom
 	{
-		transform: scale(.85, .85);
 		width: 50%;
 		height: 50%;
 		margin: auto;
+		transform: scale(0.85, 0.85);
+		transform: scale3d(0.85, 0.85, 0.85);
 		fill: $black;
 	}
 
@@ -56,41 +61,45 @@
 
 		&:before
 		{
-			opacity: .75;
 			z-index: 100;
+			opacity: 0.75;
 		}
 
 		.img
 		{
-			opacity: .5;
+			opacity: 0.5;
 		}
 
 		.icon--zoom
 		{
-			opacity: 1;
 			z-index: 200;
-			transform: scale(1,1);
+			transform: scale(1, 1);
+			transform: scale3d(1, 1, 1);
+			opacity: 1;
 		}
 	}
 }
 
-.lightbox-popup.img-border
+.lightbox-popup
 {
-	&:before
+	&.img-border
 	{
-		background-color: $black;
-	}
-
-	.icon--zoom
-	{
-		fill: $white;
-	}
-
-	&:hover
-	{
-		.img
+		&:before
 		{
-			opacity: 1;
+			background-color: $black;
+		}
+
+		.icon--zoom
+		{
+			fill: $white;
+		}
+
+		&:hover
+		{
+			.img
+			{
+				opacity: 1;
+			}
 		}
 	}
 }

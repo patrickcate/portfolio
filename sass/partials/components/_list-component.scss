@@ -15,18 +15,18 @@
 
 .list-column__header
 {
-    margin-bottom: $quarter-grid-padding;
-    text-align: center;
-    text-transform: uppercase;
-    color: $black;
+	margin-bottom: $quarter-grid-padding;
+	text-align: center;
+	text-transform: uppercase;
+	color: $black;
 }
 
 .list-column__item
 {
-    display: inline-block;
-    margin-bottom: $grid-padding;
-    text-align: left;
-    vertical-align: top;
+	display: inline-block;
+	margin-bottom: $grid-padding;
+	text-align: left;
+	vertical-align: top;
 }
 
 .list-column--skills
