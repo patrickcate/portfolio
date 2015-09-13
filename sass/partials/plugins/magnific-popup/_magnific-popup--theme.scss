@@ -63,7 +63,7 @@
 
 .mfp-ready
 {
-	transition: opacity $duration-fast ease-in-out, transform $duration-fast ease-in-out;
+	transition: opacity $duration-fast $default-timing, transform $duration-fast $default-timing;
 }
 
 .mfp-wrap
@@ -96,10 +96,10 @@
 
 .mfp-arrow, .mfp-close
 {
-	transition: color $duration-fast ease-in-out;
+	transition: color $duration-fast $default-timing;
 }
 
-.mfp-image-holder .mfp-close.mfp-close
+.mfp-image-holder .mfp-close.mfp-close, .mfp-iframe-holder .mfp-close.mfp-close
 {
 	cursor: pointer;
 	background-color: $black;
@@ -174,7 +174,7 @@ img.mfp-img
 
 button.mfp-arrow
 {
-	transition: opacity $duration-fast ease-in-out, left $duration-fast ease-in-out, right $duration-fast ease-in-out;
+	transition: opacity $duration-fast $default-timing, left $duration-fast $default-timing, right $duration-fast $default-timing;
 	cursor: pointer;
 	background-color: $black;
 	width: $grid-padding * 3;
@@ -203,9 +203,9 @@ button.mfp-arrow
 
 	&:before
 	{
-		margin-top: ( ($grid-padding * 3) / 2 ) - ($grid-padding + $half-grid-padding);
+		margin-top: (($grid-padding * 3) / 2 ) - ($grid-padding + $half-grid-padding);
 		position: relative;
-		opacity: .65;
+		opacity: 0.65;
 
 		// @include breakpoint($break-large)
 		// {
@@ -301,4 +301,17 @@ button.mfp-arrow-right
 		// 	border-left-color: $white;
 		// }
 	}
+}
+
+.mfp-iframe-holder
+{
+	.mfp-content
+	{
+		max-width: 320px;
+	}
+	//
+	// .mfp-iframe-scaler
+	// {
+	// 	padding-top: 177.77778%;
+	// }
 }

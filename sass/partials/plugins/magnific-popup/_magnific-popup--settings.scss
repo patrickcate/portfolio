@@ -14,9 +14,9 @@ $mfp-z-index-base:                    1040; // Base z-index of popup
 $mfp-include-arrows:                  true; // include styles for nav arrows
 $mfp-controls-opacity:                0.65;
 $mfp-controls-color:                  $white;
-$mfp-controls-border-color:           #3F3F3F;
+$mfp-controls-border-color:           #3f3f3f;
 $mfp-inner-close-icon-color:          #333;
-$mfp-controls-text-color:             #CCC; // Color of preloader and "1 of X" indicator
+$mfp-controls-text-color:             #ccc; // Color of preloader and "1 of X" indicator
 $mfp-controls-text-color-hover:       $white;
 $mfp-IE7support:                      false; // Very basic IE7 support
 
@@ -25,7 +25,7 @@ $mfp-include-iframe-type:             true;
 $mfp-iframe-padding-top:              40px;
 $mfp-iframe-background:               #000;
 $mfp-iframe-max-width:                900px;
-$mfp-iframe-ratio:                    9/16;
+$mfp-iframe-ratio:                    16/9;
 
 // Image-type options
 $mfp-include-image-type:              true;
@@ -35,8 +35,8 @@ $mfp-image-padding-bottom:            40px;
 $mfp-include-mobile-layout-for-image: true; // Removes paddings from top and bottom
 
 // Image caption options
-$mfp-caption-title-color:             #F3F3F3;
-$mfp-caption-subtitle-color:          #BDBDBD;
+$mfp-caption-title-color:             #f3f3f3;
+$mfp-caption-subtitle-color:          #bdbdbd;
 
 // A11y
 $mfp-use-visuallyhidden:              false; // Hide content from browsers, but make it available for screen readers
