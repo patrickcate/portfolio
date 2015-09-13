@@ -1,5 +1,15 @@
 # Change Log
 
+## [v.2.1](https://github.com/patrickcate/portfolio/tree/v.2.1) (2015-09-13)
+
+[Full Changelog](https://github.com/patrickcate/portfolio/compare/v2.2...v.2.1)
+
+**Implemented enhancements:**
+
+- Style iframe popup [\#36](https://github.com/patrickcate/portfolio/issues/36)
+
+- Add Farmer's Spot piece [\#31](https://github.com/patrickcate/portfolio/issues/31)
+
 ## [v2.2](https://github.com/patrickcate/portfolio/tree/v2.2) (2015-09-08)
 
 [Full Changelog](https://github.com/patrickcate/portfolio/compare/v2.1...v2.2)
