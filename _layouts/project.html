@@ -10,7 +10,7 @@ layout: compress
 		{% else %}
 			<div{% if image.border == true %} class="img-border"{% endif %}>
 		{% endif %}
-			<img src="/{{ image.url }}" {% if image.srcset != nil %}srcset="{{ srcset }}"{% endif %} {% if forloop.first %}{% if page.gallery_image_size == 'large' %}sizes="{{ site.large_main_image_mq }}"{% else %}sizes="{{ site.main_image_mq }}"{% endif %}{% else %}sizes="{{ site.thumbnail_grid_mq }}"{% endif %} alt="{{ image.alt }}" class="img">
+			<img src="/{{ image.url }}" {% if image.srcset != nil %}srcset="{{ srcset }}"{% endif %} {% if forloop.first %}{% if page.gallery_image_size == 'large' %}sizes="{{ site.data.large_main_image_mq }}"{% else %}sizes="{{ site.data.main_image_mq }}"{% endif %}{% else %}sizes="{{ site.data.thumbnail_grid_mq }}"{% endif %} alt="{{ image.alt }}" class="img">
 		{% if image.large_url != nil %}
 			</a>
 		{% else %}
