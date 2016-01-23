@@ -1,7 +1,7 @@
 ---
 layout: project
 title:  Baskerville Poster
-categories: [Print]
+categories: [print]
 gallery_image_size: large
 images:
   - url: images/baskerville/baskerville-1--small.png

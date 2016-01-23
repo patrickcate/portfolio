@@ -10,11 +10,11 @@ plugin_gems: []
 linters:
   BangFormat:
     enabled: true
-    space_before_bang: false
+    space_before_bang: true
     space_after_bang: false
 
   BemDepth:
-    enabled: false
+    enabled: true
     max_elements: 1
 
   BorderZero:
@@ -28,12 +28,15 @@ linters:
     enabled: true
 
   Comment:
-    enabled: true
+    enabled: false
 
   DebugStatement:
     enabled: true
 
   DeclarationOrder:
+    enabled: true
+
+  DisableLinterReason:
     enabled: true
 
   DuplicateProperty:
@@ -45,7 +48,7 @@ linters:
 
   EmptyLineBetweenBlocks:
     enabled: true
-    ignore_single_line_blocks: true
+    ignore_single_line_blocks: false
 
   EmptyRule:
     enabled: true
@@ -90,26 +93,26 @@ linters:
     style: include_zero # 'exclude_zero' or 'include_zero'
 
   MergeableSelector:
-    enabled: true
-    force_nesting: true
+    enabled: false
+    force_nesting: false
 
   NameFormat:
     enabled: true
     allow_leading_underscore: true
-    convention: hyphenated_lowercase # or 'camel_case', or 'snake_case', or a regex pattern
+    convention: hyphenated_lowercase # or 'hyphenated_lowercase' 'camel_case', or 'snake_case', or a regex pattern
 
   NestingDepth:
     enabled: true
-    max_depth: 4
+    max_depth: 3
     ignore_parent_selectors: true
 
   PlaceholderInExtend:
     enabled: true
 
   PropertyCount:
-    enabled: false
+    enabled: true
     include_nested: false
-    max_properties: 10
+    max_properties: 15
 
   PropertySortOrder:
     enabled: true
@@ -437,7 +440,8 @@ linters:
       'mso-line-height-rule',
       'line-height',
       'fill',
-      'speak'
+      'speak',
+      'will-change'
       ]
 
   PropertySpelling:
@@ -465,19 +469,19 @@ linters:
 
   SelectorDepth:
     enabled: true
-    max_depth: 4
+    max_depth: 3
 
   SelectorFormat:
     enabled: true
     convention: hyphenated_BEM # hyphenated_lowercase or 'strict_BEM', or 'hyphenated_BEM', or 'snake_case', or 'camel_case', or a regex pattern
 
   Shorthand:
-    enabled: false
-    allowed_shorthands: [1, 2, 3]
+    enabled: true
+    allowed_shorthands: [1, 2]
 
   SingleLinePerProperty:
     enabled: true
-    allow_single_line_rule_sets: true
+    allow_single_line_rule_sets: false
 
   SingleLinePerSelector:
     enabled: false
@@ -495,9 +499,13 @@ linters:
   SpaceAfterVariableName:
     enabled: true
 
+  SpaceAroundOperator:
+    enabled: true
+    style: one_space # 'no_space' or 'one_space'
+
   SpaceBeforeBrace:
-    enabled: false
-    style: space # or 'new_line'
+    enabled: new
+    style: new_line # 'space' or 'new_line'
     allow_single_line_padding: false
 
   SpaceBetweenParens:
@@ -517,6 +525,9 @@ linters:
   TrailingZero:
     enabled: false
 
+  TransitionAll:
+    enabled: true
+
   UnnecessaryMantissa:
     enabled: true
 
@@ -524,7 +535,7 @@ linters:
     enabled: true
 
   UrlFormat:
-    enabled: false
+    enabled: true
 
   UrlQuotes:
     enabled: true

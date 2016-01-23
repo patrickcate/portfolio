@@ -1,5 +1,5 @@
 $border-box-sizing: true;
-$breakpoint-to-ems: true;
+// $breakpoint-to-ems: false;
 
 $container-style: magic;
 $total-columns: 24;
@@ -8,43 +8,48 @@ $total-columns: 24;
 $column-width: $base-line-height;
 $gutter-width: $column-width;
 
-$grid-padding: convert-length($gutter-width, px);
-$half-gutter-width: convert-length(($grid-padding / 2), px);
-$half-grid-padding: convert-length(($grid-padding / 2), px);
-$quarter-gutter-width: convert-length(($grid-padding / 4), px);
-$quarter-grid-padding: convert-length(($grid-padding / 4), px);
+$grid-padding: $gutter-width;
+$half-grid-padding: $grid-padding / 2;
+$quarter-grid-padding: $grid-padding / 4;
+$eighth-grid-padding: $grid-padding / 8;
 
 // $breakpoint-list: 'tiny', 'small', 'medium', 'large', 'huge';
+$breakpoint: (
+  'default media': all,
+  'default feature': min-width,
+  'default pair': width,
 
-$break-tiny: 360px;
-$break-small: 480px;
-$break-medium: 600px;
-$break-large: 800px;
-$break-huge: 920px;
+  'force all media type': false,
+  'to ems': false,
+  'transform resolutions': true,
+
+  'no queries': false,
+  'no query fallbacks': false,
+
+  'base font size': $base-font-size,
+
+  'legacy syntax': false
+);
+
+$break-tiny: convert-length(360px, rem);
+$break-small: convert-length(480px, rem);
+$break-medium: convert-length(600px, rem);
+$break-large: convert-length(800px, rem);
+$break-huge: convert-length(920px, rem);
 // $break-huge: 960px;
 $break-retina: min-resolution 1.5dppx;
 
 $susy: (
-        // the basics
-        columns: $total-columns,
-        gutters: $gutter-width / $column-width,
-        column-width: $column-width,
-        global-box-sizing: border-box,
-        gutter-position: before,
+    // the basics
+    columns: $total-columns,
+    gutters: $gutter-width / $column-width,
+    column-width: $column-width,
+    global-box-sizing: border-box,
+    gutter-position: before,
 
-        // advanced
-        container: $break-large,
-        math: fluid,
-        flow: ltr,
-        last-flow: from,
-        );
-
-$default-border-radius: 6px;
-$photo-border: 5px;
-$photo-size--tiny: 100px;
-$photo-size--small: 160px;
-$photo-size--medium: 240px;
-$photo-size--large: 320px;
-
-$drop-shadow: 0 2px 8px 0 rgba($black, 0.5);
-$lightbox-shadow: 0 2px 8px 0 $black;
+    // advanced
+    container: $break-large,
+    math: fluid,
+    flow: ltr,
+    last-flow: from,
+);

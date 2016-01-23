@@ -4,8 +4,7 @@ title: Contact | Patrick Cate's Portfolio
 description: The portfolio site for Patrick Cate
 id: contact
 ---
-
-<section id="l-anchor--contact" class="l-section l-section--contact">
+<section id="l-anchor--contact" class="l-section l-section--contact l-section--has-divider">
 	<div class="l-section__divider l-section__divider--contact"><svg class="l-section__icon l-section__icon--contact"><use xlink:href="#section__icon--contact"></use></svg></div>
 	<div class="l-section__content">
 		<header class="l-section__header"><h2 class="l-section__title"><span class="uppercase">Contact Me</span> <small class="l-section__subtitle">(How you can hire me)</small></h2></header>
@@ -14,18 +13,18 @@ id: contact
 			<div id="js-alert--success" class="alert alert--success is-hidden">Hurray, the form submitted!</div>
 			<div id="js-alert--error" class="alert alert--error is-hidden">Oops, there was a problem sending your message. Please try again.</div>
 			<div class="form__item">
-				<label class="form__label is-required" for="name">Your Name:</label>
+				<label class="form__label is-required" for="js-input__name">Your Name:</label>
 				<input id="js-input__name" required autofocus placeholder="John Smith" type="textfield" name="name" class="form__element form__textfield">
 				<div class="form__instructions is-hidden">Who should I say is e-mailing?</div>
 			</div>
 			<div class="form__item">
-				<label class="form__label is-required" for="email">Your E-Mail:</label>
+				<label class="form__label is-required" for="js-input__email">Your E-Mail:</label>
 				<input id="js-input__email" required placeholder="your@email.com" type="email" name="email" class="form__element form__textfield">
 				<div class="form__instructions is-hidden">Where can I reply?</div>
 			</div>
 			<div class="form__item">
-				<label class="form__label is-required form__label--textarea" for="message">Message:</label>
-				<textarea id="js-input__message" required placeholder="To whom it may concern..." name="message" class="form__element form__textarea"></textarea>
+				<label class="form__label is-required form__label--textarea" for="js-input__message">Message:</label>
+				<textarea id="js-input__message" required placeholder="" name="message" class="form__element form__textarea"></textarea>
 				<div class="form__instructions is-hidden">What's the matter about?</div>
 			</div>
 			<div class="form__item">

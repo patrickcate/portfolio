@@ -1,7 +1,7 @@
 ---
 layout: project
 title:  Jekyll and Hyde
-categories: [Print]
+categories: [print]
 images:
   - url: images/jekyll-hyde/jekyll-hyde-1--medium.png
     large_url:

@@ -1,7 +1,8 @@
 var gulp            = require('gulp');
 var browserSync     = require('browser-sync');
-//var sass            = require('gulp-sass');
-var compass         = require('gulp-compass');
+// var sass            = require('gulp-sass');
+var ruby_sass       = require('gulp-ruby-sass');
+// var compass         = require('gulp-compass');
 var prefix          = require('gulp-autoprefixer');
 var cp              = require('child_process');
 
@@ -69,25 +70,38 @@ gulp.task('browser-sync', ['sass', 'jekyll-build'], function() {
 */
 gulp.task('sass', function ()
 {
-  gulp.src('sass/**/*.scss')
-  .pipe(compass({
-    config_file: './config.rb',
-    bundle_exec: true,
-    onError: browserSync.notify
-  }))
-  .on('error', handleError)
+  return ruby_sass('sass/**/*.scss', {
+    sourcemap: false,
+    style: 'compressed',
+    precision: 10,
+    stopOnError: true,
+  })
+  // .on('error', sass.logError)
+  // gulp.src('sass/**/*.scss')
+  // .pipe(compass({
+  //   config_file: './config.rb',
+  //   bundle_exec: true,
+  //   onError: browserSync.notify
+  // }))
+  //
+  // .pipe(sass({
+  //   outputStyle: 'compressed',
+  //   precision: 10,
+  //   sourceComments: false,
+  //   sourceMap: false,
+  // }))
+  // .on('error', handleError)
   .pipe(prefix(
-    'last 6 Chrome versions',
-    'last 6 Firefox versions',
-    'last 4 iOS versions',
-    'last 4 Safari versions',
-    'Explorer >= 9',
-    'last 5 Opera versions',
-    'Android >= 4',
-    // 'last 4 ChromeAndroid',
-    // 'last 4 FirefoxAndroid',
-    // 'ExplorerMobile >= 10',
     {
+      browsers: [
+        'last 6 Chrome versions',
+        'last 6 Firefox versions',
+        'last 4 iOS versions',
+        'last 4 Safari versions',
+        'Explorer >= 9',
+        'last 5 Opera versions',
+        'Android >= 4',
+      ],
       cascade: false
     }))
     .pipe(gulp.dest('css'))
@@ -95,7 +109,7 @@ gulp.task('sass', function ()
     .pipe(browserSync.reload({stream:true}))
     .pipe(notify({
       onLast: true,
-      title: 'Compass',
+      title: 'SASS',
       message: 'Sass has finished compiling.'
     }));
   });
@@ -112,6 +126,7 @@ gulp.task('sass', function ()
   //   //     }));
   //   console.log('JS Minifying Done');
   // });
+
 
 
   /**

@@ -7,7 +7,7 @@
 
 # THANKS
 
-    Open Source Develoers
+    Open Source Developers
 
 # SITE
     Site Name: Patrick Cate's Portfolio
@@ -16,4 +16,4 @@
     Doctype: HTML5
     Standards: HTML5, CSS3, JavaScript, Ruby
     Components: Jekyll, Modernizr, Normalize.css, Gulp
-    Software: Sublime Text, Photoshop, Illustrator
+    Software: Atom.io, Photoshop, Illustrator

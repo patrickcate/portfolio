@@ -7,7 +7,9 @@ $text-color: #444;
 // $light-blue: #EEF9FF;
 // $blue: #0050A9;
 // $blue: #007ABB;
+
 $blue: #0074bc;
+// $light-blue: tint($blue, 25%);
 // $blue: #0076bd;
 $dark-blue: #063b70;
 
@@ -17,20 +19,28 @@ $dark-blue: #063b70;
 // $green: #009245;
 // $green: #6abc00;
 $green: #2ba52b;
+$light-green: tint($green, 20%);
+$dark-green: shade($green, 20%);
 
 // $light-red: #FFF3F3;
 // $red: #C1272D;
 // $red: #ba0101;
 $red: #b51414;
+$light-red: tint($red, 20%);
+$dark-red: shade($red, 20%);
 // $dark-red: #A00000;
 
 // $light-orange: #FFF4EB;
 $orange: #d46611;
+$light-orange: tint($orange, 20%);
+$dark-orange: shade($orange, 20%);
 // $dark-orange: #F77900;
 
 // $gold: #ffbf00;
 // $gold: #f7941d;
 $gold: #ffc600;
+$light-gold: tint($gold, 25%);
+$dark-gold: shade($gold, 25%);
 
 $light-grey: #999;
 // $grey: #666;
@@ -59,43 +69,7 @@ $footer-background-color: #015377;
 
 
 // Layout Border Colors
-$body-border-color: #bbbbbb;
+$body-border-color: #bbb;
 $content-border-color: #d9d9d9;
 
-// Social Colors
-$twitter-color: #00aced;
-$facebook-color: #4B71B8;
-$googleplus-color: #d55429;
-$comment-count-color: #ffa000;
-
-// Gradient Start/Stop Colors
-// $menu-gradient-start: #259acc;
-// $menu-gradient-stop: #0050a9;
-
-$blue-gradient-start: #259acc;
-$blue-gradient-stop: #004EA2;
-
-$red-gradient-start: #ed0000;
-$red-gradient-stop: #a30000;
-
-$green-gradient-start: #12B14B;
-$green-gradient-stop: #0C8D44;
-
-$grey-gradient-start: #ed0000;
-$grey-gradient-stop: #a30000;
-
-$yellow-highlight-start: #f4ee00;
-$yellow-highlight-stop: #f1d300;
-
-$image-border-color: tint($light-grey, 25%);;
-
-// Form Colors
-//$form-item-focus-text-color: #000 !default;
-// $form-item-focus-border-color: #007ABB;
-// $form-item-focus-background-color: #EEF9FF;
-
-// $form-item-error-text-color: #C1272D;
-// $form-item-error-border-color: #C1272D;
-// $form-item-error-background-color: #FFF3F3;
-
-
+$image-border-color: tint($light-grey, 25%);

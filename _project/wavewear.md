@@ -17,7 +17,7 @@ images:
 
   - url: images/wavewear/wavewear-2--small.jpg
     large_url: images/wavewear/wavewear-2--large.jpg
-    alt: Wavewear T-Shirt
+    alt: Wavewear White T-Shirt
     border: true
     srcset:
       - images/wavewear/wavewear-2--mini.jpg 160w
@@ -27,7 +27,7 @@ images:
 
   - url: images/wavewear/wavewear-3--small.jpg
     large_url: images/wavewear/wavewear-3--large.jpg
-    alt: Wavewear T-Shirt
+    alt: Wavewear Blue T-Shirt
     border: true
     srcset:
       - images/wavewear/wavewear-3--mini.jpg 160w
@@ -37,7 +37,7 @@ images:
 
   - url: images/wavewear/wavewear-4--small.jpg
     large_url: images/wavewear/wavewear-4--large.jpg
-    alt: Wavewear T-Shirt
+    alt: Wavewear Black T-Shirt
     border: true
     srcset:
       - images/wavewear/wavewear-4--mini.jpg 160w

@@ -1,7 +1,7 @@
 // Block grid component
 
-$small-icon: 70px;
-$medium-icon: 75px;
+// $small-icon: 70px;
+// $medium-icon: 75px;
 
 .skills-icon
 {
@@ -17,9 +17,9 @@ $medium-icon: 75px;
 
 .block-grid, .block-grid__item
 {
-	list-style: none;
-	padding: 0;
 	margin: 0;
+	padding: 0;
+	list-style: none;
 }
 
 .block-grid__item
@@ -42,10 +42,11 @@ $medium-icon: 75px;
 {
 	// @include span(5);
 	// width: span(5);
+	display: table-cell;
 	float: left;
 	width: $small-icon;
 	// margin: 0;
-	display: table-cell;
+
 
 	@include breakpoint($break-tiny)
 	{
@@ -55,8 +56,8 @@ $medium-icon: 75px;
 
 .block-grid__content
 {
-	padding-left: $half-grid-padding;
 	display: table-cell;
+	padding-left: $half-grid-padding;
 
 	@include breakpoint($break-tiny)
 	{
@@ -75,17 +76,14 @@ $medium-icon: 75px;
 	{
 		@include span(24);
 
+		@include breakpoint($break-small)
+		{
+			@include span(12);
+		}
+
 		&:first-child
 		{
 			@include first;
-		}
-	}
-
-	@include breakpoint($break-small)
-	{
-		.block-grid__item
-		{
-			@include span(12);
 		}
 	}
 }

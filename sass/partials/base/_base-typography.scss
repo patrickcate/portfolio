@@ -4,11 +4,22 @@
 
  a
  {
- 	@include link-colors( $blue, shade($blue, 15%), $blue, $blue, $blue );
- 	transition: color .25s $default-timing;
- 	background: transparent;
- 	text-decoration: underline;
- 	-webkit-tap-highlight-color: rgba(0,0,0,0);
+    //  @include link-colors( $blue, shade($blue, 15%), $blue, $blue, $blue );
+     transition: color $duration-fast $default-timing;
+     background: transparent;
+     text-decoration: underline;
+     color: $blue;
+     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+     &:link, &:visited
+     {
+         color: $blue;
+     }
+
+     &:hover, &:focus, &:active
+     {
+         color: shade($blue, 15%);
+     }
  }
 
 /**
@@ -54,7 +65,7 @@ abbr[title]
  * contexts in Firefox 4+, Safari 5, and Chrome.
  */
 
- #{headings()}, p
+h1, h2, h3, h4, h5, h6, p
  {
  	@include font-feature-settings(kern);
  	margin: 0;
@@ -63,7 +74,7 @@ abbr[title]
  	// letter-spacing: convert-length(0.35px, em);
  }
 
- #{headings()}
+h1, h2, h3, h4, h5, h6
  {
  	font-weight: normal;
  	// font-weight: $font-weight-normal;

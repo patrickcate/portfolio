@@ -68,7 +68,8 @@
 
 .mfp-wrap
 {
-	transform: scale(.85);
+	transform: scale(0.85);
+	// will-change: transform;
 
 	&.mfp-ready
 	{
@@ -87,6 +88,7 @@
 .mfp-bg
 {
 	opacity: 0;
+	// will-change: opacity;
 
 	&.mfp-ready
 	{
@@ -101,7 +103,6 @@
 
 .mfp-image-holder .mfp-close.mfp-close, .mfp-iframe-holder .mfp-close.mfp-close
 {
-	cursor: pointer;
 	background-color: $black;
 	display: inline-block;
 	left: auto;
@@ -113,6 +114,7 @@
 	border: 3px solid $white;
 	box-shadow: $lightbox-shadow;
 	padding: 1px 0 0 0;
+	cursor: pointer;
 	border-radius: 100px;
 	line-height: 1;
 	position: absolute;
@@ -186,7 +188,7 @@ button.mfp-arrow
 	// position: relative;
 	top: auto;
 	bottom: -#{($grid-padding * 3) + $quarter-grid-padding};
-	transform: scale(.75);
+	transform: scale(0.75);
 	// margin-top: -#{$grid-padding + $half-grid-padding};
 
 	@include breakpoint($break-large)

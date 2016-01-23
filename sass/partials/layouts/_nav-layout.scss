@@ -7,10 +7,10 @@
 
 	@include breakpoint($break-small)
 	{
+		float: right;
+		clear: none;
 		padding: ($grid-padding) 0 0 0;
 		text-align: right;
-		clear: none;
-		float: right;
 	}
 
 	@include breakpoint($break-medium)
@@ -23,16 +23,16 @@
 {
 	@include span(8 of 24);
 
+	@include breakpoint($break-small)
+	{
+		display: inline-block;
+		float: none;
+		width: auto;
+	}
+
 	&:first-child
 	{
 		@include first;
-	}
-
-	@include breakpoint($break-small)
-	{
-		width: auto;
-		float: none;
-		display: inline-block;
 	}
 
 	+ .nav__item
@@ -52,20 +52,24 @@
 .nav__link
 {
 	@extend %h5;
-	@include link-colors($white, $gold, $white, $white, inherit);
 	display: block;
 	text-decoration: none;
+	color: $white;
 
-	&:before
+	@include breakpoint($break-medium)
 	{
-		@extend %icon--before;
-		font-size: $h6-font-size;
-		margin-right: $quarter-grid-padding;
+		font-size: $h4-font-size;
+		line-height: $h4-line-height;
+	}
 
-		@include breakpoint($break-medium)
-		{
-			font-size: $h5-font-size;
-		}
+	&:link, &:visited
+	{
+		color: $white;
+	}
+
+	&:hover, &:focus, &:active
+	{
+		color: $gold;
 	}
 
 	&:hover, &:focus
@@ -76,127 +80,34 @@
 		}
 	}
 
-	@include breakpoint($break-medium)
+	&:before
 	{
-		font-size: $h4-font-size;
-		line-height: $h4-line-height;
+		@extend %icon--before;
+		margin-right: $quarter-grid-padding;
+		font-size: $h6-font-size;
+
+		@include breakpoint($break-medium)
+		{
+			font-size: $h5-font-size;
+		}
 	}
 }
 
 .nav__link--is-active-first
 {
-	color: $gold!important;
-	// text-decoration: underline;
+	color: $gold !important;
+
 	.nav__text
 	{
 		text-decoration: underline;
 	}
-	// .nav__icon
-	// {
-	// 	fill: $gold;
-	// }
 }
-
-// %nav__link--icon
-// {
-// 	&:before
-// 	{
-// 		content: '';
-// 		display: inline-block;
-// 		margin-right: $quarter-grid-padding;
-// 		vertical-align: middle;
-// 		margin-top: -2px;
-// 	}
-// }
-
-.nav__icon
-{
-	// transition: fill 0.25s $default-timing;
-	// display: inline-block;
-	// margin-right: $quarter-grid-padding;
-	// vertical-align: middle;
-	// // filter: drop-shadow($drop-text-shadow);
-	// fill: $white;
-	// margin-top: -4px
-
-	// fill: $white!important;
-
-	// path, circle
-	// {
-	// 	fill: $white;
-	// }
-
-	// *
-	// {
-	// 	fill: $red;
-	// }
-
-	// &:hover
-	// {
-	// 	// *
-	// 	// {
-	// 		fill: $gold;
-	// 	// }
-
-
-
-	// }
-}
-
-// .nav__icon--about
-// {
-// 	height: 16px;
-// 	width: 6.58px;
-
-// 	// fill: $white!important;
-// }
-
-// // .nav__icon--skills
-// // {
-// // 	height: 20px;
-// // 	width: 9px;
-// // }
-
-// // .nav__icon--tools
-// // {
-// // 	height: 20px;
-// // 	width: 9px;
-// // }
-
-// .nav__icon--work
-// {
-// 	height: 20px;
-// 	width: 21.142px;
-// 	margin-top: -6px
-// }
-
-// .nav__icon--contact
-// {
-// 	height: 16px;
-// 	width: 24px;
-// 	// margin-top: -4px
-// }
-
-// #nav-icon--about
-// {
-// 	fill: $white;
-
-// 	*
-// 	{
-// 		fill: $white;
-// 	}
-// }
-
-// .nav__link--about
-// {
-// 	// transition: all 1s $default-timing;
-
 
 .nav__link--about
 {
 	&:before
 	{
-		content: "\e602";
+		content: '\e602';
 	}
 }
 
@@ -204,7 +115,7 @@
 {
 	&:before
 	{
-		content: "\e601";
+		content: '\e601';
 		font-size: $h5-font-size;
 
 		@include breakpoint($break-medium)
@@ -213,11 +124,12 @@
 		}
 	}
 }
+
 .nav__link--contact
 {
 	&:before
 	{
-		content: "\e600";
+		content: '\e600';
 	}
 }
 

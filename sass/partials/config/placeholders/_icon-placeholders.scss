@@ -20,7 +20,8 @@
 	&:before
 	{
 		@extend %icon--before;
-		content: '\e603';
+		// content: '\e603';
+		content: k8ticon(icon--pdf);
 	}
 }
 
@@ -29,7 +30,8 @@
 	&:before
 	{
 		@extend %icon--before;
-		content: '\e604';
+		// content: '\e604';
+		content: k8ticon(icon--send);
 	}
 }
 
@@ -38,7 +40,8 @@
 	&:before
 	{
 		@extend %icon--before;
-		content: '\e605';
+		// content: '\e605';
+		content: k8ticon(icon--download);
 	}
 }
 
@@ -47,7 +50,8 @@
 	&:before
 	{
 		@extend %icon--before;
-		content: '\e609';
+		// content: '\e609';
+		content: k8ticon(icon--required);
 	}
 }
 
@@ -56,7 +60,8 @@
 	&:before
 	{
 		@extend %icon--before;
-		content: '\e607';
+		// content: '\e607';
+		content: k8ticon(icon--checkmark);
 	}
 }
 
@@ -65,7 +70,8 @@
 	&:before
 	{
 		@extend %icon--before;
-		content: '\e608';
+		// content: '\e608';
+		content: k8ticon(icon--refresh);
 	}
 }
 
@@ -74,6 +80,7 @@
 	&:before
 	{
 		@extend %icon--before;
-		content: '\e606';
+		// content: '\e606';
+		content: k8ticon(icon--delete);
 	}
 }

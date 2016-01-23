@@ -2,12 +2,10 @@
 
 .alert
 {
-	// display: none;
-	color: $white;
-	// font-weight: bold;
-	border-radius: $default-border-radius / 2;
-	padding: $half-grid-padding;
 	margin-bottom: $grid-padding;
+	padding: $half-grid-padding;
+	color: $white;
+	border-radius: $default-border-radius / 2;
 
 	&:before
 	{
@@ -21,7 +19,7 @@
 
 	&:before
 	{
-		@extend %icon--checkmark;
+		content: k8ticon(icon--checkmark);
 	}
 }
 
@@ -31,6 +29,6 @@
 
 	&:before
 	{
-		@extend %icon--delete;
+		content: k8ticon(icon--delete);
 	}
 }

@@ -15,7 +15,7 @@ images:
 
   - url: images/spy-tv/spy-tv-2--small.jpg
     large_url: images/spy-tv/spy-tv-2--large.jpg
-    alt: Spy TV
+    alt: Cover of Spy TV Brochure
     border: true
     srcset:
       - images/spy-tv/spy-tv-2--mini.jpg 160w
@@ -25,7 +25,7 @@ images:
 
   - url: images/spy-tv/spy-tv-3--small.jpg
     large_url: images/spy-tv/spy-tv-3--large.jpg
-    alt: Spy TV
+    alt: First Spread of Spy TV Brochure
     border: true
     srcset:
       - images/spy-tv/spy-tv-3--mini.jpg 160w
@@ -35,7 +35,7 @@ images:
 
   - url: images/spy-tv/spy-tv-4--small.jpg
     large_url: images/spy-tv/spy-tv-4--large.jpg
-    alt: Spy TV
+    alt: Left Inner Spread of Spy TV Brochure
     border: true
     srcset:
       - images/spy-tv/spy-tv-4--mini.jpg 160w
@@ -45,7 +45,7 @@ images:
 
   - url: images/spy-tv/spy-tv-5--small.jpg
     large_url: images/spy-tv/spy-tv-5--large.jpg
-    alt: Spy TV
+    alt: Right Inner Spread of Spy TV Brochure
     border: true
     srcset:
       - images/spy-tv/spy-tv-5--mini.jpg 160w

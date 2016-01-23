@@ -359,7 +359,8 @@
           "mso-line-height-rule",
           "line-height",
           "fill",
-          "speak"
+          "speak",
+          "will-change"
         ],
         [
           "$include breakpoint"

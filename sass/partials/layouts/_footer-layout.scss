@@ -7,14 +7,23 @@
 
 	a
 	{
-		@include link-colors($white, $gold, $white, $white, inherit);
+		color: $white;
+
+		&:link, &:visited
+		{
+			color: $white;
+		}
+
+		&:hover, &:focus, &:active
+		{
+			color: $gold;
+		}
 	}
 }
 
 .l-footer__inner
 {
 	@extend %container;
-
 	padding: ($grid-padding * 2) $grid-padding;
 }
 

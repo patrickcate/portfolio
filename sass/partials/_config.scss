@@ -1,4 +1,32 @@
-@import 'config/dependencies';
-@import 'config/variables';
-@import 'config/mixins';
-@import 'config/placeholders';
+// Plugins
+@import 'plugins/units/units';
+@import 'plugins/susy/susy';
+@import 'plugins/breakpoint/breakpoint';
+@import 'plugins/bourbon/tint';
+@import 'plugins/bourbon/shade';
+
+// Functions
+@import 'config/functions/unicode';
+@import 'config/functions/k8ticon';
+
+// Mixins
+@import 'config/mixins/clearfix';
+@import 'config/mixins/font-features';
+@import 'config/mixins/font-face';
+@import 'config/mixins/triangle';
+@import 'config/mixins/placeholder-text';
+
+// Variables
+@import 'config/variables/color-variables';
+@import 'config/variables/typography-variables';
+@import 'config/variables/grid-variables';
+@import 'config/variables/media-variables';
+@import 'config/variables/form-variables';
+@import 'config/variables/animation-variables';
+@import 'config/variables/icon-variables';
+
+// Placeholders
+@import 'config/placeholders/grid-placeholders';
+@import 'config/placeholders/typography-placeholders';
+@import 'config/placeholders/icon-placeholders';
+@import 'config/placeholders/animation-placeholders';

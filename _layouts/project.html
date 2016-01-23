@@ -44,7 +44,7 @@ layout: compress
 					{% assign categories = page.categories | sort: page.category %}
 					{% for category in categories %}{% if forloop.last %}<span class="gallery__category--{{category | classify}}">{{category | titlecase }}</span>{% else %}<span class="gallery__category--{{category | classify}}">{{category | titlecase }}</span>/{% endif %}{% endfor %}</h5></div>
 
-				{{ content }}
+				<div class="gallery__body">{{ content }}</div>
 			</div>
 			{% assign image_number = imageset | size %}
 			{% if image_number > 1 %}

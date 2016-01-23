@@ -66,24 +66,9 @@ $hero-line-height: 70px;
 // $h2-line-height: 39px;
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // The amount lists and blockquotes are indented.
 // $indent-amount: convert-length($grid-padding * 2, em);
 
-$inset-light-text: 0 -1px 0 rgba(#000, .85);
-$inset-dark-text: 0 1px 0 #fff;
-$drop-text-shadow: 0 1px 0 rgba(#000, .85);
+$inset-light-text: 0 -1px 0 rgba($black, 0.85);
+$inset-dark-text: 0 1px 0 $white;
+$drop-text-shadow: 0 1px 0 rgba($black, 0.85);

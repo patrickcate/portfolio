@@ -1,7 +1,7 @@
 ---
 layout: project
 title:  CSS Zen Garden
-categories: [Web]
+categories: [web]
 images:
   - url: images/zen-garden/zen-garden-1--small.png
     large_url: images/zen-garden/zen-garden-2--large.jpg

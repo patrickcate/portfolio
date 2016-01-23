@@ -28,13 +28,12 @@
 	display: block;
 	transform: scale(1);
 	transform: scale3d(1, 1, 1);
-
-	backface-visibility: hidden;
+	// backface-visibility: hidden;
 
 	&:before, .icon--zoom
 	{
 		position: absolute;
-		z-index: -1;
+		z-index: 100;
 		top: 0;
 		right: 0;
 		bottom: 0;
@@ -61,7 +60,7 @@
 
 		&:before
 		{
-			z-index: 100;
+			// z-index: 100;
 			opacity: 0.75;
 		}
 
@@ -82,6 +81,8 @@
 
 .lightbox-popup
 {
+	position: relative;
+
 	&.img-border
 	{
 		&:before

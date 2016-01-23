@@ -32,11 +32,11 @@
 
 	@include breakpoint($break-small)
 	{
+		display: inline-block;
 		width: 35%;
 		max-width: 150px;
-		display: inline-block;
-		text-align: right;
 		margin-right: $quarter-grid-padding;
+		text-align: right;
 	}
 
 	&.is-required
@@ -162,7 +162,7 @@
 	margin-top: $quarter-grid-padding / 2;
 	width: 100%;
 	font-weight: bold;
-	transform: translate3d(0,0,0);  // Fix mobile safari rendering performance.
+	transform: translate3d(0, 0, 0);  // Fix mobile safari rendering performance.
 
 	// &:before
 	// {
