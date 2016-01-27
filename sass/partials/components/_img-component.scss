@@ -1,10 +1,5 @@
 // Image/Lightbox Component
 
-.img
-{
-	transition: opacity $duration-fast $default-timing;
-}
-
 .img-border
 {
 	position: relative;
@@ -14,6 +9,7 @@
 	border: 1px solid $image-border-color;
 	border-radius: 2px;
 	background-color: $white;
+	will-change: background-color;
 
 	.img
 	{
@@ -30,6 +26,12 @@
 	transform: scale3d(1, 1, 1);
 	// backface-visibility: hidden;
 
+	.img
+	{
+		transition: opacity $duration-fast $default-timing;
+		will-change: opacity;
+	}
+
 	&:before, .icon--zoom
 	{
 		position: absolute;
@@ -42,6 +44,12 @@
 		content: '';
 		transition: z-index $duration-fast $default-timing, opacity $duration-fast $default-timing, transform 0.15s $default-timing;
 		opacity: 0;
+		will-change: opacity, z-index, transform;
+	}
+
+	&:before
+	{
+		will-change: opacity;
 	}
 
 	.icon--zoom
