@@ -1,5 +1,6 @@
 name: Portfolio
 description: Patrick Cate's Portfolio
+twitter_id: '@patrickcate'
 markdown: kramdown
 highlighter: pygments
 relative_permalinks: true

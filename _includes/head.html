@@ -9,6 +9,23 @@
     <meta name="author" content="Patrick Cate">
     <meta name="version" content="{% project_version %}">
     <meta name="robots" content="all">
+    <!-- Schema.org markup for Google+ -->
+    <meta itemprop="name" content="{{ page.title }}">
+    <meta itemprop="description" content="{{ page.description }}">
+    <meta itemprop="image" content="{{ site.url }}/images/favicons/favicon-192x192.png">
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="{{ site.twitter_id }}">
+    <meta name="twitter:title" content="{{ page.title }}">
+    <meta name="twitter:description" content="{{ page.description }}">
+    <meta name="twitter:image" content="{{ site.url }}/images/favicons/favicon-192x192.png">
+    <!-- Open Graph data -->
+    <meta property="og:title" content="{{ page.title }}">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+    <meta property="og:image" content="{{ site.url }}/images/favicons/favicon-192x192.png">
+    <meta property="og:description" content="{{ page.description }}">
+    <meta property="og:site_name" content="{{ site.description }}">
     {% include favicons.html %}
     <link rel="stylesheet" type="text/css" media="screen" href="/css/styles.css">
 </head>

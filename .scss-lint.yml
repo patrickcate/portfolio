@@ -7,10 +7,13 @@ plugin_directories: ['.scss-linters']
 # installed)
 plugin_gems: []
 
+# Default severity of all linters.
+severity: warning
+
 linters:
   BangFormat:
     enabled: true
-    space_before_bang: true
+    space_before_bang: false
     space_after_bang: false
 
   BemDepth:
@@ -20,6 +23,9 @@ linters:
   BorderZero:
     enabled: true
     convention: none # 'zero' or `none`
+
+  ChainedClasses:
+    enabled: false
 
   ColorKeyword:
     enabled: true
@@ -447,6 +453,7 @@ linters:
   PropertySpelling:
     enabled: true
     extra_properties: []
+    disabled_properties: []
 
   PropertyUnits:
     enabled: true
@@ -460,6 +467,9 @@ linters:
       'dpi', 'dpcm', 'dppx',                   # Resolution
       '%']                                     # Other
     properties: {}
+
+  PseudoElement:
+    enabled: true
 
   QualifyingElement:
     enabled: true
@@ -488,6 +498,7 @@ linters:
 
   SpaceAfterComma:
     enabled: true
+    style: one_space # or 'no_space', or 'at_least_one_space'
 
   SpaceAfterPropertyColon:
     enabled: true
