@@ -2,7 +2,7 @@
 
 @mixin clearfix
 {
-	&:before, &:after
+	&::before, &::after
 	{
 		display: table;
 		visibility: hidden;
@@ -11,7 +11,7 @@
 		content: '';
 	}
 
-	&:after
+	&::after
 	{
 		clear: both;
 	}

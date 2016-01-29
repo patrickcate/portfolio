@@ -65,7 +65,7 @@
 {
 	&:first-of-type
 	{
-		&:first-letter
+		&::first-letter
 		{
 			float: left;
 			padding-top: 8px;

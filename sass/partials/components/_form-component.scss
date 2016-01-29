@@ -6,8 +6,8 @@
 
 .form
 {
-	margin: 0 auto;
 	width: 100%;
+	margin: 0 auto;
 
 	@include breakpoint($break-medium)
 	{
@@ -29,6 +29,7 @@
 	display: inline-block;
 	cursor: pointer;
 	line-height: $h4-line-height;
+	will-change: color;
 
 	@include breakpoint($break-small)
 	{
@@ -41,7 +42,7 @@
 
 	&.is-required
 	{
-		&:before
+		&::before
 		{
 			@extend %icon--required;
 			margin-right: $quarter-grid-padding;
@@ -54,7 +55,7 @@
 	{
 		color: $blue;
 
-		// &:before
+		// &::before
 		// {
 		// 	color: $red;
 		// }
@@ -98,6 +99,7 @@
 	border-radius: 0;
 	color: $text-color;
 	-webkit-appearance: none;
+	will-change: border-color, border-left-width;
 
 	&:focus
 	{
@@ -113,13 +115,13 @@
 
 .form__textarea
 {
+	// height: 100%;
+	overflow: auto;
 	// display: inline-block;
 	min-height: 200px;
 	resize: vertical;
 	vertical-align: top;
-	// height: 100%;
-	overflow: auto;
-	vertical-align: top;
+	// vertical-align: top;
 	font-weight: normal;
 }
 
@@ -128,7 +130,7 @@
 	float: none;
 	margin: 0;
 
-	&:before
+	&::before
 	{
 		transition: transform 0.25s $default-timing;
 	}
@@ -139,7 +141,7 @@
 		{
 			.no-touch &
 			{
-				&:before
+				&::before
 				{
 					transform: translateY(-3px);
 				}
@@ -164,7 +166,7 @@
 	font-weight: bold;
 	transform: translate3d(0, 0, 0);  // Fix mobile safari rendering performance.
 
-	// &:before
+	// &::before
 	// {
 	// 	display: inline-block;
 	// 	content: '';
@@ -175,12 +177,12 @@
 		width: 95%;
 		max-width: 450px;
 
-		&:before
+		&::before
 		{
 			display: inline-block;
-			content: '';
 			width: 35%;
 			max-width: 150px;
+			content: '';
 		}
 	}
 }

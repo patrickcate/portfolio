@@ -32,7 +32,7 @@
 	{
 		transform: translateY(-#{$grid-padding});
 
-		&:before
+		&::before
 		{
 			@extend %spinner;
 			display: block;
@@ -48,7 +48,7 @@
 {
 	.mfp-preloader
 	{
-		&:before
+		&::before
 		{
 			// @extend %icon--before;
 			@extend %icon--delete;
@@ -69,7 +69,7 @@
 .mfp-wrap
 {
 	transform: scale(0.85);
-	// will-change: transform;
+	// will-change: transform, opacity;
 
 	&.mfp-ready
 	{
@@ -203,7 +203,7 @@ button.mfp-arrow
 		transform: scale(1);
 	}
 
-	&:before
+	&::before
 	{
 		margin-top: (($grid-padding * 3) / 2 ) - ($grid-padding + $half-grid-padding);
 		position: relative;
@@ -225,7 +225,7 @@ button.mfp-arrow
 		margin-top: -#{$grid-padding + $half-grid-padding};
 	}
 
-	&:after
+	&::after
 	{
 		content: none;
 	}
@@ -262,7 +262,7 @@ button.mfp-arrow-left
 		left: -#{$grid-padding * 4};
 	}
 
-	&:before
+	&::before
 	{
 		@include triangle($grid-padding * 2, $white, left);
 		border-top-width: $half-grid-padding + $quarter-grid-padding;
@@ -291,7 +291,7 @@ button.mfp-arrow-right
 		right: -#{$grid-padding * 4};
 	}
 
-	&:before
+	&::before
 	{
 		@include triangle($grid-padding * 2, $white, right);
 		border-top-width: $half-grid-padding + $quarter-grid-padding;

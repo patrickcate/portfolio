@@ -7,7 +7,7 @@
 	color: $white;
 	border-radius: $default-border-radius / 2;
 
-	&:before
+	&::before
 	{
 		@extend %icon--before;
 	}
@@ -17,7 +17,7 @@
 {
 	background-color: $green;
 
-	&:before
+	&::before
 	{
 		content: k8ticon(icon--checkmark);
 	}
@@ -27,7 +27,7 @@
 {
 	background-color: $red;
 
-	&:before
+	&::before
 	{
 		content: k8ticon(icon--delete);
 	}

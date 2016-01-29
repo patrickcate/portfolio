@@ -55,6 +55,7 @@
 	display: block;
 	text-decoration: none;
 	color: $white;
+	will-change: color;
 
 	@include breakpoint($break-medium)
 	{
@@ -80,7 +81,7 @@
 		}
 	}
 
-	&:before
+	&::before
 	{
 		@extend %icon--before;
 		margin-right: $quarter-grid-padding;
@@ -95,7 +96,7 @@
 
 .nav__link--is-active-first
 {
-	color: $gold !important;
+	color: $gold!important;
 
 	.nav__text
 	{
@@ -105,7 +106,7 @@
 
 .nav__link--about
 {
-	&:before
+	&::before
 	{
 		content: '\e602';
 	}
@@ -113,7 +114,7 @@
 
 .nav__link--work
 {
-	&:before
+	&::before
 	{
 		content: '\e601';
 		font-size: $h5-font-size;
@@ -127,7 +128,7 @@
 
 .nav__link--contact
 {
-	&:before
+	&::before
 	{
 		content: '\e600';
 	}
@@ -147,7 +148,7 @@
 // 	line-height: $h2-line-height;
 // 	margin-top: $half-grid-padding;
 
-// 	&:before
+// 	&::before
 // 	{
 // 		margin-right: 0;
 // 	}

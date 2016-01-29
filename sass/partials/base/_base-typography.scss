@@ -225,7 +225,7 @@ blockquote
 	font-style: italic;
 	font-family: $serif-font;
 
-	&:before
+	&::before
 	{
 		position: absolute;
 		top: 0;

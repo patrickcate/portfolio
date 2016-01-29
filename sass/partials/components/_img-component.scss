@@ -32,7 +32,7 @@
 		will-change: opacity;
 	}
 
-	&:before, .icon--zoom
+	&::before, .icon--zoom
 	{
 		position: absolute;
 		z-index: 100;
@@ -47,7 +47,7 @@
 		will-change: opacity, z-index, transform;
 	}
 
-	&:before
+	&::before
 	{
 		will-change: opacity;
 	}
@@ -66,7 +66,7 @@
 	{
 		cursor: zoom-in;
 
-		&:before
+		&::before
 		{
 			// z-index: 100;
 			opacity: 0.75;
@@ -93,7 +93,7 @@
 
 	&.img-border
 	{
-		&:before
+		&::before
 		{
 			background-color: $black;
 		}
