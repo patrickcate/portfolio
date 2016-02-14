@@ -28,4 +28,9 @@
     <meta property="og:site_name" content="{{ site.description }}">
     {% include favicons.html %}
     <link rel="stylesheet" type="text/css" media="screen" href="/css/styles.css">
+    {% for nav in site.data.navigation %}
+        {% if page.id != nav.id %}
+            <link rel="dns-prefetch" href="{{ site.url }}{{ nav.url }}">
+        {% endif %}
+    {% endfor %}
 </head>
