@@ -2,113 +2,118 @@
 
 .img-border
 {
-	position: relative;
-	display: block;
-	padding: $photo-border;
-	vertical-align: middle;
-	border: 1px solid $image-border-color;
-	border-radius: 2px;
-	background-color: $white;
-	will-change: background-color;
+    position: relative;
+    display: block;
+    padding: $photo-border;
+    vertical-align: middle;
+    border: 1px solid $image-border-color;
+    border-radius: 2px;
+    background-color: $white;
+    will-change: background-color;
 
-	.img
-	{
-		display: block;
-		border: 1px solid $image-border-color;
-		border-radius: 1px;
-	}
+    .img
+    {
+        display: block;
+        border: 1px solid $image-border-color;
+        border-radius: 1px;
+    }
 }
 
 .lightbox-popup
 {
-	display: block;
-	transform: scale(1);
-	transform: scale3d(1, 1, 1);
-	// backface-visibility: hidden;
+    display: block;
+    transform: scale(1);
+    transform: scale3d(1, 1, 1);
+    // backface-visibility: hidden;
 
-	.img
-	{
-		transition: opacity $duration-fast $default-timing;
-		will-change: opacity;
-	}
+    .img
+    {
+        transition: opacity $duration-fast $default-timing;
+        will-change: opacity;
 
-	&::before, .icon--zoom
-	{
-		position: absolute;
-		z-index: 100;
-		top: 0;
-		right: 0;
-		bottom: 0;
-		left: 0;
-		display: block;
-		content: '';
-		transition: z-index $duration-fast $default-timing, opacity $duration-fast $default-timing, transform 0.15s $default-timing;
-		opacity: 0;
-		will-change: opacity, z-index, transform;
-	}
+        .gallery:hover &
+        {
 
-	&::before
-	{
-		will-change: opacity;
-	}
+        }
+    }
 
-	.icon--zoom
-	{
-		width: 50%;
-		height: 50%;
-		margin: auto;
-		transform: scale(0.85, 0.85);
-		transform: scale3d(0.85, 0.85, 0.85);
-		fill: $black;
-	}
+    &::before, .icon--zoom
+    {
+        position: absolute;
+        z-index: 100;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: block;
+        content: '';
+        transition: z-index $duration-fast $default-timing, opacity $duration-fast $default-timing, transform 0.15s $default-timing;
+        opacity: 0;
+        will-change: opacity, z-index, transform;
+    }
 
-	&:hover
-	{
-		cursor: zoom-in;
+    &::before
+    {
+        will-change: opacity;
+    }
 
-		&::before
-		{
-			// z-index: 100;
-			opacity: 0.75;
-		}
+    .icon--zoom
+    {
+        width: 50%;
+        height: 50%;
+        margin: auto;
+        transform: scale(0.85, 0.85);
+        transform: scale3d(0.85, 0.85, 0.85);
+        fill: $black;
+    }
 
-		.img
-		{
-			opacity: 0.5;
-		}
+    &:hover
+    {
+        cursor: zoom-in;
 
-		.icon--zoom
-		{
-			z-index: 200;
-			transform: scale(1, 1);
-			transform: scale3d(1, 1, 1);
-			opacity: 1;
-		}
-	}
+        &::before
+        {
+            // z-index: 100;
+            opacity: 0.75;
+        }
+
+        .img
+        {
+            opacity: 0.5;
+        }
+
+        .icon--zoom
+        {
+            z-index: 200;
+            transform: scale(1, 1);
+            transform: scale3d(1, 1, 1);
+            opacity: 1;
+        }
+    }
 }
 
 .lightbox-popup
 {
-	position: relative;
+    position: relative;
 
-	&.img-border
-	{
-		&::before
-		{
-			background-color: $black;
-		}
+    &.img-border
+    {
+        &::before
+        {
+            background-color: $black;
+        }
 
-		.icon--zoom
-		{
-			fill: $white;
-		}
+        .icon--zoom
+        {
+            fill: $white;
+        }
 
-		&:hover
-		{
-			.img
-			{
-				opacity: 1;
-			}
-		}
-	}
+        &:hover
+        {
+            .img
+            {
+                opacity: 1;
+            }
+        }
+    }
 }

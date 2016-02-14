@@ -2,41 +2,41 @@
 
 .thumbnail-grid
 {
-	clear: both;
-	margin: 0;
-	padding: 0;
-	list-style: none;
+    clear: both;
+    margin: 0;
+    padding: 0;
+    list-style: none;
 
-	@include breakpoint($break-medium)
-	{
-		margin: $grid-padding 0 0 0;
-	}
+    @include breakpoint($break-medium)
+    {
+        margin: $grid-padding 0 0 0;
+    }
 }
 
 .thumbnail-grid__item
 {
-	@include span(12);
-	margin-bottom: gutters(24);
+    @include span(12);
+    margin-bottom: gutters(24);
 
-	&:nth-child(2n - 1)
-	{
-		@include first;
-		clear: left;
-	}
+    &:nth-child(2n - 1)
+    {
+        @include first;
+        clear: left;
+    }
 
-	@include breakpoint($break-small)
-	{
-		@include span(6 of 24);
+    @include breakpoint($break-small)
+    {
+        @include span(6 of 24);
 
-		&:nth-child(2n - 1)
-		{
-			clear: none;
-			margin-left: gutters(24);
-		}
+        &:nth-child(2n - 1)
+        {
+            clear: none;
+            margin-left: gutters(24);
+        }
 
-		&:first-child
-		{
-			@include first;
-		}
-	}
+        &:first-child
+        {
+            @include first;
+        }
+    }
 }

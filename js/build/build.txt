@@ -1,18 +1,19 @@
 
 main.js
 ----------------
-jquery-1.11.3.min.js
 modernizr.min.js
 main.js
 
 require-lightbox.js
 ----------------
 picturefill.min.js
+jquery-1.12.0.min.js
 jquery.magnific-popup.min.js
 require-lightbox.js
 
 require-form.js
 ----------------
+jquery-1.12.0.min.js
 parsley.min.js
 parse-1.4.2.min.js
 require-form.js

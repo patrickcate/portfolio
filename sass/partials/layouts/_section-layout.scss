@@ -2,83 +2,83 @@
 
 .l-section
 {
-	@extend %noise-background;
-	// position: relative;
-	background-color: $white;
+    @extend %noise-background;
+    // position: relative;
+    background-color: $white;
 
-	&:nth-of-type(odd)
-	{
-		background-color: $content-background-color;
-	}
+    &:nth-of-type(odd)
+    {
+        background-color: $content-background-color;
+    }
 
-	&.l-section--has-divider
-	{
-		position: relative;
-	}
+    &.l-section--has-divider
+    {
+        position: relative;
+    }
 
-	+ .l-section
-	{
-		border-top: 1px solid $content-border-color;
-	}
+    + .l-section
+    {
+        border-top: 1px solid $content-border-color;
+    }
 }
 
 
 .l-section__content
 {
-	@extend %container;
-	padding-top: $grid-padding;
-	padding-bottom: $grid-padding;
+    @extend %container;
+    padding-top: $grid-padding;
+    padding-bottom: $grid-padding;
 }
 
 .l-section__divider
 {
-	height: 4px;
-	background-color: $blue;
+    height: 4px;
+    background-color: $blue;
 
-	+ .l-section
-	{
-		border-top: none;
-	}
+    + .l-section
+    {
+        border-top: none;
+    }
 }
 
 .l-section__divider--work, .l-section__divider--contact
 {
-	margin-top: 50px;
+    margin-top: 50px;
 }
 
 .l-section__divider--work
 {
-	+ .l-section__content
-	{
-		padding: $grid-padding 0 0 0;
-	}
+    + .l-section__content
+    {
+        padding: $grid-padding 0 0 0;
+    }
 }
 
 .l-section__icon
 {
-	position: absolute;
-	z-index: 1;
-	top: -#{$section-icon-size / 2};
-	right: 0;
-	left: 0;
-	width: $section-icon-size;
-	height: $section-icon-size;
-	margin: 0 auto;
+    position: absolute;
+    z-index: 1;
+    top: -#{$section-icon-size / 2};
+    right: 0;
+    left: 0;
+    width: $section-icon-size;
+    height: $section-icon-size;
+    margin: 0 auto;
 }
 
 .l-section__header
 {
-	text-align: center;
+    text-align: center;
 }
 
 .l-section__title
 {
-	margin: $quarter-grid-padding 0;
-	color: $blue;
+    margin: $quarter-grid-padding 0;
+    color: $blue;
 }
 
 .l-section__subtitle
 {
-	display: inline-block;
-	font-size: $h4-font-size;
+    display: inline-block;
+    font-size: $h4-font-size;
 }

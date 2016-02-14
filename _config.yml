@@ -13,46 +13,42 @@ destination:    ./_site
 plugins:        ./_plugins
 layouts:        ./_layouts
 include: [
-          '.htaccess',
-          'js/*.js'
-         ]
+  '.htaccess',
+  'js/*.js'
+]
 
 # Serving
 port: 3000
 host: localhost
 
 gems: [
-    'jekyll_version_plugin',
-    # 'jekyll/minibundle'
-    ]
+  'jekyll_version_plugin',
+]
 
 sitemap:
   file: '/sitemap.xml'
 
-minibundle:
-  # mode: development
+# Compress layout settings
+compress_html:
+  clippings: []
+  comments: []
+  endings: []
+  ignore:
+    envs: []
+  blanklines: false
+  profile: false
+  startings: []
 
 collections:
 - project
 
 exclude: [
-    '*.json',
-    '*.log',
-    '*.map',
-    '*.zip',
-    'js/**/*.*',
-    '*.sublime-project',
-    '*.sublime-workspace',
-    'config.rb',
-    'Gemfile',
-    'Gemfile.lock',
-    'grunt',
-    'Gruntfile.js',
-    'gulpfile.js',
-    'node_modules',
-    'sass',
+  '*.json',
+  '*.log',
+  '*.map',
+  '*.zip',
+  'js/**/*.*',
+  'gulpfile.js',
+  'node_modules',
+  'sass',
 ]
-
-#main_image_mq: '(min-width: 800px) 240px, (min-width: 480px) calc(33vw - 20px), 50vw'
-#large_main_image_mq: '(min-width: 800px) 310px, (min-width: 480px) calc(42vw - 20px), 50vw'
-#thumbnail_grid_mq: '(min-width: 800px) 210px, (min-width: 480px) calc((100vw - 20px) / 4), calc((100vw - 20px) / 2)'

@@ -2,12 +2,12 @@
 
 @function k8ticon($icon-name)
 {
-	@if map-has-key($k8ticons, $icon-name)
-	{
-		@return unicode(map-get($k8ticons, $icon-name));
-	}
+    @if map-has-key($k8ticons, $icon-name)
+    {
+        @return unicode(map-get($k8ticons, $icon-name));
+    }
 
-	@warn 'There doesn\'t appear to be a icon named: `#{$icon-name}`';
+    @warn 'There doesn\'t appear to be a icon named: `#{$icon-name}`';
 
-	@return null;
+    @return null;
 }

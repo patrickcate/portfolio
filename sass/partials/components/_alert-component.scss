@@ -2,33 +2,33 @@
 
 .alert
 {
-	margin-bottom: $grid-padding;
-	padding: $half-grid-padding;
-	color: $white;
-	border-radius: $default-border-radius / 2;
+    margin-bottom: $grid-padding;
+    padding: $half-grid-padding;
+    color: $white;
+    border-radius: $default-border-radius / 2;
 
-	&::before
-	{
-		@extend %icon--before;
-	}
+    &::before
+    {
+        @extend %icon--before;
+    }
 }
 
 .alert--success
 {
-	background-color: $green;
+    background-color: $green;
 
-	&::before
-	{
-		content: k8ticon(icon--checkmark);
-	}
+    &::before
+    {
+        content: k8ticon(icon--checkmark);
+    }
 }
 
 .alert--error
 {
-	background-color: $red;
+    background-color: $red;
 
-	&::before
-	{
-		content: k8ticon(icon--delete);
-	}
+    &::before
+    {
+        content: k8ticon(icon--delete);
+    }
 }

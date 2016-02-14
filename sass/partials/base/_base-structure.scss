@@ -6,13 +6,13 @@
 
  *, *:before, *:after
  {
- 	box-sizing: border-box;
+    box-sizing: border-box;
  }
 
  html
  {
- 	font-family: sans-serif;
-	-webkit-text-size-adjust: 100%; /* 2 */
+    font-family: sans-serif;
+    -webkit-text-size-adjust: 100%; /* 2 */
     -ms-text-size-adjust: 100%; /* 2 */
     -webkit-font-smoothing: antialiased; /* Set the anti-alias settings. Alternative: subpixel-antialiased */
     -moz-osx-font-smoothing: grayscale;
@@ -20,14 +20,14 @@
     line-height: $base-line-height;
 
     &.touch
-	{
-		overflow: hidden;
-	// 	// overflow-x: hidden;
-	// 	// overflow-y: scroll;
-	// 	// -webkit-overflow-scrolling: touch;
-		width: 100%;
-		height: 100%;
-	}
+    {
+        overflow: hidden;
+    // 	// overflow-x: hidden;
+    // 	// overflow-y: scroll;
+    // 	// -webkit-overflow-scrolling: touch;
+        width: 100%;
+        height: 100%;
+    }
 }
 
 /**
@@ -36,33 +36,33 @@
 
  body
  {
- 	margin: 0;
- 	padding: 0;
- 	color: $text-color;
- 	font-family: $base-font-family;
- 	font-size: $base-font-size;
- 	letter-spacing: normal;
+     margin: 0;
+     padding: 0;
+     color: $text-color;
+     font-family: $base-font-family;
+     font-size: $base-font-size;
+     letter-spacing: normal;
 
  // 	.touch &
-	// {
-	// 	// position: absolute;
-	// 	top: 0;
-	// 	overflow: auto;
-	// 	overflow-x: hidden;
-	// 	overflow-y: scroll;
-	// 	width: 100%;
-	// 	height: 100%;
-	// 	-webkit-overflow-scrolling: touch;
-	// }
-	.touch &
-	{
-		overflow: hidden;
-		// overflow-x: hidden;
-		// overflow-y: scroll;
-		// -webkit-overflow-scrolling: touch;
-		width: 100%;
-		height: 100%;
-	}
+    // {
+    // 	// position: absolute;
+    // 	top: 0;
+    // 	overflow: auto;
+    // 	overflow-x: hidden;
+    // 	overflow-y: scroll;
+    // 	width: 100%;
+    // 	height: 100%;
+    // 	-webkit-overflow-scrolling: touch;
+    // }
+    .touch &
+    {
+        overflow: hidden;
+        // overflow-x: hidden;
+        // overflow-y: scroll;
+        // -webkit-overflow-scrolling: touch;
+        width: 100%;
+        height: 100%;
+    }
 }
 
 
@@ -82,17 +82,17 @@
  nav,
  section,
  summary
- {
- 	display: block;
- }
+{
+    display: block;
+}
 
 /**
  * Address `[hidden]` styling not present in IE 8/9.
  * Hide the `template` element in IE, Safari, and Firefox < 22.
  */
 
- [hidden],
- template
- {
- 	display: none;
- }
+[hidden],
+template
+{
+    display: none;
+}

@@ -19,12 +19,12 @@
 .l-header__inner
 {
 	@extend %container;
-	padding: ($grid-padding + $quarter-grid-padding) $grid-padding $half-grid-padding $grid-padding;
+	padding: $half-grid-padding $grid-padding;
 
-	.no-webapp &
-	{
-		padding-top: $half-grid-padding;
-	}
+	// .no-webapp &
+	// {
+	// 	padding-top: $half-grid-padding;
+	// }
 }
 
 .site-logo

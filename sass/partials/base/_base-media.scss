@@ -8,10 +8,10 @@ canvas,
 progress,
 video
 {
-	display: inline-block;
-	/* 1 */
-	vertical-align: baseline;
-	/* 2 */
+    display: inline-block;
+    /* 1 */
+    vertical-align: baseline;
+    /* 2 */
 }
 
 /**
@@ -21,8 +21,8 @@ video
 
 audio:not([controls])
 {
-	display: none;
-	height: 0;
+    display: none;
+    height: 0;
 }
 
 /**
@@ -31,9 +31,9 @@ audio:not([controls])
 
 img
 {
-	border: none;
-	max-width: 100%;
-	height: auto;
+    border: none;
+    max-width: 100%;
+    height: auto;
 }
 
 /**
@@ -42,5 +42,5 @@ img
 
 svg:not(:root)
 {
-	overflow: hidden;
+    overflow: hidden;
 }

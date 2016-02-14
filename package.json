@@ -32,7 +32,7 @@
     "imagemin-jpegoptim": "~4.0.0",
     "imagemin-mozjpeg": "~4.0.0",
     "imagemin-pngcrush": "~4.0.0",
-    "requirejs": "^2.1.16"
+    "requirejs": "^2.1.22"
   },
   "engines": {
     "node": ">=0.8.0"

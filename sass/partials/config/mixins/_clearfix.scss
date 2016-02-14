@@ -2,17 +2,17 @@
 
 @mixin clearfix
 {
-	&::before, &::after
-	{
-		display: table;
-		visibility: hidden;
-		overflow: hidden;
-		height: 0;
-		content: '';
-	}
+    &::before, &::after
+    {
+        display: table;
+        visibility: hidden;
+        overflow: hidden;
+        height: 0;
+        content: '';
+    }
 
-	&::after
-	{
-		clear: both;
-	}
+    &::after
+    {
+        clear: both;
+    }
 }

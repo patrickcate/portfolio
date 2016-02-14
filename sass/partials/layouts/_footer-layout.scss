@@ -1,33 +1,33 @@
 .l-footer
 {
-	@extend %noise-background;
-	color: $white;
-	background-color: $blue;
-	text-shadow: $drop-text-shadow;
+    @extend %noise-background;
+    color: $white;
+    background-color: $blue;
+    text-shadow: $drop-text-shadow;
 
-	a
-	{
-		color: $white;
+    a
+    {
+        color: $white;
 
-		&:link, &:visited
-		{
-			color: $white;
-		}
+        &:link, &:visited
+        {
+            color: $white;
+        }
 
-		&:hover, &:focus, &:active
-		{
-			color: $gold;
-		}
-	}
+        &:hover, &:focus, &:active
+        {
+            color: $gold;
+        }
+    }
 }
 
 .l-footer__inner
 {
-	@extend %container;
-	padding: ($grid-padding * 2) $grid-padding;
+    @extend %container;
+    padding: ($grid-padding * 2) $grid-padding;
 }
 
 .l-footer__copyright
 {
-	text-align: center;
+    text-align: center;
 }

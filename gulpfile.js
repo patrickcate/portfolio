@@ -110,7 +110,7 @@ gulp.task('requirejs', function (cb)
     removeCombined: true,
     findNestedDependencies: true,
     optimize: 'uglify2',
-    skipDirOptimize: true,
+    skipDirOptimize: false,
     modules: [
       {
         name: 'main'
@@ -125,8 +125,7 @@ gulp.task('requirejs', function (cb)
       }
     ]
   },
-  function(buildResponse)
-  {
+  function(buildResponse) {
     console.log('build response', buildResponse);
     cb();
   }, cb);

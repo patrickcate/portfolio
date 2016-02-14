@@ -1,188 +1,188 @@
 @include placeholder-text
 {
-	font-style: italic;
-	color: $light-grey;
+    font-style: italic;
+    color: $light-grey;
 }
 
 .form
 {
-	width: 100%;
-	margin: 0 auto;
+    width: 100%;
+    margin: 0 auto;
 
-	@include breakpoint($break-medium)
-	{
-		width: 60%;
-	}
+    @include breakpoint($break-medium)
+    {
+        width: 60%;
+    }
 }
 
 .form__item
 {
-	display: block;
-	margin-bottom: $half-grid-padding;
-	vertical-align: middle;
-	position: relative;
-	transform: translate3d(0, 0, 0); // Fix mobile safari rendering performance.
+    display: block;
+    margin-bottom: $half-grid-padding;
+    vertical-align: middle;
+    position: relative;
+    transform: translate3d(0, 0, 0); // Fix mobile safari rendering performance.
 }
 
 .form__label
 {
-	display: inline-block;
-	cursor: pointer;
-	line-height: $h4-line-height;
-	will-change: color;
+    display: inline-block;
+    cursor: pointer;
+    line-height: $h4-line-height;
+    will-change: color;
 
-	@include breakpoint($break-small)
-	{
-		display: inline-block;
-		width: 35%;
-		max-width: 150px;
-		margin-right: $quarter-grid-padding;
-		text-align: right;
-	}
+    @include breakpoint($break-small)
+    {
+        display: inline-block;
+        width: 35%;
+        max-width: 150px;
+        margin-right: $quarter-grid-padding;
+        text-align: right;
+    }
 
-	&.is-required
-	{
-		&::before
-		{
-			@extend %icon--required;
-			margin-right: $quarter-grid-padding;
-			font-size: $h6-font-size;
-			color: $red;
-		}
-	}
+    &.is-required
+    {
+        &::before
+        {
+            @extend %icon--required;
+            margin-right: $quarter-grid-padding;
+            font-size: $h6-font-size;
+            color: $red;
+        }
+    }
 
-	&.is-highlighted
-	{
-		color: $blue;
+    &.is-highlighted
+    {
+        color: $blue;
 
-		// &::before
-		// {
-		// 	color: $red;
-		// }
-	}
+        // &::before
+        // {
+        // 	color: $red;
+        // }
+    }
 }
 
 .form__label--textarea
 {
-	vertical-align: top;
+    vertical-align: top;
 }
 
 .form__element
 {
-	display: inline-block;
-	width: 100%;
+    display: inline-block;
+    width: 100%;
 
-	@include breakpoint($break-small)
-	{
-		display: inline-block;
-		width: 60%;
-		max-width: 300px;
-	}
+    @include breakpoint($break-small)
+    {
+        display: inline-block;
+        width: 60%;
+        max-width: 300px;
+    }
 }
 
 .form__element--is-invalid
 {
-	+ .form__instructions
-	{
-		@extend .is-visible;
-	}
+    + .form__instructions
+    {
+        @extend .is-visible;
+    }
 }
 
 .form__textfield, .form__textarea
 {
-	transition: border $duration-fast $default-timing;
-	font-family: $mono-font;
-	background-color: $white;
-	padding: $quarter-grid-padding;
-	border: 1px solid $image-border-color;
-	text-align: left;
-	border-radius: 0;
-	color: $text-color;
-	-webkit-appearance: none;
-	will-change: border-color, border-left-width;
+    transition: border $duration-fast $default-timing;
+    font-family: $mono-font;
+    background-color: $white;
+    padding: $quarter-grid-padding;
+    border: 1px solid $image-border-color;
+    text-align: left;
+    border-radius: 0;
+    color: $text-color;
+    -webkit-appearance: none;
+    will-change: border-color, border-left-width;
 
-	&:focus
-	{
-		border-color: $blue;
-		border-left-width: $quarter-grid-padding;
-	}
+    &:focus
+    {
+        border-color: $blue;
+        border-left-width: $quarter-grid-padding;
+    }
 
-	// &:required
-	// {
-	// 	border-color: $orange;
-	// }
+    // &:required
+    // {
+    // 	border-color: $orange;
+    // }
 }
 
 .form__textarea
 {
-	// height: 100%;
-	overflow: auto;
-	// display: inline-block;
-	min-height: 200px;
-	resize: vertical;
-	vertical-align: top;
-	// vertical-align: top;
-	font-weight: normal;
+    // height: 100%;
+    overflow: auto;
+    // display: inline-block;
+    min-height: 200px;
+    resize: vertical;
+    vertical-align: top;
+    // vertical-align: top;
+    font-weight: normal;
 }
 
 .form__button
 {
-	float: none;
-	margin: 0;
+    float: none;
+    margin: 0;
 
-	&::before
-	{
-		transition: transform 0.25s $default-timing;
-	}
+    &::before
+    {
+        transition: transform 0.25s $default-timing;
+    }
 
-	&.icon--send
-	{
-		&:hover, &:focus
-		{
-			.no-touch &
-			{
-				&::before
-				{
-					transform: translateY(-3px);
-				}
-			}
-		}
-	}
+    &.icon--send
+    {
+        &:hover, &:focus
+        {
+            .no-touch &
+            {
+                &::before
+                {
+                    transform: translateY(-3px);
+                }
+            }
+        }
+    }
 
-	@include breakpoint($break-huge)
-	{
-		// margin-left: calc(2px + 35%);
-	}
+    @include breakpoint($break-huge)
+    {
+        // margin-left: calc(2px + 35%);
+    }
 }
 
 .form__instructions
 {
-	text-align: center;
-	font-size: $h6-font-size;
-	line-height: $h6-line-height;
-	color: $red;
-	margin-top: $quarter-grid-padding / 2;
-	width: 100%;
-	font-weight: bold;
-	transform: translate3d(0, 0, 0);  // Fix mobile safari rendering performance.
+    text-align: center;
+    font-size: $h6-font-size;
+    line-height: $h6-line-height;
+    color: $red;
+    margin-top: $quarter-grid-padding / 2;
+    width: 100%;
+    font-weight: bold;
+    transform: translate3d(0, 0, 0);  // Fix mobile safari rendering performance.
 
-	// &::before
-	// {
-	// 	display: inline-block;
-	// 	content: '';
-	// }
+    // &::before
+    // {
+    // 	display: inline-block;
+    // 	content: '';
+    // }
 
-	@include breakpoint($break-small)
-	{
-		width: 95%;
-		max-width: 450px;
+    @include breakpoint($break-small)
+    {
+        width: 95%;
+        max-width: 450px;
 
-		&::before
-		{
-			display: inline-block;
-			width: 35%;
-			max-width: 150px;
-			content: '';
-		}
-	}
+        &::before
+        {
+            display: inline-block;
+            width: 35%;
+            max-width: 150px;
+            content: '';
+        }
+    }
 }

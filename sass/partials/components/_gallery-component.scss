@@ -8,47 +8,47 @@
 
 .gallery__content
 {
-	@extend %clearfix;
+    @extend %clearfix;
 }
 
 .gallery__title
 {
-	color: $blue;
+    color: $blue;
 }
 
 .gallery__header
 {
-	margin-bottom: $quarter-grid-padding;
+    margin-bottom: $quarter-grid-padding;
 
-	@include breakpoint($break-small)
-	{
-		@include span(16 of 24);
-		float: right;
-		margin: 0;
-	}
+    @include breakpoint($break-small)
+    {
+        @include span(16 of 24);
+        float: right;
+        margin: 0;
+    }
 }
 
 .gallery__body
 {
-	@include breakpoint($break-small)
-	{
-		@include span(16 of 24);
-		float: right;
-		margin: 0;
-	}
+    @include breakpoint($break-small)
+    {
+        @include span(16 of 24);
+        float: right;
+        margin: 0;
+    }
 }
 
 .gallery__thumbnail--large
 {
-	+ .gallery__header, ~ .gallery__body
-	{
-		@include breakpoint($break-small)
-		{
-			@include span(14 of 24);
-			float: right;
-			margin: 0;
-		}
-	}
+    + .gallery__header, ~ .gallery__body
+    {
+        @include breakpoint($break-small)
+        {
+            @include span(14 of 24);
+            float: right;
+            margin: 0;
+        }
+    }
 }
 
 // .gallery__title, .gallery__categories
@@ -58,29 +58,29 @@
 
 .gallery__thumbnail
 {
-	@include span(first 12 of 24);
-	// margin: 0 $grid-padding $quarter-grid-padding 0;
+    @include span(first 12 of 24);
+    // margin: 0 $grid-padding $quarter-grid-padding 0;
 
-	a
-	{
-		display: block;
-	}
-	//
-	// .img
-	// {
-	// 	width: 100%;
-	// }
+    a
+    {
+        display: block;
+    }
+    //
+    // .img
+    // {
+    // 	width: 100%;
+    // }
 
-	@include breakpoint($break-small)
-	{
-		@include span(first 8 of 24);
-		margin-right: gutter(24);
+    @include breakpoint($break-small)
+    {
+        @include span(first 8 of 24);
+        margin-right: gutter(24);
 
-		&.gallery__thumbnail--large
-		{
-			@include span(first 10 of 24);
-		}
-	}
+        &.gallery__thumbnail--large
+        {
+            @include span(first 10 of 24);
+        }
+    }
 
 }
 
@@ -91,30 +91,30 @@
 
 .gallery__category--print
 {
-	color: $green;
+    color: $green;
 }
 
 .gallery__category--web
 {
-	color: $red;
+    color: $red;
 }
 
 .gallery__category--identity, .gallery__category--brand-identity
 {
-	color: $purple;
+    color: $purple;
 }
 
 .gallery__category--drupal
 {
-	color: $blue;
+    color: $blue;
 }
 
 .gallery__category--email
 {
-	color: $orange;
+    color: $orange;
 }
 
 .gallery__category--app
 {
-	color: $dark-grey;
+    color: $dark-grey;
 }
