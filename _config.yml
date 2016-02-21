@@ -51,4 +51,6 @@ exclude: [
   'gulpfile.js',
   'node_modules',
   'sass',
+  'Gemfile',
+  'Gemfile.lock'
 ]

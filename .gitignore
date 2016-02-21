@@ -59,3 +59,6 @@ images
 
 ## Ignore the Node Modules folder ##
 node_modules
+
+## Ignore the Bower Components folder ##
+bower_components

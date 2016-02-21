@@ -19,6 +19,7 @@ var rjs             = require('requirejs');
 var cache           = require('gulp-cache');
 var changed         = require('gulp-changed');
 var remember        = require('gulp-remember');
+var cheerio         = require('gulp-cheerio');
 
 require('gulp-run-seq');
 
@@ -34,8 +35,8 @@ function handleError(err)
 
 
 /**
- * Build the Jekyll Site
- */
+* Build the Jekyll Site
+*/
 gulp.task('jekyll-build', function (done) {
   browserSync.notify(messages.jekyllBuild);
   return cp.spawn('bundle', ['exec', 'jekyll', 'build'], {stdio: 'inherit'}).on('error', handleError).on('close', done);
@@ -43,16 +44,16 @@ gulp.task('jekyll-build', function (done) {
 
 
 /**
- * Rebuild Jekyll & do page reload
- */
+* Rebuild Jekyll & do page reload
+*/
 gulp.task('jekyll-rebuild', ['jekyll-build'], function () {
   browserSync.reload();
 });
 
 
 /**
- * Wait for jekyll-build, then launch the Server
- */
+* Wait for jekyll-build, then launch the Server
+*/
 gulp.task('browser-sync', ['sass', 'jekyll-build'], function() {
   browserSync({
     server: {
@@ -63,8 +64,8 @@ gulp.task('browser-sync', ['sass', 'jekyll-build'], function() {
 
 
 /**
- * Compile files from /sass into both _site/css (for live injecting) and site (for future jekyll builds)
- */
+* Compile files from /sass into both _site/css (for live injecting) and site (for future jekyll builds)
+*/
 gulp.task('sass', function ()
 {
   return ruby_sass('sass/**/*.scss', {
@@ -99,8 +100,8 @@ gulp.task('sass', function ()
 
 
 /**
- * Compress js files and concatenate them.
- */
+* Compress js files and concatenate them.
+*/
 gulp.task('requirejs', function (cb)
 {
   rjs.optimize({
@@ -133,8 +134,8 @@ gulp.task('requirejs', function (cb)
 
 
 /**
- * Compress js files and concatenate them.
- */
+* Compress js files and concatenate them.
+*/
 gulp.task('js', function()
 {
   gulp.src('./js/build/require-lightbox.js')
@@ -159,58 +160,47 @@ gulp.task('svg-sprite', function ()
 {
   gulp.src(['./_source/assets/svg-sprite-icons/base/*.svg', './_source/assets/svg-sprite-icons/about/*.svg'])
   .pipe(svgmin())
-  .pipe(svgstore(
-    {
-      fileName: 'svg-sprite--about.svg',
-      prefix: '',
-      transformSvg: function (svg, cb) {
-        svg.attr({ style: 'display:none' });
-        svg.find('//*[@fill="none"]').forEach(function (child) {
-          child.attr('fill').remove();
-        });
-        cb(null);
-      }
-    })
-  )
+  .pipe(svgstore({inlineSvg: false}))
+  .pipe(cheerio({
+    run: function ($) {
+      $('svg').attr('style', 'display:none');
+      $('[fill="none"]').removeAttr('fill');
+    },
+    parserOptions: { xmlMode: true }
+  }))
+  .pipe(rename('svg-sprite--about.svg'))
   .pipe(gulp.dest('./_includes/'));
   gulp.src(['./_source/assets/svg-sprite-icons/base/*.svg', './_source/assets/svg-sprite-icons/work/*.svg'])
   .pipe(svgmin())
-  .pipe(svgstore(
-    {
-      fileName: 'svg-sprite--work.svg',
-      prefix: '',
-      transformSvg: function (svg, cb) {
-        svg.attr({ style: 'display:none' });
-        svg.find('//*[@fill="none"]').forEach(function (child) {
-          child.attr('fill').remove();
-        });
-        cb(null);
-      }
-    })
-  )
+  .pipe(svgstore({inlineSvg: false}))
+  .pipe(cheerio({
+    run: function ($) {
+      $('svg').attr('style', 'display:none');
+      $('[fill="none"]').removeAttr('fill');
+    },
+    parserOptions: { xmlMode: true }
+  }))
+  .pipe(rename('svg-sprite--work.svg'))
   .pipe(gulp.dest('./_includes/'));
   gulp.src(['./_source/assets/svg-sprite-icons/base/*.svg', './_source/assets/svg-sprite-icons/contact/*.svg'])
   .pipe(svgmin())
-  .pipe(svgstore(
-    {
-      fileName: 'svg-sprite--contact.svg',
-      prefix: '',
-      transformSvg: function (svg, cb) {
-        svg.attr({ style: 'display:none' });
-        svg.find('//*[@fill="none"]').forEach(function (child) {
-          child.attr('fill').remove();
-        });
-        cb(null);
-      }
-    })
-  )
+  .pipe(svgstore({inlineSvg: false}))
+  .pipe(cheerio({
+    run: function ($) {
+      $('[fill="none"]').removeAttr('fill');
+      $('svg').attr('style', 'display:none');
+    },
+    parserOptions: { xmlMode: true }
+  }))
+
+  .pipe(rename('svg-sprite--contact.svg'))
   .pipe(gulp.dest('./_includes/'));
 });
 
 
 /**
- * Minify HTML
- */
+* Minify HTML
+*/
 gulp.task('htmlmin', function()
 {
   gulp.src('_site/**/*.html')
@@ -227,8 +217,8 @@ gulp.task('htmlmin', function()
 
 
 /**
- * Losslessly compress images
- */
+* Losslessly compress images
+*/
 gulp.task('imagemin', [[['imagemin-1'], ['imagemin-2'], ['imagemin-3'], ['imagemin-4']]], function()
 {
   console.log('Image Minifying Done');
@@ -286,8 +276,8 @@ gulp.task('imagemin-4', function(end)
 
 
 /**
- * Generate responsive image sizes
- */
+* Generate responsive image sizes
+*/
 gulp.task('image-sizes', function()
 {
   var img_src = '_source/assets/portfolio-pieces/site-masters/**/*.{png,jpg,gif}';
@@ -362,9 +352,9 @@ gulp.task('image-sizes', function()
 
 
 /**
- * Watch scss files for changes & recompile
- * Watch html/md files, run jekyll & reload BrowserSync
- */
+* Watch scss files for changes & recompile
+* Watch html/md files, run jekyll & reload BrowserSync
+*/
 gulp.task('watch', function () {
   gulp.watch('./sass/**/*.scss', ['sass']);
   gulp.watch('./js/src/*.js', ['requirejs']);
@@ -375,7 +365,7 @@ gulp.task('watch', function () {
 
 
 /**
- * Default task, running just `gulp` will compile the sass,
- * compile the jekyll site, launch BrowserSync & watch files.
- */
+* Default task, running just `gulp` will compile the sass,
+* compile the jekyll site, launch BrowserSync & watch files.
+*/
 gulp.task('default', ['browser-sync', 'watch']);
