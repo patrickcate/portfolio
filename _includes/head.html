@@ -28,6 +28,24 @@
     <meta property="og:site_name" content="{{ site.description }}">
     {% include favicons.html %}
     <link rel="stylesheet" type="text/css" media="screen" href="/css/styles.css">
+    <script src="/js/require.min.js"></script>
+    {% if page.id == "work" %}
+      <script>
+        require(['/js/main.js'], function (main) {
+          require(['/js/lightbox.js']);
+        });
+      </script>
+    {% elsif page.id == "contact" %}
+      <script>
+        require(['/js/main.js'], function (main) {
+          require(['/js/forms.js']);
+        });
+      </script>
+    {% else %}
+      <script>
+        require(['/js/main.js']);
+      </script>
+    {% endif %}
     {% for nav in site.data.navigation %}
         {% if page.id != nav.id %}
             <link rel="dns-prefetch" href="{{ site.url }}{{ nav.url }}">

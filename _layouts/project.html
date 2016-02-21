@@ -6,11 +6,12 @@ layout: compress
     {% for image in page.images %}
         {% capture srcset %}{% if image.srcset != nil %}{% for set in image.srcset %}{% if forloop.last %}/{{ set }}{% else %}/{{ set }}, {% endif %}{% endfor %}{% endif %}{% endcapture %}
         {% if image.large_url != nil %}
-            <a href="/{{ image.large_url }}" class="lightbox-popup{% if image.border == true %} img-border{% endif %}{% if image.video == true %} mfp-iframe{% endif %}"><svg class="icon--zoom"><use xlink:href="#icon--zoom"></use></svg>
+            <a href="/{{ image.large_url }}" class="lightbox-popup{% if image.border == true %} img-border{% endif %}{% if image.video == true %} mfp-iframe{% endif %}"><svg class="icon--zoom"><use xlink:href="#icon--zoom"></use></svg>{% if image.border == true %}<div class="img-border__inner">{% endif %}
         {% else %}
-            <div{% if image.border == true %} class="img-border"{% endif %}>
+            <div{% if image.border == true %} class="img-border"{% endif %}>{% if image.border == true %}<div class="img-border__inner">{% endif %}
         {% endif %}
             <img src="/{{ image.url }}" {% if image.srcset != nil %}srcset="{{ srcset }}"{% endif %} {% if forloop.first %}{% if page.gallery_image_size == 'large' %}sizes="{{ site.data.large_main_image_mq }}"{% else %}sizes="{{ site.data.main_image_mq }}"{% endif %}{% else %}sizes="{{ site.data.thumbnail_grid_mq }}"{% endif %} alt="{{ image.alt }}" class="img">
+        {% if image.border == true %}</div>{% endif %}
         {% if image.large_url != nil %}
             </a>
         {% else %}
