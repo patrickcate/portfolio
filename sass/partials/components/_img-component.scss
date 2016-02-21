@@ -14,27 +14,23 @@
     .img
     {
         display: block;
-        border: 1px solid $image-border-color;
-        border-radius: 1px;
     }
+}
+
+.img-border__inner
+{
+    overflow: hidden;
+    border: 1px solid $image-border-color;
+    border-radius: 1px;
 }
 
 .lightbox-popup
 {
     display: block;
-    transform: scale(1);
-    transform: scale3d(1, 1, 1);
-    // backface-visibility: hidden;
 
     .img
     {
         transition: opacity $duration-fast $default-timing;
-        will-change: opacity;
-
-        .gallery:hover &
-        {
-
-        }
     }
 
     &::before, .icon--zoom
@@ -73,7 +69,6 @@
 
         &::before
         {
-            // z-index: 100;
             opacity: 0.75;
         }
 

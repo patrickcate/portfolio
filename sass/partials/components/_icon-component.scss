@@ -54,3 +54,33 @@
         @extend %icon--delete;
     }
 }
+
+.badge-link
+{
+    display: inline-block;
+    height: 40px;
+    margin-right: $half-grid-padding;
+
+    &:last-child
+    {
+        margin-right: 0;
+    }
+}
+
+.badge--amazon
+{
+    width: 128px;
+    height: 40px;
+}
+
+.badge--ibooks
+{
+    width: 112px;
+    height: 40px;
+}
+
+.badge--kindle
+{
+    width: 116px;
+    height: 40px;
+}
