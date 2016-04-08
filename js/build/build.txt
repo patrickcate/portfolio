@@ -15,5 +15,4 @@ require-form.js
 ----------------
 jquery-1.12.0.min.js
 parsley.min.js
-parse-1.4.2.min.js
 require-form.js
