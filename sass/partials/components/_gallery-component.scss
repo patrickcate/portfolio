@@ -60,11 +60,12 @@
         display: block;
     }
 
-    // .img
-    // {
+    .img
+    {
+        border: 1px solid transparent;
         // will-change: opacity;
         // transform: translate3d(1px, 1px, 1px);
-    // }
+    }
 
     @include breakpoint($break-tiny)
     {

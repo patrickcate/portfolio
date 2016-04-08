@@ -22,6 +22,11 @@
     overflow: hidden;
     border: 1px solid $image-border-color;
     border-radius: 1px;
+
+    .img
+    {
+        border: none;
+    }
 }
 
 .lightbox-popup

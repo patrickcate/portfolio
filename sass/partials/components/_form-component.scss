@@ -1,7 +1,7 @@
 @include placeholder-text
 {
-    font-style: italic;
     color: $light-grey;
+    font-style: italic;
 }
 
 .form
@@ -17,11 +17,11 @@
 
 .form__item
 {
+    position: relative;
     display: block;
     margin-bottom: $half-grid-padding;
-    vertical-align: middle;
-    position: relative;
     transform: translate3d(0, 0, 0); // Fix mobile safari rendering performance.
+    vertical-align: middle;
 }
 
 .form__label
@@ -46,8 +46,8 @@
         {
             @extend %icon--required;
             margin-right: $quarter-grid-padding;
-            font-size: $h6-font-size;
             color: $red;
+            font-size: $h6-font-size;
         }
     }
 
@@ -90,15 +90,15 @@
 
 .form__textfield, .form__textarea
 {
-    transition: border $duration-fast $default-timing;
-    font-family: $mono-font;
-    background-color: $white;
     padding: $quarter-grid-padding;
+    transition: border $duration-fast $default-timing;
+    background-color: $white;
     border: 1px solid $image-border-color;
     text-align: left;
     border-radius: 0;
     color: $text-color;
     -webkit-appearance: none;
+    font-family: $mono-font;
     will-change: border-color, border-left-width;
 
     &:focus

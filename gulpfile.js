@@ -35,8 +35,8 @@ function handleError(err)
 
 
 /**
-* Build the Jekyll Site
-*/
+ * Build the Jekyll Site
+ */
 gulp.task('jekyll-build', function (done) {
   browserSync.notify(messages.jekyllBuild);
   return cp.spawn('bundle', ['exec', 'jekyll', 'build'], {stdio: 'inherit'}).on('error', handleError).on('close', done);
@@ -44,16 +44,16 @@ gulp.task('jekyll-build', function (done) {
 
 
 /**
-* Rebuild Jekyll & do page reload
-*/
+ * Rebuild Jekyll & do page reload
+ */
 gulp.task('jekyll-rebuild', ['jekyll-build'], function () {
   browserSync.reload();
 });
 
 
 /**
-* Wait for jekyll-build, then launch the Server
-*/
+ * Wait for jekyll-build, then launch the Server
+ */
 gulp.task('browser-sync', ['sass', 'jekyll-build'], function() {
   browserSync({
     server: {
@@ -64,8 +64,8 @@ gulp.task('browser-sync', ['sass', 'jekyll-build'], function() {
 
 
 /**
-* Compile files from /sass into both _site/css (for live injecting) and site (for future jekyll builds)
-*/
+ * Compile files from /sass into both _site/css (for live injecting) and site (for future jekyll builds)
+ */
 gulp.task('sass', function ()
 {
   return ruby_sass('sass/**/*.scss', {
@@ -100,8 +100,8 @@ gulp.task('sass', function ()
 
 
 /**
-* Compress js files and concatenate them.
-*/
+ * Compress js files and concatenate them.
+ */
 gulp.task('requirejs', function (cb)
 {
   rjs.optimize({
@@ -199,8 +199,8 @@ gulp.task('svg-sprite', function ()
 
 
 /**
-* Minify HTML
-*/
+ * Minify HTML
+ */
 gulp.task('htmlmin', function()
 {
   gulp.src('_site/**/*.html')
@@ -217,8 +217,8 @@ gulp.task('htmlmin', function()
 
 
 /**
-* Losslessly compress images
-*/
+ * Losslessly compress images
+ */
 gulp.task('imagemin', [[['imagemin-1'], ['imagemin-2'], ['imagemin-3'], ['imagemin-4']]], function()
 {
   console.log('Image Minifying Done');
