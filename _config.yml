@@ -3,7 +3,7 @@ description: Patrick Cate's Portfolio
 twitter_id: '@patrickcate'
 markdown: kramdown
 highlighter: pygments
-relative_permalinks: true
+relative_permalinks: false
 doctor: true
 url: http://portfolio.patrickcate.com
 
@@ -14,7 +14,8 @@ plugins:        ./_plugins
 layouts:        ./_layouts
 include: [
   '.htaccess',
-  'js/*.js'
+  'js/*.js',
+  '_pages'
 ]
 
 # Serving

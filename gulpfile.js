@@ -359,7 +359,7 @@ gulp.task('watch', function () {
   gulp.watch('./sass/**/*.scss', ['sass']);
   gulp.watch('./js/src/*.js', ['requirejs']);
   gulp.watch('./js/build/*.js', ['js']);
-  gulp.watch(['index.html', '_data/*.*', 'work/*.*', 'contact/*.*', '_layouts/*.*', '_includes/*.*', '_project/*', './css/**/*.css', './js/*.js', '!./js/build/*.js'], ['jekyll-rebuild']);
+  gulp.watch(['_data/*.*', '_pages/*.*', '_layouts/*.*', '_includes/*.*', '_project/*', './css/**/*.css', './js/*.js', '!./js/build/*.js'], ['jekyll-rebuild']);
   gulp.watch(['_site/index.html', '_site/work/*.html', '_site/contact/*.html'], ['htmlmin']);
 });
 

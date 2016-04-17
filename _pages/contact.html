@@ -3,6 +3,7 @@ layout: default
 title: Contact | Patrick Cate's Portfolio
 description: Form for contacting Graphic Designer Patrick Cate.
 id: contact
+permalink: /contact/
 ---
 <section id="l-anchor--contact" class="l-section l-section--contact l-section--has-divider">
     <div class="l-section__divider l-section__divider--contact"><svg class="l-section__icon l-section__icon--contact"><use xlink:href="#section__icon--contact"></use></svg></div>
@@ -14,7 +15,7 @@ id: contact
             <div id="js-alert--error" class="alert alert--error is-hidden">Oops, there was a problem sending your message. Please try again.</div>
             <div class="form__item">
                 <label class="form__label is-required" for="js-input__name">Your Name:</label>
-                <input id="js-input__name" required autofocus placeholder="John Smith" type="textfield" name="name" class="form__element form__textfield">
+                <input id="js-input__name" required autofocus placeholder="John Smith" autocomplete="off" type="textfield" name="name" class="form__element form__textfield">
                 <div class="form__instructions is-hidden">Who should I say is e-mailing?</div>
             </div>
             <div class="form__item">
