@@ -1,11 +1,11 @@
-<header id="js-header" class="l-header">
+<header id="js-header" class="l-header" role="banner">
     <div class="l-header__inner">
         <div class="l-headline">
             <a href="/" class="site-logo"><svg class="logo"><title>Patrick Cate's Logo</title><use xlink:href="#logo"></use></svg></a>
             <div class="align-left"><h2 class="site-headline">Patrick&nbsp;Cate</h2>
             <h5 class="site-tagline">Graphic/Web&nbsp;Designer</h5></div>
         </div>
-        <nav class="l-navigation">
+        <nav class="l-navigation" role="navigation">
             <ul id="js-nav" class="nav">
                 {% for link in site.data.navigation %}
                     {% if page.id == link.id %}
