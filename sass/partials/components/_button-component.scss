@@ -14,13 +14,6 @@
     background-color: $blue;
     text-shadow: $drop-text-shadow;
 
-    @include breakpoint($break-large)
-    {
-        float: right;
-        margin-top: -#{$grid-padding * 3};
-        margin-bottom: 0;
-    }
-
     &:link, &:visited
     {
         color: $white;

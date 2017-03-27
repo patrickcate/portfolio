@@ -3,15 +3,55 @@ layout: project
 title:  Jekyll and Hyde
 categories: [print]
 images:
-  - url: images/jekyll-hyde/jekyll-hyde-1--medium.png
-    large_url:
+  - url: images/jekyll-hyde/jekyll-hyde-1--medium.jpg
+    large_url: images/jekyll-hyde/jekyll-hyde-1--large.jpg
     alt: Dr. Jekyll and Mr. Hyde
-    border: false
+    border: true
     srcset:
-      - images/jekyll-hyde/jekyll-hyde-1--mini.png 160w
-      - images/jekyll-hyde/jekyll-hyde-1--tiny.png 240w
-      - images/jekyll-hyde/jekyll-hyde-1--small.png 320w
-      - images/jekyll-hyde/jekyll-hyde-1--medium.png 480w
+      - images/jekyll-hyde/jekyll-hyde-1--mini.jpg 160w
+      - images/jekyll-hyde/jekyll-hyde-1--tiny.jpg 240w
+      - images/jekyll-hyde/jekyll-hyde-1--small.jpg 320w
+      - images/jekyll-hyde/jekyll-hyde-1--medium.jpg 480w
+
+  - url: images/jekyll-hyde/jekyll-hyde-2--small.jpg
+    large_url: images/jekyll-hyde/jekyll-hyde-2--large.jpg
+    alt: First page of Dr. Jekyll and Mr. Hyde
+    border: true
+    srcset:
+      - images/jekyll-hyde/jekyll-hyde-2--mini.jpg 160w
+      - images/jekyll-hyde/jekyll-hyde-2--tiny.jpg 240w
+      - images/jekyll-hyde/jekyll-hyde-2--small.jpg 320w
+      - images/jekyll-hyde/jekyll-hyde-2--medium.jpg 480w
+
+  - url: images/jekyll-hyde/jekyll-hyde-3--small.jpg
+    large_url: images/jekyll-hyde/jekyll-hyde-3--large.jpg
+    alt: Second Page of Dr. Jekyll and Mr. Hyde
+    border: true
+    srcset:
+      - images/jekyll-hyde/jekyll-hyde-3--mini.jpg 160w
+      - images/jekyll-hyde/jekyll-hyde-3--tiny.jpg 240w
+      - images/jekyll-hyde/jekyll-hyde-3--small.jpg 320w
+      - images/jekyll-hyde/jekyll-hyde-3--medium.jpg 480w
+
+  - url: images/jekyll-hyde/jekyll-hyde-4--small.jpg
+    large_url: images/jekyll-hyde/jekyll-hyde-4--large.jpg
+    alt: Inner page of Dr. Jekyll and Mr. Hyde
+    border: true
+    srcset:
+      - images/jekyll-hyde/jekyll-hyde-4--mini.jpg 160w
+      - images/jekyll-hyde/jekyll-hyde-4--tiny.jpg 240w
+      - images/jekyll-hyde/jekyll-hyde-4--small.jpg 320w
+      - images/jekyll-hyde/jekyll-hyde-4--medium.jpg 480w
+
+  - url: images/jekyll-hyde/jekyll-hyde-5--small.jpg
+    large_url: images/jekyll-hyde/jekyll-hyde-5--large.jpg
+    alt: Dr. Jekyll and Mr. Hyde eBook on multiple devices
+    border: true
+    srcset:
+      - images/jekyll-hyde/jekyll-hyde-5--mini.jpg 160w
+      - images/jekyll-hyde/jekyll-hyde-5--tiny.jpg 240w
+      - images/jekyll-hyde/jekyll-hyde-5--small.jpg 320w
+      - images/jekyll-hyde/jekyll-hyde-5--medium.jpg 480w
 ---
 
 Book cover for a new edition of the _Robert Louis Stevenson_ classic "The Strange Case of Dr. Jekyll and Mr. Hyde". The design features Dr. Jekyll's alter ego manifested as his cast shadow as he walks down a London street. Because of the print budget for the run of this edition, the cover was designed to have great visual impact when printed in black and white.
