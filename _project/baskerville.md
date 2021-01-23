@@ -1,6 +1,6 @@
 ---
 layout: project
-title:  Baskerville Poster
+title: Baskerville Poster
 categories: [print]
 gallery_image_size: large
 images:

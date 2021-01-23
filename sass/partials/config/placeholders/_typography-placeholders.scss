@@ -1,77 +1,63 @@
-
-%hero-text
-{
-    font-size: $hero-font-size;
+%hero-text {
+  font-size: $hero-font-size;
 }
 
-%h1
-{
-    margin-bottom: 0;
-    font-size: $h1-font-size--small;
-    line-height: $h1-line-height--small;
+%h1 {
+  margin-bottom: 0;
+  font-size: $h1-font-size--small;
+  line-height: $h1-line-height--small;
 
-    @include breakpoint($break-medium)
-    {
-        font-size: $h1-font-size;
-        line-height: $h1-line-height;
+  @include breakpoint($break-medium) {
+    font-size: $h1-font-size;
+    line-height: $h1-line-height;
+  }
+}
+
+%h2 {
+  margin-bottom: 0;
+  font-size: $h2-font-size--small;
+  line-height: $h2-line-height--small;
+
+  @include breakpoint($break-medium) {
+    font-size: $h2-font-size;
+    line-height: $h2-line-height;
+  }
+}
+
+%h3 {
+  margin-bottom: 0;
+  font-size: $h3-font-size;
+  line-height: $h3-line-height;
+}
+
+%h4 {
+  font-size: $h4-font-size;
+  line-height: $h4-line-height;
+}
+
+%h5 {
+  font-size: $h5-font-size;
+  line-height: $h5-line-height;
+}
+
+%h6 {
+  font-size: $h6-font-size;
+  line-height: $h6-line-height;
+}
+
+%p {
+  font-size: $p-font-size;
+  line-height: $p-line-height;
+}
+
+%drop-cap {
+  &:first-of-type {
+    &::first-letter {
+      float: left;
+      padding-top: 8px;
+      padding-right: 2px;
+      font-size: 60px;
+      line-height: 38px;
     }
-}
-
-%h2
-{
-    margin-bottom: 0;
-    font-size: $h2-font-size--small;
-    line-height: $h2-line-height--small;
-
-    @include breakpoint($break-medium)
-    {
-        font-size: $h2-font-size;
-        line-height: $h2-line-height;
-    }
-}
-
-%h3
-{
-    margin-bottom: 0;
-    font-size: $h3-font-size;
-    line-height: $h3-line-height;
-}
-
-%h4
-{
-    font-size: $h4-font-size;
-    line-height: $h4-line-height;
-}
-
-%h5
-{
-    font-size: $h5-font-size;
-    line-height: $h5-line-height;
-}
-
-%h6
-{
-    font-size: $h6-font-size;
-    line-height: $h6-line-height;
-}
-
-%p
-{
-    font-size: $p-font-size;
-    line-height: $p-line-height;
-}
-
-%drop-cap
-{
-    &:first-of-type
-    {
-        &::first-letter
-        {
-            float: left;
-            padding-top: 8px;
-            padding-right: 2px;
-            font-size: 60px;
-            line-height: 38px;
-        }
-    }
+  }
 }

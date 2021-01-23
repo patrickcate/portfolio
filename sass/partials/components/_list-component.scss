@@ -1,53 +1,43 @@
-.list-column
-{
-    text-align: left;
+.list-column {
+  text-align: left;
 
-    @include breakpoint($break-small)
-    {
-        text-align: center;
-
-        + .list-column
-        {
-            margin-left: $grid-padding;
-        }
-    }
-}
-
-.list-column__header
-{
-    margin-bottom: $quarter-grid-padding;
+  @include breakpoint($break-small) {
     text-align: center;
-    text-transform: uppercase;
-    color: $black;
-}
 
-.list-column__item
-{
-    display: inline-block;
-    margin-bottom: $grid-padding;
-    text-align: left;
-    vertical-align: top;
-}
-
-.list-column--skills
-{
-    .list-column__item
-    {
-        display: block;
-
-        &:first-of-type
-        {
-            margin-bottom: $half-grid-padding;
-        }
-
-        @include breakpoint($break-large)
-        {
-            display: inline-block;
-
-            + .list-column__item
-            {
-                margin-left: $grid-padding;
-            }
-        }
+    + .list-column {
+      margin-left: $grid-padding;
     }
+  }
+}
+
+.list-column__header {
+  margin-bottom: $quarter-grid-padding;
+  text-align: center;
+  text-transform: uppercase;
+  color: $black;
+}
+
+.list-column__item {
+  display: inline-block;
+  margin-bottom: $grid-padding;
+  text-align: left;
+  vertical-align: top;
+}
+
+.list-column--skills {
+  .list-column__item {
+    display: block;
+
+    &:first-of-type {
+      margin-bottom: $half-grid-padding;
+    }
+
+    @include breakpoint($break-large) {
+      display: inline-block;
+
+      + .list-column__item {
+        margin-left: $grid-padding;
+      }
+    }
+  }
 }

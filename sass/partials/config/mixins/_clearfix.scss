@@ -1,18 +1,16 @@
 // Custom clearfix
 
-@mixin clearfix
-{
-    &::before, &::after
-    {
-        display: table;
-        visibility: hidden;
-        overflow: hidden;
-        height: 0;
-        content: '';
-    }
+@mixin clearfix {
+  &::after,
+  &::before {
+    display: table;
+    visibility: hidden;
+    overflow: hidden;
+    height: 0;
+    content: '';
+  }
 
-    &::after
-    {
-        clear: both;
-    }
+  &::after {
+    clear: both;
+  }
 }

@@ -1,6 +1,6 @@
 ---
 layout: project
-title:  Living Light Exhibition
+title: Living Light Exhibition
 categories: [print]
 gallery_image_size: small
 images:

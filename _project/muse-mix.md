@@ -1,6 +1,6 @@
 ---
 layout: project
-title:  Muse Mix
+title: Muse Mix
 categories: [web]
 gallery_image_size: large
 images:

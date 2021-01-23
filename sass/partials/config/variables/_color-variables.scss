@@ -9,41 +9,25 @@ $text-color: #444;
 // $blue: #007ABB;
 
 $blue: #0074bc;
-// $light-blue: tint($blue, 25%);
-// $blue: #0076bd;
 $dark-blue: #063b70;
 
-// $blue-grey: #3a4e5e;
-
-// $light-green: #F0FFF0;
-// $green: #009245;
-// $green: #6abc00;
 $green: #2ba52b;
 $light-green: tint($green, 20%);
 $dark-green: shade($green, 20%);
 
-// $light-red: #FFF3F3;
-// $red: #C1272D;
-// $red: #ba0101;
 $red: #b51414;
 $light-red: tint($red, 20%);
 $dark-red: shade($red, 20%);
-// $dark-red: #A00000;
 
-// $light-orange: #FFF4EB;
 $orange: #d46611;
 $light-orange: tint($orange, 20%);
 $dark-orange: shade($orange, 20%);
-// $dark-orange: #F77900;
 
-// $gold: #ffbf00;
-// $gold: #f7941d;
 $gold: #ffc600;
 $light-gold: tint($gold, 25%);
 $dark-gold: shade($gold, 25%);
 
 $light-grey: #999;
-// $grey: #666;
 $grey: #466068;
 
 $dark-grey: #444;
@@ -51,8 +35,6 @@ $dark-grey: #444;
 $light-biege: tint(#d2c5a6, 25%);
 $biege: #d2c5a6;
 $biege: shade(tint($gold, 80%), 15%);
-// $blue: #1a3f68;
-// $blue: #092546;
 
 $white: #fff;
 $black: #000;

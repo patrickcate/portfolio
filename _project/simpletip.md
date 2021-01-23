@@ -1,7 +1,7 @@
 ---
 layout: project
-title: Tokyo Travel
-categories: [print]
+title: SimpleTip
+categories: [app]
 images:
   - url: images/tokyo/tokyo-1--small.jpg
     large_url: images/tokyo/tokyo-1--large.jpg
@@ -54,4 +54,4 @@ images:
       - images/tokyo/tokyo-5--medium.jpg 480w
 ---
 
-8-panel accordion brochure which highlights for English visitors several of Tokyo's famous districts and what makes each unique. Each panel is devoted to a specific district and features a QR code which when scanned opens up a map of the district in a smartphone or other mobile device.
+SimpleTip makes calculating tip's fast, easy, and accurate. With its clean intuitive design, everything is easily entered from a single screen.

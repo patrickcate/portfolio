@@ -1,33 +1,30 @@
-.l-footer
-{
-    @extend %noise-background;
+.l-footer {
+  @extend %noise-background;
+  color: $white;
+  background-color: $blue;
+  text-shadow: $drop-text-shadow;
+
+  a {
     color: $white;
-    background-color: $blue;
-    text-shadow: $drop-text-shadow;
 
-    a
-    {
-        color: $white;
-
-        &:link, &:visited
-        {
-            color: $white;
-        }
-
-        &:hover, &:focus, &:active
-        {
-            color: $gold;
-        }
+    &:link,
+    &:visited {
+      color: $white;
     }
+
+    &:active,
+    &:focus,
+    &:hover {
+      color: $gold;
+    }
+  }
 }
 
-.l-footer__inner
-{
-    @extend %container;
-    padding: ($grid-padding * 2) $grid-padding;
+.l-footer__inner {
+  @extend %container;
+  padding: ($grid-padding * 2) $grid-padding;
 }
 
-.l-footer__copyright
-{
-    text-align: center;
+.l-footer__copyright {
+  text-align: center;
 }

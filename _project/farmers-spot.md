@@ -1,6 +1,6 @@
 ---
 layout: project
-title:  Farmer's Spot App
+title: Farmer's Spot App
 categories: [brand identity, app]
 images:
   - url: images/farmers-spot/farmers-spot-1--medium.png
@@ -53,7 +53,6 @@ images:
       - images/farmers-spot/farmers-spot-4--tiny.jpg 240w
       - images/farmers-spot/farmers-spot-4--small.jpg 320w
       - images/farmers-spot/farmers-spot-4--medium.jpg 480w
-
 ---
 
 UI design for _Farmer's Spot_ app. _Farmer's Spot_ makes finding farmers markets a breeze. No matter where you are _Farmer's Spot_ will find the nearest market and give you detailed information on where it is, when its open, and what products are offered. The app integrates directly with your GPS app of choice to give you door to market directions. Everything is just a tap away. Profiles of vendor’s share their story and make it easy to learn exactly where your food is coming from.

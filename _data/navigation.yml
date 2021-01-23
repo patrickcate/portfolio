@@ -1,8 +1,8 @@
-  - id: about
-    url: /
+- id: about
+  url: /
 
-  - id: work
-    url: /work/
+- id: work
+  url: /work/
 
-  - id: contact
-    url: /contact/
+- id: contact
+  url: /contact/

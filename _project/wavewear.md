@@ -1,6 +1,6 @@
 ---
 layout: project
-title:  Wavewear
+title: Wavewear
 categories: [brand identity]
 gallery_image_size: large
 images:

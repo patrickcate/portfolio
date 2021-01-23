@@ -1,54 +1,51 @@
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>{{ page.title }}</title>
-    <meta name="description" content="{{ page.description }}">
-    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1.0">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="author" content="Patrick Cate">
-    <meta name="version" content="{% project_version %}">
-    <meta name="robots" content="all">
-    <!-- Schema.org markup for Google+ -->
-    <meta itemprop="name" content="{{ page.title }}">
-    <meta itemprop="description" content="{{ page.description }}">
-    <meta itemprop="image" content="{{ site.url }}/images/favicons/favicon-192x192.png">
-    <!-- Twitter Card data -->
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:site" content="{{ site.twitter_id }}">
-    <meta name="twitter:title" content="{{ page.title }}">
-    <meta name="twitter:description" content="{{ page.description }}">
-    <meta name="twitter:image" content="{{ site.url }}/images/favicons/favicon-192x192.png">
-    <!-- Open Graph data -->
-    <meta property="og:title" content="{{ page.title }}">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="{{ site.url }}{{ page.url }}">
-    <meta property="og:image" content="{{ site.url }}/images/favicons/favicon-192x192.png">
-    <meta property="og:description" content="{{ page.description }}">
-    <meta property="og:site_name" content="{{ site.description }}">
-    {% include favicons.html %}
-    <link rel="stylesheet" type="text/css" media="screen" href="/css/styles.css">
-    <script src="/js/require.min.js"></script>
-    {% if page.id == "work" %}
-      <script>
-        require(['/js/main.js'], function (main) {
-          require(['/js/lightbox.js']);
-        });
-      </script>
-    {% elsif page.id == "contact" %}
-      <script>
-        require(['/js/main.js'], function (main) {
-          require(['/js/forms.js']);
-        });
-      </script>
-    {% else %}
-      <script>
-        require(['/js/main.js']);
-      </script>
-    {% endif %}
-    {% for nav in site.data.navigation %}
-        {% if page.id != nav.id %}
-            <link rel="dns-prefetch" href="{{ site.url }}{{ nav.url }}">
-        {% endif %}
-    {% endfor %}
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <title>{{ page.title }}</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <meta name="description" content="{{ page.description }}" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="author" content="Patrick Cate" />
+  <meta name="version" content="{% project_version %}" />
+  <meta name="robots" content="all" />
+  <!-- Schema.org markup for Google+ -->
+  <meta itemprop="name" content="{{ page.title }}" />
+  <meta itemprop="description" content="{{ page.description }}" />
+  <meta itemprop="image" content="{{ site.url }}/images/favicons/favicon-192x192.png" />
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="{{ site.twitter_id }}" />
+  <meta name="twitter:title" content="{{ page.title }}" />
+  <meta name="twitter:description" content="{{ page.description }}" />
+  <meta name="twitter:image" content="{{ site.url }}/images/favicons/favicon-192x192.png" />
+  <!-- Open Graph data -->
+  <meta property="og:title" content="{{ page.title }}" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
+  <meta property="og:image" content="{{ site.url }}/images/favicons/favicon-192x192.png" />
+  <meta property="og:description" content="{{ page.description }}" />
+  <meta property="og:site_name" content="{{ site.description }}" />
+  {% include favicons.html %}
+  <link rel="stylesheet" type="text/css" media="screen" href="/css/styles.css" />
+  <script src="/js/require.min.js"></script>
+  {% if page.id == "work" %}
+  <script>
+    require(['/js/main.js'], function (main) {
+      require(['/js/lightbox.js']);
+    });
+  </script>
+  {% elsif page.id == "contact" %}
+  <script>
+    require(['/js/main.js'], function (main) {
+      require(['/js/forms.js']);
+    });
+  </script>
+  {% else %}
+  <script>
+    require(['/js/main.js']);
+  </script>
+  {% endif %} {% for nav in site.data.navigation %} {% if page.id != nav.id %}
+  <link rel="dns-prefetch" href="{{ site.url }}{{ nav.url }}" />
+  {% endif %} {% endfor %}
 </head>

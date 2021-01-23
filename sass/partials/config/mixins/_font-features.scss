@@ -2,30 +2,28 @@
 // Font Feature Settings mixin
 // ----------------------------------------------------------------------------
 
-@mixin font-feature-settings($feature-list: false)
-{
-    // Only proceed if a list of arguments was passed
-    @if $feature-list
-    {
-        // Create an empty list for the standard syntax
-        $standard: ();
+@mixin font-feature-settings($feature-list: false) {
+  // Only proceed if a list of arguments was passed
+  @if $feature-list {
 
-        // Create an empty list for the old Mozilla syntax
-        $old-moz: ();
+    // Create an empty list for the standard syntax
+    $standard: ();
 
-        // Add each listed feature to the standard and old Mozilla values
-        @each $feature in $feature-list
-        {
-            $standard: append( $standard, '#{$feature}' 1, comma );
-            $old-moz: append( $old-moz, '#{$feature}=1', comma );
-        }
+    // Create an empty list for the old Mozilla syntax
+    $old-moz: ();
 
-        // Finally, print out the prefixed and non-prefixed code for all of the listed features
-        -moz-font-feature-settings: $old-moz;
-        -moz-font-feature-settings: $standard;
-        -ms-font-feature-settings: $standard;
-        -o-font-feature-settings: $standard;
-        -webkit-font-feature-settings: $standard;
-        font-feature-settings: $standard;
+    // Add each listed feature to the standard and old Mozilla values
+    @each $feature in $feature-list {
+      $standard: append($standard, '#{$feature}' 1, comma);
+      $old-moz: append($old-moz, '#{$feature}=1', comma);
     }
+
+    // Finally, print out the prefixed and non-prefixed code for all of the listed features
+    -moz-font-feature-settings: $old-moz;
+    -moz-font-feature-settings: $standard;
+    -ms-font-feature-settings: $standard;
+    -o-font-feature-settings: $standard;
+    -webkit-font-feature-settings: $standard;
+    font-feature-settings: $standard;
+  }
 }

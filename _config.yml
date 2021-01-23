@@ -7,24 +7,18 @@ relative_permalinks: false
 doctor: true
 url: http://portfolio.patrickcate.com
 
-timezone:       America/New_York
-source:         .
-destination:    ./_site
-plugins:        ./_plugins
-layouts:        ./_layouts
-include: [
-  '.htaccess',
-  'js/*.js',
-  '_pages'
-]
+timezone: America/New_York
+source: .
+destination: ./_site
+plugins: ./_plugins
+layouts: ./_layouts
+include: ['.htaccess', 'js/*.js', '_pages']
 
 # Serving
 port: 3000
 host: localhost
 
-gems: [
-  'jekyll_version_plugin',
-]
+gems: ['jekyll_version_plugin']
 
 sitemap:
   file: '/sitemap.xml'
@@ -41,17 +35,6 @@ compress_html:
   startings: []
 
 collections:
-- project
+  - project
 
-exclude: [
-  '*.json',
-  '*.log',
-  '*.map',
-  '*.zip',
-  'js/**/*.*',
-  'gulpfile.js',
-  'node_modules',
-  'sass',
-  'Gemfile',
-  'Gemfile.lock'
-]
+exclude: ['*.json', '*.log', '*.map', '*.zip', 'js/**/*.*', 'gulpfile.js', 'node_modules', 'sass', 'Gemfile', 'Gemfile.lock']

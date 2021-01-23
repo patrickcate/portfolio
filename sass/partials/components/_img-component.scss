@@ -1,119 +1,101 @@
 // Image/Lightbox Component
 
-.img-border
-{
-    position: relative;
+.img-border {
+  position: relative;
+  display: block;
+  padding: $photo-border;
+  vertical-align: middle;
+  border: 1px solid $image-border-color;
+  border-radius: 2px;
+  background-color: $white;
+  will-change: background-color;
+
+  .img {
     display: block;
-    padding: $photo-border;
-    vertical-align: middle;
-    border: 1px solid $image-border-color;
-    border-radius: 2px;
-    background-color: $white;
-    will-change: background-color;
-
-    .img
-    {
-        display: block;
-    }
+  }
 }
 
-.img-border__inner
-{
-    overflow: hidden;
-    border: 1px solid $image-border-color;
-    border-radius: 1px;
+.img-border__inner {
+  overflow: hidden;
+  border: 1px solid $image-border-color;
+  border-radius: 1px;
 
-    .img
-    {
-        border: none;
-    }
+  .img {
+    border: none;
+  }
 }
 
-.lightbox-popup
-{
+.lightbox-popup {
+  display: block;
+
+  .img {
+    transition: opacity $duration-fast $default-timing;
+  }
+
+  &::before,
+  .icon--zoom {
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
     display: block;
+    content: '';
+    transition: z-index $duration-fast $default-timing, opacity $duration-fast $default-timing, transform 0.15s $default-timing;
+    opacity: 0;
+    will-change: opacity, z-index, transform;
+  }
 
-    .img
-    {
-        transition: opacity $duration-fast $default-timing;
+  &::before {
+    will-change: opacity;
+  }
+
+  .icon--zoom {
+    width: 50%;
+    height: 50%;
+    margin: auto;
+    transform: scale(0.85, 0.85);
+    transform: scale3d(0.85, 0.85, 0.85);
+    fill: $black;
+  }
+
+  &:hover {
+    cursor: zoom-in;
+
+    &::before {
+      opacity: 0.75;
     }
 
-    &::before, .icon--zoom
-    {
-        position: absolute;
-        z-index: 100;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        display: block;
-        content: '';
-        transition: z-index $duration-fast $default-timing, opacity $duration-fast $default-timing, transform 0.15s $default-timing;
-        opacity: 0;
-        will-change: opacity, z-index, transform;
+    .img {
+      opacity: 0.5;
     }
 
-    &::before
-    {
-        will-change: opacity;
+    .icon--zoom {
+      z-index: 200;
+      transform: scale(1, 1);
+      transform: scale3d(1, 1, 1);
+      opacity: 1;
     }
-
-    .icon--zoom
-    {
-        width: 50%;
-        height: 50%;
-        margin: auto;
-        transform: scale(0.85, 0.85);
-        transform: scale3d(0.85, 0.85, 0.85);
-        fill: $black;
-    }
-
-    &:hover
-    {
-        cursor: zoom-in;
-
-        &::before
-        {
-            opacity: 0.75;
-        }
-
-        .img
-        {
-            opacity: 0.5;
-        }
-
-        .icon--zoom
-        {
-            z-index: 200;
-            transform: scale(1, 1);
-            transform: scale3d(1, 1, 1);
-            opacity: 1;
-        }
-    }
+  }
 }
 
-.lightbox-popup
-{
-    position: relative;
+.lightbox-popup {
+  position: relative;
 
-    &.img-border
-    {
-        &::before
-        {
-            background-color: $black;
-        }
-
-        .icon--zoom
-        {
-            fill: $white;
-        }
-
-        &:hover
-        {
-            .img
-            {
-                opacity: 1;
-            }
-        }
+  &.img-border {
+    &::before {
+      background-color: $black;
     }
+
+    .icon--zoom {
+      fill: $white;
+    }
+
+    &:hover {
+      .img {
+        opacity: 1;
+      }
+    }
+  }
 }

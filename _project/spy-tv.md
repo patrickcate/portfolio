@@ -1,6 +1,6 @@
 ---
 layout: project
-title:  Spy TV
+title: Spy TV
 categories: [brand identity, print]
 images:
   - url: images/spy-tv/spy-tv-1--medium.png
@@ -52,7 +52,6 @@ images:
       - images/spy-tv/spy-tv-5--tiny.jpg 240w
       - images/spy-tv/spy-tv-5--small.jpg 320w
       - images/spy-tv/spy-tv-5--medium.jpg 480w
-
 ---
 
 Brochure for the _SpyTV_ television network, a channel which features movies and television shows with spy themes and espionage in the subject matter. The brochure promotes the channel as well as several of the original shows in their upcoming 2014 fall lineup. Local cable channel information is also included as well as general contact information.

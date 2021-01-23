@@ -1,86 +1,70 @@
-%icon--before
-{
-    &::before
-    {
-        display: inline-block;
-        margin-right: $quarter-grid-padding + ($quarter-grid-padding / 2);
-        vertical-align: baseline;
-        text-decoration: none;
-        text-transform: none;
-        font-family: $icon-font;
-        font-weight: normal;
-        font-style: normal;
-        line-height: 1;
-        speak: none;
-    }
+%icon--before {
+  &::before {
+    display: inline-block;
+    margin-right: $quarter-grid-padding + ($quarter-grid-padding / 2);
+    vertical-align: baseline;
+    text-decoration: none;
+    text-transform: none;
+    font-family: $icon-font;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1;
+    speak: none;
+  }
 }
 
-%icon--pdf
-{
-    &::before
-    {
-        @extend %icon--before;
-        // content: '\e603';
-        content: k8ticon(icon--pdf);
-    }
+%icon--pdf {
+  &::before {
+    @extend %icon--before;
+    // content: '\e603';
+    content: k8ticon(icon--pdf);
+  }
 }
 
-%icon--send
-{
-    &::before
-    {
-        @extend %icon--before;
-        // content: '\e604';
-        content: k8ticon(icon--send);
-    }
+%icon--send {
+  &::before {
+    @extend %icon--before;
+    // content: '\e604';
+    content: k8ticon(icon--send);
+  }
 }
 
-%icon--download
-{
-    &::before
-    {
-        @extend %icon--before;
-        // content: '\e605';
-        content: k8ticon(icon--download);
-    }
+%icon--download {
+  &::before {
+    @extend %icon--before;
+    // content: '\e605';
+    content: k8ticon(icon--download);
+  }
 }
 
-%icon--required
-{
-    &::before
-    {
-        @extend %icon--before;
-        // content: '\e609';
-        content: k8ticon(icon--required);
-    }
+%icon--required {
+  &::before {
+    @extend %icon--before;
+    // content: '\e609';
+    content: k8ticon(icon--required);
+  }
 }
 
-%icon--checkmark
-{
-    &::before
-    {
-        @extend %icon--before;
-        // content: '\e607';
-        content: k8ticon(icon--checkmark);
-    }
+%icon--checkmark {
+  &::before {
+    @extend %icon--before;
+    // content: '\e607';
+    content: k8ticon(icon--checkmark);
+  }
 }
 
-%icon--refresh
-{
-    &::before
-    {
-        @extend %icon--before;
-        // content: '\e608';
-        content: k8ticon(icon--refresh);
-    }
+%icon--refresh {
+  &::before {
+    @extend %icon--before;
+    // content: '\e608';
+    content: k8ticon(icon--refresh);
+  }
 }
 
-%icon--delete
-{
-    &::before
-    {
-        @extend %icon--before;
-        // content: '\e606';
-        content: k8ticon(icon--delete);
-    }
+%icon--delete {
+  &::before {
+    @extend %icon--before;
+    // content: '\e606';
+    content: k8ticon(icon--delete);
+  }
 }

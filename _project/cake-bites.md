@@ -1,6 +1,6 @@
 ---
 layout: project
-title:  Custom Cake Bites
+title: Custom Cake Bites
 categories: [print, web, brand identity]
 images:
   - url: images/cake-bites/cake-bites-1--medium.png

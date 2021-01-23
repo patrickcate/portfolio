@@ -36,20 +36,20 @@ $break-small: convert-length(480px, rem);
 $break-medium: convert-length(600px, rem);
 $break-large: convert-length(800px, rem);
 $break-huge: convert-length(920px, rem);
-// $break-huge: 960px;
+
 $break-retina: min-resolution 1.5dppx;
 
 $susy: (
-    // the basics
-    columns: $total-columns,
-    gutters: $gutter-width / $column-width,
-    column-width: $column-width,
-    global-box-sizing: border-box,
-    gutter-position: before,
+  // the basics
+  columns: $total-columns,
+  gutters: $gutter-width / $column-width,
+  column-width: $column-width,
+  global-box-sizing: border-box,
+  gutter-position: before,
 
-    // advanced
-    container: $break-large,
-    math: fluid,
-    flow: ltr,
-    last-flow: from,
+  // advanced
+  container: $break-large,
+  math: fluid,
+  flow: ltr,
+  last-flow: from,
 );

@@ -1,6 +1,6 @@
 ---
 layout: project
-title:  Renwick Gallery
+title: Renwick Gallery
 categories: [print]
 images:
   - url: images/renwick/renwick-1--small.jpg
@@ -42,7 +42,6 @@ images:
       - images/renwick/renwick-4--tiny.jpg 240w
       - images/renwick/renwick-4--small.jpg 320w
       - images/renwick/renwick-4--medium.jpg 480w
-
 ---
 
 Brochure advertising the _Renwick American Art Museum_ in Washington, D.C. The brochure highlights the museum’s history and exhibits, as well as tour information and directions. All photos are of pieces currently on display at the museum. The cover features one of the museum's most popular pieces "Game Fish".
