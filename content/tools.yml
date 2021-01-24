@@ -1,0 +1,47 @@
+tools:
+  - name: Adobe Photoshop
+    logo: adobe-photoshop
+  - name: Adobe Illustrator
+    logo: adobe-illustrator
+  - name: Adobe InDesign
+    logo: adobe-indesign
+  - name: Figma
+    logo: figma
+  - name: VSCode
+    logo: vscode
+  - name: Drupal
+    logo: drupal
+  - name: Vue
+    logo: vuejs
+  - name: Nuxt
+    logo: nuxt
+  - name: D3
+    logo: d3js
+  - name: USWDS
+    logo: uswds
+  - name: Cypress
+    logo: cypress
+  - name: Gulp
+    logo: gulp
+  - name: Vite
+    logo: vitejs
+  - name: Lando
+    logo: lando
+  - name: HTML
+    logo: html
+  - name: CSS
+    logo: css
+  - name: Sass
+    logo: sass
+  - name: Tailwind CSS
+    logo: tailwindcss
+  - name: JavaScript
+    logo: javascript
+  - name: Git
+    logo: git
+  - name: PHP
+    logo: php
+  - name: Twig
+    logo: twig
+  - name: Node
+    logo: nodejs
