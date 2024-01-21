@@ -1,3 +1,18 @@
+# Changelog
+
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+## [3.0.0](https://github.com/patrickcate/portfolio/compare/v2.2.5...v3.0.0) (2024-01-21)
+
+
+### ⚠ BREAKING CHANGES
+
+* rebuilt using Nuxt.js
+
+### Features
+
+* version 3 of portfolio site ([46dfd28](https://github.com/patrickcate/portfolio/commit/46dfd28b1251c106d8c5c29ddf93481c854b0836))
+
 # Change Log
 
 ## [v2.2.5](https://github.com/patrickcate/portfolio/tree/v2.2.5) (2016-01-23)
