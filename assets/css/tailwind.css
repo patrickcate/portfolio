@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind screens;
+
+@layer utilities {
+  @responsive {
+    @variants hover, focus, active {
+      .underline-offset-1 {
+        text-underline-offset: 1px;
+      }
+
+      .underline-offset-2 {
+        text-underline-offset: 2px;
+      }
+
+      .underline-offset,
+      .underline-offset-3 {
+        text-underline-offset: 3px;
+      }
+
+      .underline-offset-4 {
+        text-underline-offset: 4px;
+      }
+
+      .underline-offset-5 {
+        text-underline-offset: 5px;
+      }
+
+      .underline-thickness-auto {
+        text-decoration-thickness: auto;
+      }
+
+      .underline-thickness-1 {
+        text-decoration-thickness: 1px;
+      }
+
+      .underline-thickness,
+      .underline-thickness-2 {
+        text-decoration-thickness: 2px;
+      }
+
+      .underline-thickness-3 {
+        text-decoration-thickness: 3px;
+      }
+
+      .underline-thickness-4 {
+        text-decoration-thickness: 4px;
+      }
+
+      .underline-thickness-5 {
+        text-decoration-thickness: 5px;
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+@font-face {
+  font-family: 'Sentinel';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: local('Sentinel Semibold'), local('Sentinel-Semibold'),
+    url('~assets/fonts/Sentinel-Semibold.woff2') format('woff2'),
+    url('~assets/fonts/Sentinel-Semibold.woff') format('woff');
+}
+
+*,
+&::before,
+&::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-size: var(--font-size-body-2);
+}

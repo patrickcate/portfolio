@@ -1,0 +1,44 @@
+:root {
+  /* Spacing */
+  --base-spacing: 1rem;
+
+  /* Typography */
+  --base-font-size: var(--base-spacing);
+  --font-size-body-1: calc(var(--base-font-size) - 2px);
+  --font-size-body-2: calc(var(--base-font-size));
+  --font-size-body-3: calc(var(--font-size-body-2) + 2px);
+  --font-size-body-4: calc(var(--font-size-body-3) + 2px);
+  --font-size-body-5: calc(var(--font-size-body-4) + 2px);
+  --base-line-height: 1.5;
+  --font-serif: 'Sentinel', 'Georgia', serif;
+  --font-sans-serif: 'Avenir Next', 'Avenir', system-ui, -apple-system,
+    'Segoe UI', 'Roboto', 'Ubuntu', 'Cantarell', 'Noto Sans', sans-serif;
+
+  /* Colors */
+  --color-white: hsla(0, 0%, 100%, 1);
+  --color-black: hsla(0, 0%, 0%, 1);
+  --color-neutral-1: hsla(180, 7.7%, 97.5%, 1);
+  --color-neutral-2: hsla(204, 16.1%, 93.9%, 1);
+  --color-neutral-3: hsla(200, 10.3%, 88.6%, 1);
+  --color-neutral-4: hsla(207, 6.3%, 72%, 1);
+  --color-neutral-5: hsla(200, 2.5%, 53.7%, 1);
+  --color-neutral-6: hsla(204, 2.3%, 43.3%, 1);
+  --color-neutral-7: hsla(210, 2.3%, 34.5%, 1);
+  --color-neutral-8: hsla(210, 1.5%, 25.9%, 1);
+  --color-neutral-9: hsla(180, 1.1%, 17.8%, 1);
+  --color-neutral-10: hsla(240, 1.9%, 10.4%, 1);
+  --color-primary-1: hsla(204, 100%, 99%, 1);
+  --color-primary-2: hsla(201, 87.5%, 96.9%, 1);
+  --color-primary-3: hsla(201, 76.9%, 94.9%, 1);
+  --color-primary-4: hsla(203, 78.6%, 89%, 1);
+  --color-primary-5: hsla(203, 100%, 36.9%, 1);
+  --color-primary-6: hsla(203, 100%, 31.6%, 1);
+  --color-primary-7: hsla(203, 100%, 26.3%, 1);
+  --color-primary-8: hsla(203, 100%, 21.2%, 1);
+  --color-primary-9: hsla(203, 100%, 16.3%, 1);
+  --color-primary-10: hsla(203, 100%, 11.8%, 1);
+  --color-danger-5: hsla(354, 73.9%, 34.5%, 1);
+  --color-accent-5: hsla(43, 88.3%, 53.1%, 1);
+  --color-text: var(--color-neutral-7);
+  --color-header: var(--color-neutral-9);
+}

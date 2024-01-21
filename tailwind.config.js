@@ -1,0 +1,258 @@
+const colors = require('tailwindcss/colors')
+const defaultTheme = require('tailwindcss/defaultTheme')
+const convertLength = require('convert-css-length')
+
+const convertCssLength = convertLength('16px')
+const rem = value => convertCssLength(value, 'rem')
+
+const baseColors = {
+  primary: '#0074bc',
+  neutral: '#868a8c',
+  accent: '#f1b51e',
+  danger: '#991724',
+  success: '#00b02a',
+  body: '#56585a',
+  header: '#2d2e2e',
+  border: '#b3b8bc',
+}
+
+const baseFontSizes = {
+  body: {
+    1: rem('14px'),
+    2: rem('16px'),
+    3: rem('18px'),
+    4: rem('20px'),
+    5: rem('22px'),
+  },
+  headerPrimary: {
+    1: [rem('16px'), { lineHeight: rem('24px') }],
+    2: [rem('20px'), { lineHeight: rem('30px') }],
+    3: [rem('24px'), { lineHeight: rem('32px') }],
+    4: [rem('28px'), { lineHeight: rem('36px') }],
+    5: [rem('32px'), { lineHeight: rem('42px') }],
+    6: [rem('40px'), { lineHeight: rem('50px') }],
+    7: [rem('48px'), { lineHeight: rem('58px') }],
+    8: [rem('56px'), { lineHeight: rem('66px') }],
+    9: [rem('64px'), { lineHeight: rem('72px') }],
+    10: [rem('72px'), { lineHeight: rem('78px') }],
+  },
+  headerSecondary: {
+    xs2: [rem('22px'), { lineHeight: rem('32px') }],
+    xs: [rem('26px'), { lineHeight: rem('32px') }],
+    sm: [rem('28px'), { lineHeight: rem('36px') }],
+    md: [rem('32px'), { lineHeight: rem('42px') }],
+    lg: [rem('40px'), { lineHeight: rem('50px') }],
+    xl: [rem('48px'), { lineHeight: rem('58px') }],
+    '2xl': [rem('56px'), { lineHeight: rem('66px') }],
+    '3xl': [rem('64px'), { lineHeight: rem('72px') }],
+    '4xl': [rem('72px'), { lineHeight: rem('78px') }],
+  },
+}
+
+module.exports = {
+  purge: {
+    enabled: process.env.NODE_ENV === 'production',
+    content: [
+      'content/**/*.md',
+      'components/**/*.vue',
+      'layouts/**/*.vue',
+      'pages/**/*.vue',
+      'plugins/**/*.js',
+      'nuxt.config.js',
+      'app.html',
+      // TypeScript
+      'plugins/**/*.ts',
+      'nuxt.config.ts',
+    ],
+  },
+  darkMode: false, // or 'media' or 'class'
+  theme: {
+    screens: {
+      '2xs': '360px',
+      xs: '414px',
+      sm: '640px',
+      md: '768px',
+      lg: '1024px',
+      xl: '1280px',
+      '2xl': '1440px',
+      '3xl': '1920px',
+    },
+    fontSize: {
+      xs: rem('14px'),
+      base: rem('16px'),
+      sm: rem('16px'),
+      md: rem('18px'),
+      lg: rem('20px'),
+      xl: rem('22px'),
+      '2xl': rem('24px'),
+      '3xl': rem('28px'),
+      '4xl': rem('32px'),
+      '5xl': rem('40px'),
+      '6xl': rem('48px'),
+      '7xl': rem('56px'),
+      '8xl': rem('64px'),
+      '9xl': rem('72px'),
+      'body-1': baseFontSizes.body[1],
+      'body-2': baseFontSizes.body[2],
+      'body-3': baseFontSizes.body[3],
+      'body-4': baseFontSizes.body[4],
+      'body-5': baseFontSizes.body[5],
+      'header-1': baseFontSizes.headerPrimary[7],
+      'header-2': baseFontSizes.headerPrimary[6],
+      'header-3': baseFontSizes.headerPrimary[5],
+      'header-4': baseFontSizes.headerPrimary[4],
+      'header-5': baseFontSizes.headerPrimary[3],
+      'header-6': baseFontSizes.headerPrimary[2],
+      'header-7': baseFontSizes.headerPrimary[1],
+    },
+    colors: {
+      transparent: colors.transparent,
+      current: colors.current,
+      black: colors.black,
+      white: colors.white,
+      primary: {
+        1: '#fafdff',
+        2: '#f0f9fe',
+        3: '#e8f5fc',
+        4: '#cde8f9',
+        5: baseColors.primary,
+        DEFAULT: baseColors.primary,
+        6: '#0063a1',
+        7: '#005386',
+        8: '#00436c',
+        9: '#003353',
+        10: '#00253c',
+      },
+      neutral: {
+        1: '#f8f9f9',
+        2: '#edf0f2',
+        3: '#dfe3e5',
+        4: baseColors.border,
+        5: baseColors.neutral,
+        DEFAULT: baseColors.neutral,
+        6: '#6c6f71',
+        7: baseColors.body,
+        8: '#414243',
+        9: baseColors.header,
+        10: '#1a1a1b',
+      },
+      accent: {
+        1: '#fffdfa',
+        2: '#fefaf1',
+        3: '#fdf7e7',
+        4: '#fceeca',
+        5: baseColors.accent,
+        DEFAULT: baseColors.accent,
+      },
+      danger: {
+        1: '#fefbfb',
+        2: '#fdf2f3',
+        3: '#fce9eb',
+        4: '#f8ced2',
+        5: baseColors.danger,
+        DEFAULT: baseColors.danger,
+        6: '#8e1521',
+        7: '#73111b',
+        8: '#5d0e16',
+        9: '#470b11',
+        10: '#35080c',
+      },
+      success: {
+        1: '#fafffb',
+        2: '#f0fff3',
+        3: '#e5ffeb',
+        4: '#c7ffd4',
+        5: baseColors.success,
+        DEFAULT: baseColors.success,
+        6: '#00a326',
+        7: '#00851f',
+        8: '#006b19',
+        9: '#005213',
+        10: '#003d0e',
+      },
+      'color-body': baseColors.body,
+      'color-header': baseColors.header,
+    },
+    extend: {
+      fontFamily: {
+        sans: ['"Avenir Next"', 'Avenir', ...defaultTheme.fontFamily.sans],
+        serif: ['Sentinel', ...defaultTheme.fontFamily.serif],
+      },
+      skew: {
+        30: '30deg',
+        45: '45deg',
+        90: '90deg',
+        '-30': '-30deg',
+        '-45': '-45deg',
+        '-90': '-90deg',
+      },
+      width: {
+        px: '1px',
+        '2px': '2px',
+      },
+      transitionProperty: {
+        colors:
+          'background-color, border-color, color, fill, stroke, text-decoration-color',
+        backgroundColor: 'background-color',
+        borderColor: 'border-color',
+        color: 'color',
+        fill: 'fill',
+        stroke: 'stroke',
+        outlineColor: 'outline-color',
+        textDecorationColor: 'text-decoration-color',
+      },
+      typography: theme => ({
+        DEFAULT: {
+          css: {
+            color: baseColors.body,
+            lineHeight: defaultTheme.lineHeight.normal,
+            a: {
+              color: baseColors.primary,
+              textDecoration: 'none',
+              fontWeight: defaultTheme.fontWeight.semibold,
+              '&:hover': {
+                textDecoration: 'underline',
+                color: theme('colors.primary.7'),
+                textUnderlineOffset: '3px',
+                textDecorationThickness: '2px',
+              },
+              '&:active': {
+                textDecoration: 'underline',
+                color: theme('colors.primary.8'),
+                textUnderlineOffset: '3px',
+                textDecorationThickness: '2px',
+              },
+            },
+            strong: {
+              color: baseColors.header,
+              fontWeight: defaultTheme.fontWeight.semibold,
+            },
+            'ol > li::before': {
+              fontWeight: defaultTheme.fontWeight.semibold,
+              color: baseColors.border,
+            },
+            'ul > li::before': {
+              fontWeight: defaultTheme.fontWeight.semibold,
+              backgroundColor: baseColors.border,
+            },
+            hr: {
+              borderColor: baseColors.border,
+              marginTop: rem('24px'),
+              marginBottom: rem('24px'),
+            },
+          },
+        },
+      }),
+    },
+  },
+  variants: {
+    extend: {
+      textColor: ['active'],
+    },
+    typography: [],
+  },
+  corePlugins: {
+    container: false,
+  },
+  plugins: [require('@tailwindcss/typography')],
+}
