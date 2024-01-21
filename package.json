@@ -48,7 +48,7 @@
     "ie > 11"
   ],
   "dependencies": {
-    "@nuxt/content": "^1.11.1",
+    "@nuxt/content": "^2.10.0",
     "@nuxtjs/svg-sprite": "^0.5.2",
     "core-js": "^3.8.2",
     "nuxt": "2.14.11"
