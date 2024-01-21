@@ -49,7 +49,7 @@
   ],
   "dependencies": {
     "@nuxt/content": "^1.11.1",
-    "@nuxtjs/svg-sprite": "^0.5.2",
+    "@nuxtjs/svg-sprite": "^1.0.2",
     "core-js": "^3.8.2",
     "nuxt": "2.14.11"
   },
