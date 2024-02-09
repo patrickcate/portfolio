@@ -9,7 +9,7 @@ endDate: Present
 order: 1
 ---
 
-- Implement visual designs using CSS/Sass, HTML, ES6+ JavaScript, PHP, and templating languages like Twig.
+- Implemented visual designs using CSS/Sass, HTML, ES6+ JavaScript, PHP, and templating languages like Twig.
 - Designed and built custom Drupal CMS themes and modules for major government clients.
 - Created wireframes and website/application mockups using Figma, Adobe Photoshop, and Adobe Illustrator.
 - Created data visualizations using D3.js and other data visualization libraries.
