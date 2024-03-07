@@ -9,15 +9,23 @@ endDate: Present
 order: 1
 ---
 
-- Implemented visual designs using CSS/Sass, HTML, ES6+ JavaScript, PHP, and templating languages like Twig.
-- Designed and built custom Drupal CMS themes and modules for major government clients.
-- Created wireframes and website/application mockups using Figma, Adobe Photoshop, and Adobe Illustrator.
-- Created data visualizations using D3.js and other data visualization libraries.
-- Created web applications using Vue.js and Nuxt.js.
-- Implemented front-end build tools using Gulp.js, Vite, and Webpack to compile and optimize assets.
-- Incorporated third-party API's and services through custom Drupal and Node.js modules.
-- Utilized code linters and other tools to enforce project-level code formatting standards.
+- Designed and built custom Drupal CMS themes for large government clients such as the:
+  - National Institutes of Health (NIH)
+  - Bureau of Ocean Energy Management (BOEM)
+  - Commission of Fine Arts (CFA)
+  - Export-Import Bank of the United States (EXIM)
+  - Department of Interior (DOI)
+- Created wireframes and mockups for websites and applications using Figma, Adobe Photoshop, and Adobe Illustrator.
+- Implemented designs using CSS/Sass, HTML, ES6+ JavaScript, jQuery, PHP, and Twig.
+- Created custom Drupal modules integrating 3rd party systems and services.
+- Configured Drupal content types, fields, views, webforms, and other entities.
+- Migrated Drupal 7 sites to Drupal 8+ using core migrate API.
+- Built and utilized CI/CD processes to deploy configuration and code updates to Acquia-hosted environments.
+- Created interactive data visualizations using D3.js.
+- Developed web applications using Vue.js and Nuxt.js.
+- Wrote end-to-end (E2E) tests to validate functionality and reduce regressions.
+- Set up front-end build pipelines using Gulp.js, Webpack, and Vite to compile and optimize assets.
 - Created and maintained visual design systems/style guides.
-- Wrote extensive E2E tests with Cypress to validate functionality and reduce regressions.
 - Remediated Section 508/WCAG 2.0 accessibility issues.
-- Consulted and trained clients on Drupal and front-end development topics including: theming, site building, WCAG 2.0 accessibility compliance, Sass/CSS organization, and visual design.
+- Contributed bug fixes and patch reviews to the Drupal open-source project.
+- Participated in daily stand-ups, sprint planning, and retrospectives as part of Agile-managed projects.
